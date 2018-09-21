@@ -1,0 +1,112 @@
+body{
+    background-color: #FAFAFA !important;
+}
+
+.navbar{
+    background-color: #FAFAFA !important;
+}
+
+#footer{
+    padding-bottom: 0 !important;
+    background-color: #343a40 !important;
+} 
+
+.container h1{
+    width: 140%;
+}
+
+.jumbotron{
+    border-radius: 0;
+    padding: 10px;
+    background: #007bff !important;
+    color: #FFF;
+}
+
+
+.jumbotron h2{
+    margin-bottom: -5px;
+    padding-top: 10px;
+    margin-top: 50px;
+    padding: 10px;
+    margin-left: 7%;
+}
+
+#vce{
+    background-color: #000000;
+    color: #FFF;
+}
+
+a{
+    color: #000000 !important;
+}
+
+a i{
+    margin: 5px;
+}
+.navbar{
+	background-color: #f1f1f1;
+	border-color: #f1f1f1 !important;
+}
+#nc{
+	width: 100% !important;
+    border-radius: 3px !important;
+    min-height: 40px;
+    font-size: 18px;
+}
+
+#vce{
+	background-color: #000;
+	color: #fff;
+	width: 100% !important;
+    border-radius: 3px !important;
+    min-height: 40px;
+    font-size: 18px;
+}
+
+.table{
+    margin-top: 3% !important;
+}
+
+#paginacao{
+    margin-top: 10px;
+}
+
+#linha1{
+    width: 100% !important;
+    margin-bottom: 10px;
+}
+
+#linha2{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#linha3{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.form-row{
+    border: 1px #ced4da solid !important;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+#cancelar{
+    background-color: #FF0000 !important;
+    color: #FFF;
+    width: 100%;
+    font-size: 18px;
+}
+
+#finalizar{
+    width: 100%;
+    font-size: 18px;
+}
+
+.card-body{
+    border: 1px #ced4da solid !important;
+    margin-top: 30px;
+    width: 50%; 
+}
+
+
