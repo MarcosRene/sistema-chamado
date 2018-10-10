@@ -1,15 +1,15 @@
 body{
-    background-color: #FAFAFA !important;
+    background-color: #F2F2F2 !important;
 }
 
 .navbar{
-    background-color: #FAFAFA !important;
+    background-color: #F2F2F2 !important;
 }
 
 #footer{
     padding-bottom: 0 !important;
     background-color: #343a40 !important;
-} 
+}
 
 .container h1{
     width: 140%;
@@ -21,7 +21,6 @@ body{
     background: #007bff !important;
     color: #FFF;
 }
-
 
 .jumbotron h2{
     margin-bottom: -5px;
@@ -36,17 +35,25 @@ body{
     color: #FFF;
 }
 
-a{
-    color: #000000 !important;
+li a{
+    text-decoration: none !important;
+    color: #212529 !important;
 }
 
 a i{
     margin: 5px;
 }
+
 .navbar{
 	background-color: #f1f1f1;
 	border-color: #f1f1f1 !important;
 }
+
+th{
+    text-decoration: none !important;
+    color: #212529 !important;
+}
+
 #nc{
 	width: 100% !important;
     border-radius: 3px !important;
@@ -54,10 +61,8 @@ a i{
     font-size: 18px;
 }
 
-#vce{
-	background-color: #000;
-	color: #fff;
-	width: 100% !important;
+#vche{
+    width: 100% !important;
     border-radius: 3px !important;
     min-height: 40px;
     font-size: 18px;
@@ -65,10 +70,6 @@ a i{
 
 .table{
     margin-top: 3% !important;
-}
-
-#paginacao{
-    margin-top: 10px;
 }
 
 #linha1{
@@ -85,8 +86,9 @@ a i{
     width: 100%;
     margin-bottom: 10px;
 }
+
 .form-row{
-    border: 1px #ced4da solid !important;
+    background: #FFF !important;
     border-radius: 3px;
     padding: 10px;
     margin-bottom: 10px;
@@ -95,7 +97,7 @@ a i{
     background-color: #FF0000 !important;
     color: #FFF;
     width: 100%;
-    font-size: 18px;
+    font-size: 18px;   
 }
 
 #finalizar{
@@ -103,10 +105,86 @@ a i{
     font-size: 18px;
 }
 
-.card-body{
-    border: 1px #ced4da solid !important;
-    margin-top: 30px;
-    width: 50%; 
+#novo{
+    width: 50% !important;
+    border-radius: 3px !important;
+    min-height: 40px;
+    font-size: 18px;
+}
+
+#inicio{
+    width: 50% !important;
+    border-radius: 3px !important;
+    min-height: 40px;
+    font-size: 18px;
+    margin-left: 12px;
+}
+
+#voltar{
+    width: 100% !important;
+    border-radius: 3px !important;
+    min-height: 40px;   
+    font-size: 18px;
+    margin-left: 12px;
+}
+
+.modal-header{
+    background: #28a745 !important;
+    margin-top: 30px;  
+    border-radius: 0 !important;
+}
+
+#titulo-modal{
+    color: #FFF !important;
+}
+
+#dt{
+    background: #FF8000 !important;
+    color: #FFF;
+    width: 100% !important;
+    border-radius: 3px !important;
+    min-height: 40px;  
+}
+
+#dt1{
+    background: #FF8000 !important;
+    color: #FFF;
+    width: 50% !important;
 }
 
 
+#enc{
+    width: 100% !important;
+    margin-left: 40px !important;
+}
+
+#at{
+    width: 100% !important;
+}
+
+#modal-depende{
+    background: #FF8000 !important;
+    color: #FFF;
+    border-radius: 0 !important;
+}
+
+#ag{
+    background-color: #FF0000 !important;
+    color: #FFF;
+    width: 50% !important; 
+}
+#modal-encerra{
+    background: #343a40 !important;   
+}
+
+#en{
+    width: 50% !important;
+}
+
+#bt-at{
+    width: 50% !important;   
+}
+
+#tbd{
+    background: #FFF !important;
+}

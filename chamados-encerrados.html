@@ -6,24 +6,23 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <title>chamado</title>
+        <title>Chamado</title>
 
         <link href="Sass/node_modules/bootstrap/compiler/bootstrap.css" rel="stylesheet">
         <link href="font-awesome/css/font-awesome.min.css" real="stylesheet">
         <link href="_css/estilo.css" rel="stylesheet">
-        
+
     </head>
 
     <body>
-
         <nav class="navbar navbar-expand-lg navbar-light fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand" href=""><img src="img/logo.png" height="35px" width="45px"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="nav navbar-nav ml-auto">
+                 <div class="collapse navbar-collapse" id="navbarResponsive">
+                     <ul class="nav navbar-nav ml-auto">
                         <li><span class="fa fa-user"></span>Usuário: </li>
                         <li>
                             <a href="#">
@@ -35,73 +34,80 @@
             </div>
         </nav>
 
-       
+
         <div class="jumbotron">
             <div class="container-fluid">
-                <h2>Meus Chamados</h2> 
+                <h2>Meus Chamados encerrados</h2> 
             </div>
         </div>
-
+            
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-1"></div>
                 <div class="col-md-3">
-                    <a href="cadastro-chamado.html"><button id="nc" class="btn btn-success" type="button">Novo Chamado</button></a>
+                    <a href="principal.html"><button id="nc" class="btn btn-primary" type="button">Inicio</button></a>
                 </div>
-            <div class="col-md-4"></div>
-            <div class="col-md-3">
-                  <a href="chamados-encerrados.html"><button id="vche" class="btn btn-dark" type="button">Visualizar Chamados encerrados</button></a>
             </div>
-            <div class="col-md-1"></div>
-            </div>
-               
+
             <div class="row">
-                <div class="col-md-1"></div>
-                <div class="col-md-10">
-                    <table class="table">
-                        <thead class="thead-light">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <table class="table">
+                    <thead class="thead-light">
                         <tr>
                             <th scope="col">Código</th>
                             <th scope="col">Descrição</th>
-                            <th scope="col">Abertos</th>
+                            <th scope="col">Aberto em</th>
+                            <th scope="col">Encerrado em</th>
+                            <th scope="col">Atendido por</th>
                             <th scope="col">Status</th>
                         </tr>
-                        </thead>
-                        <tbody id="tbd">
-                        <tr>
-                            <th scope="row">1</th>
+                    </thead>
+                    <tbody id="tbd">
+                        <tr >
+                        <th scope="row">1</th>
                             <td>?</td>
                             <td>?</td>
-                            <td>?</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
                             <td>?</td>
                             <td>?</td>
                             <td>?</td>
                         </tr>
                         <tr>
-                            <th scope="row">3</th>
+                        <th scope="row">2</th>
                             <td>?</td>
                             <td>?</td>
-                            <td>?</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">4</th>
                             <td>?</td>
                             <td>?</td>
                             <td>?</td>
                         </tr>
                         <tr>
-                          <th scope="row">5</th>
-                          <td>?</td>
-                          <td>?</td>
-                          <td>?</td>
+                        <th scope="row">3</th>
+                            <td>?</td>
+                            <td>?</td>
+                            <td>?</td>
+                            <td>?</td>
+                            <td>?</td>
                         </tr>
-                        </tbody>
-                    </table>
-                    </div>
-                <div class="col-md-1"></div>
+                        <tr>
+                        <th scope="row">4</th>
+                            <td>?</td>
+                            <td>?</td>
+                            <td>?</td>
+                            <td>?</td>
+                            <td>?</td>
+                        </tr>
+                        <tr>
+                        <th scope="row">5</th>
+                            <td>?</td>
+                            <td>?</td>
+                            <td>?</td>
+                            <td>?</td>
+                            <td>?</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-1"></div>
             </div>
 
             <nav id="paginacao">
@@ -123,10 +129,8 @@
                     </li>
                 </ul>
             </nav>  
-
         </div>
-        
-      
+
         <footer id="footer" class="py-5 bg-dark fixed mt-5">
             <div class="container-fluid">
                 <p class="m-0 text-center text-white"></p>
@@ -140,4 +144,3 @@
     </body>
 
 </html>
-    
