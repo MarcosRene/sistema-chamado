@@ -5,15 +5,17 @@
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Chamado</title>
 
         <link href="Sass/node_modules/bootstrap/compiler/bootstrap.css" rel="stylesheet">
-        <link href="font-awesome/font-awesome-4.7.0/css/font-awesome.min.css" real="stylesheet">
+
+        <link href="font-awesome/css/font-awesome.min.css" real="stylesheet">
         <link href="_css/estilo.css" rel="stylesheet">
-   
+
     </head>
 
-    <body>
+       <body>
         <nav class="navbar navbar-expand-lg navbar-light fixed-top">
             <div class="container-fluid">
                 <a class="navbar-brand" href=""><img src="img/logo.png" height="35px" width="45px"></a>
@@ -23,11 +25,6 @@
                  <div class="collapse navbar-collapse" id="navbarResponsive">
                      <ul class="nav navbar-nav ml-auto">
                         <li><span class="fa fa-user"></span>Usuário: </li>
-                        <li>
-                            <a href="#">
-                                <span class="fa fa-sign-out"></span>Sair
-                            </a>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -42,7 +39,7 @@
 
         <div class="container">
             <form>
-            <div class="form-row col-lg-7">
+            <div class="form-row col-md-7">
                 <div class="col">
                     <fieldset disabled>
                        <div class="form-group">
@@ -76,7 +73,7 @@
                     </fieldset>
                </div>
             </div>
-            <div class="form-row col-lg-7">
+            <div class="form-row col-md-7">
                 <div class="col">
                     <fieldset disabled>
                         <div class="form-group">
@@ -110,7 +107,7 @@
                     </fieldset>
                 </div>
                 </div>
-                <div class="form-row col-lg-7">
+                <div class="form-row col-md-7">
                     <div class="col">
                         <fieldset disabled>
                             <div class="form-group">
@@ -131,7 +128,7 @@
                 </div>
                 </div>
             </form>   
-            <div class="form-row col-lg-4">
+            <div class="form-row col-md-4">
                 <div class="col">
                     <fieldset disabled>
                        <div class="form-group">
@@ -149,7 +146,7 @@
                    </fieldset>
                 </div>      
             </div>
-            <div class="form-row col-lg-4">
+            <div class="form-row col-md-4">
                 <div class="col">
                     <fieldset disabled>
                        <div class="form-group">
@@ -161,14 +158,14 @@
             </div>
         </div>
         
-        <div class="container-fluid">
+        <div class="container col-lg-8">
             <div class="row">
-                <div class="col-md-5"></div>
+                <div class="col-md-6"></div>
                 <div class="col-md-3">
-                    <a href="principal.html"><button id="voltar" class="btn btn-dark" type="button">Voltar</button></a>
+                    <a href="principal.html"><button class="btn btn-primary" type="button">Inicio</button></a>
                 </div>
-                <div class="col-md-3" id="esp">
-                    <button id="finalizar" class="btn btn-primary" type="button" data-toggle="modal" data-target="#confirmacao">Inicio</button>
+                 <div class="col-md-3">
+                    <a href="chamados-encerrados.html"><button class="btn btn-dark" type="button">Voltar</button></a>
                 </div>
             </div>
         </div>

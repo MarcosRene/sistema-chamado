@@ -25,11 +25,6 @@
                <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="nav navbar-nav ml-auto">
                         <li><span class="fa fa-user"></span>Usuário: </li>
-                        <li>
-                            <a href="#">
-                                <span class="fa fa-sign-out"></span>Sair
-                            </a>
-                        </li>
                     </ul>
                </div>
            </div>
@@ -38,11 +33,11 @@
        
        <div class="jumbotron">
            <div class="container-fluid">
-               <h2>Meus Chamados</h2> 
+               <h2>Cadastrar chamados</h2> 
            </div>
        </div>
   
-       <div class="container">
+       <div class="container col-lg-8">
            <form>
                <div class="form-row">
                    <div class="col">
@@ -115,14 +110,14 @@
             </form>
         </div> 
       
-        <div class="container-fluid">
+        <div class="container col-lg-8">
             <div class="row">
-                <div class="col-md-5"></div>
+                <div class="col-md-6"></div>
                 <div class="col-md-3">
-                    <a href="principal.html"><button id="cancelar" class="btn" type="button">Cancelar</button></a>
+                    <a href="principal.html"><button class="btn btn-danger" type="button">Cancelar</button></a>
                 </div>
-                <div class="col-md-3" id="esp">
-                    <button id="finalizar" class="btn btn-primary" type="button" data-toggle="modal" data-target="#confirmacao">Finalizar</button>
+                <div class="col-md-3">
+                    <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#confirmacao">Finalizar</button>
                 </div>
             </div>
         </div>
@@ -140,8 +135,8 @@
                         <h5>Aguarde seu atendimento e acompanhe o status na tela inicial.</h5>
                     </div>
                     <div class="modal-footer">
-                        <button id="novo" class="btn btn-success" type="button">Novo chamado</button>
-                        <button id="inicio" class="btn btn-primary" type="button">Inicio</button> 
+                        <button id="btnNovo" class="btn btn-success" type="button">Novo chamado</button>
+                        <button id="btnInicio" class="btn btn-primary" type="button">Inicio</button> 
                     </div>
                 </div>
             </div>

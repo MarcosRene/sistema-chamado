@@ -1,14 +1,14 @@
 body{
-    background-color: #F2F2F2 !important;
+    background-color: #E6E6E6 !important;
 }
 
 .navbar{
-    background-color: #F2F2F2 !important;
+    background-color: #E6E6E6 !important;
 }
 
 #footer{
     padding-bottom: 0 !important;
-    background-color: #343a40 !important;
+    background-color: #343A40 !important;
 }
 
 .container h1{
@@ -18,7 +18,7 @@ body{
 .jumbotron{
     border-radius: 0;
     padding: 10px;
-    background: #007bff !important;
+    background: #007BFF !important;
     color: #FFF;
 }
 
@@ -28,11 +28,6 @@ body{
     margin-top: 50px;
     padding: 10px;
     margin-left: 7%;
-}
-
-#vce{
-    background-color: #000000;
-    color: #FFF;
 }
 
 li a{
@@ -45,8 +40,8 @@ a i{
 }
 
 .navbar{
-	background-color: #f1f1f1;
-	border-color: #f1f1f1 !important;
+	background-color: #F1F1F1;
+	border-color: #F1F1F1 !important;
 }
 
 th{
@@ -54,82 +49,55 @@ th{
     color: #212529 !important;
 }
 
-#nc{
-	width: 100% !important;
-    border-radius: 3px !important;
-    min-height: 40px;
-    font-size: 18px;
-}
-
-#vche{
-    width: 100% !important;
-    border-radius: 3px !important;
-    min-height: 40px;
-    font-size: 18px;
-}
-
 .table{
     margin-top: 3% !important;
 }
 
-#linha1{
-    width: 100% !important;
-    margin-bottom: 10px;
-}
-
-#linha2{
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-#linha3{
-    width: 100%;
-    margin-bottom: 10px;
-}
-
 .form-row{
     background: #FFF !important;
-    border-radius: 3px;
+    border-radius: 5px !important;
     padding: 10px;
     margin-bottom: 10px;
 }
-#cancelar{
-    background-color: #FF0000 !important;
-    color: #FFF;
-    width: 100%;
-    font-size: 18px;   
+
+.btn-primary{
+    width: 100% !important; 
 }
 
-#finalizar{
-    width: 100%;
-    font-size: 18px;
+.btn-dark{
+    width: 100% !important;
 }
 
-#novo{
+.btn-success{
+    width: 100% !important;
+}
+
+.btn-danger{
+    width: 100% !important;
+}
+
+#btnNovo{
     width: 50% !important;
     border-radius: 3px !important;
     min-height: 40px;
-    font-size: 18px;
 }
 
-#inicio{
+#btnInicio{
     width: 50% !important;
     border-radius: 3px !important;
     min-height: 40px;
-    font-size: 18px;
     margin-left: 12px;
 }
 
-#voltar{
+#btnVoltar{
     width: 100% !important;
     border-radius: 3px !important;
     min-height: 40px;   
-    font-size: 18px;
     margin-left: 12px;
 }
 
 .modal-header{
-    background: #28a745 !important;
+    background: #28A745 !important;
     margin-top: 30px;  
     border-radius: 0 !important;
 }
@@ -144,6 +112,7 @@ th{
     width: 100% !important;
     border-radius: 3px !important;
     min-height: 40px;  
+   
 }
 
 #dt1{
@@ -152,14 +121,21 @@ th{
     width: 50% !important;
 }
 
-
-#enc{
+#btnDepende{
     width: 100% !important;
-    margin-left: 40px !important;
+    background: #FF8000 !important;
+    color: #FFF !important;
+    border: #FF8000 !important;
 }
 
-#at{
-    width: 100% !important;
+#btnAguarda{
+    background: #FF8000 !important;
+    color: #FFF;
+    width: 50% !important; 
+}
+
+#modal-encerra{
+    background: #343A40 !important;   
 }
 
 #modal-depende{
@@ -168,23 +144,20 @@ th{
     border-radius: 0 !important;
 }
 
-#ag{
-    background-color: #FF0000 !important;
-    color: #FFF;
-    width: 50% !important; 
-}
-#modal-encerra{
-    background: #343a40 !important;   
-}
-
-#en{
+#btnEncerra{
     width: 50% !important;
 }
 
-#bt-at{
+#btnAtender{
     width: 50% !important;   
 }
 
-#tbd{
+#tBody{
     background: #FFF !important;
+}
+
+#btnCancelar{
+    width: 50% !important;
+    background: #DC3545 !important;
+    color: #FFF;
 }
