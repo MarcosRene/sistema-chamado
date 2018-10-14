@@ -1,0 +1,67 @@
+.navbar{
+    background-color: #E6E6E6 !important;
+}
+
+#footer{
+    padding-bottom: 0 !important;
+    background-color: #343A40 !important;
+}
+
+.jumbotron{
+    border-radius: 0;
+    padding: 10px;
+    background: #007BFF !important;
+    color: #FFF;
+}
+
+.jumbotron h2{
+    margin-bottom: -5px;
+    padding-top: 10px;
+    margin-top: 50px;
+    padding: 10px;
+    margin-left: -1%;
+}
+
+#vertical h1{
+    width: 140%;
+}
+
+#vertical {
+    min-height: 480px !important;
+    border-radius: 4px;
+    background: #343A40 !important;
+    margin: 0px 20px 20px !important;
+}
+
+#grupoBtn{
+    margin-top: 25px !important;
+    width: 100% !important;
+    background: #6E6E6E;
+    border-radius: 0;
+    color: #FFF;
+}
+
+.btn:hover{
+    background: #343A40 !important;
+}
+
+li a{
+    text-decoration: none !important;
+    color: #212529 !important;
+}
+
+#sing a{
+    text-decoration: none !important;
+    color: #FFF;
+}
+
+#sing{
+    text-align: right;
+    margin-top: 85% !important;
+}
+
+p{
+    margin-left: 0.5rem;
+    margin-top: 1px;
+    margin-bottom: 1rem;
+}

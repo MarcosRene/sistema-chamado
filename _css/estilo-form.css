@@ -9,12 +9,15 @@ body{
     margin-top: 10%;
     margin-bottom: 10%;
 }
+
 .form-signin .checkbox{
     font-weight: 400px;    
 }
+
 .form-signin h1{
     width: 100%
 }
+
 .form-signin .form-control{
     position: relative;
     box-sizing: border-box;
@@ -22,12 +25,13 @@ body{
     padding: 10px;
     font-size: 16px;
 }
+
 .container{
     width: 100%;
     max-width: 330px;
     padding: 15px;
     margin: 0 auto;
-    border-radius: 15px;
+    border-radius: 5px;
     background-color: #FFF;
 }
 
@@ -37,6 +41,22 @@ body{
 .form-signin input[type='text']{
     margin-bottom: -1px;
 }
+
 .form-signin input[type='password']{
     margin-bottom: 10px;
+}
+
+.btn-primary{
+    width: 48% !important;
+    float: left !important;
+    margin-bottom: 10px;
+}
+
+#recuperar{
+    text-align: right !important;
+}
+
+a{
+    color: #696960 !important;       
+}
 }
