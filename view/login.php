@@ -20,7 +20,7 @@
     <body class="text-center">
         <div class="container">
             <div class="form-signin">
-                <h1 class="h4 mb-3 font-weight-normal">Por favor, faça seu login</h1>
+                <h1 class="h4 mb-3 font-weight-normal">Login</h1>
                 <form>
                     <div class="form-group">
                         <label class="sr-only" for="usuario">Usuário</label>
@@ -31,9 +31,7 @@
                         <input class="form-control" type="password" id="senha" placeholder="Senha">
                     </div>                
                     <div class="form-group">
-                        <a href="principal.html"><button class="btn btn-primary mr-2" type="submit" >Admin</button></a>
-                    </div> <div class="form-group">
-                        <a href="principal.html"><button class="btn btn-primary" type="submit" >Usuário</button></a>
+                        <a href="principal.html"><button class="btn btn-primary" type="submit" >Entrar</button></a>
                     </div> 
                     <div class="form-group">
                         <div id="recuperar">
