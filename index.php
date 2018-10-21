@@ -13,7 +13,7 @@
         require_once 'control/Login_controle.php';  
         $login =  new Login_controle(); 
       
-            
+            echo "g";
         ?>
 
     </body>
