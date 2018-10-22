@@ -9,12 +9,15 @@
     <body>
 
         <?php
-            
+        
+        require_once 'conexao/Conexao.php';
+        $con = Conexao::getInstance();
+      
+        
+      
         require_once 'control/Login_controle.php';  
         $login =  new Login_controle(); 
-      
-            echo "g";
         ?>
-
+     
     </body>
 </html>

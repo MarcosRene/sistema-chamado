@@ -47,8 +47,7 @@ body{
 }
 
 .btn-primary{
-    width: 48% !important;
-    float: left !important;
+    width: 100% !important;
     margin-bottom: 10px;
 }
 
