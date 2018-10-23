@@ -18,9 +18,15 @@
 
 
     <body class="text-center">
+
+        <div class="container" id="row" >
+            img <img src="../assets/img/logo.png" />
+        </div>
+
         <div class="container">
             <div class="form-signin">
                 <h1 class="h4 mb-3 font-weight-normal">Login</h1>
+
 
                 <form method="POST" action="routes.php">
 
