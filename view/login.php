@@ -22,23 +22,21 @@
             <div class="form-signin">
                 <h1 class="h4 mb-3 font-weight-normal">Login</h1>
 
-                <form action="login_controle.php" method="POST">
-                    <div class="form-group">
-                        <label class="sr-only" for="usuario">Usuário</label>
-                        <input class="form-control" type="text" id="usuario" placeholder="Usuário">
+                <form method="POST" action="routes.php">
+
+                    <div class="grid-item">
+                        <input class="form-control"type="user" name="login" placeholder="Usuário" required/>
                     </div>
-                    <div class="form-group">
-                        <label class="sr-only" for="senha">Senha</label>
-                        <input class="form-control" type="password" id="senha" placeholder="Senha">
-                    </div>                
-                    <div class="form-group">
-                        <a href="principal.html"><button class="btn btn-primary" type="submit" >Entrar</button></a>
-                    </div> 
-                    <div class="form-group">
-                        <div id="recuperar">
-                            <a href="#">Recupere sua senha</a>
-                        </div>
+
+                    <div class="grid-item">
+                        <input class="form-control" type="password" name="senha" placeholder="Senha" required/>
                     </div>
+
+                    <div class="grid-item">
+                        <input type="hidden" name="acao" value="login"/>
+                        <button class="btn btn-primary"type="submit" class="button">Entrar</button>
+                    </div>
+
                 </form>
             </div>
         </div>

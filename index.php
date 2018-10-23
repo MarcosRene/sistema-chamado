@@ -10,13 +10,9 @@
 
         <?php
         
-        require_once 'conexao/Conexao.php';
-        $con = Conexao::getInstance();
-      
-        
-      
-        require_once 'control/Login_controle.php';  
-        $login =  new Login_controle(); 
+        require_once 'view/login.php';
+   
+ 
         ?>
      
     </body>
