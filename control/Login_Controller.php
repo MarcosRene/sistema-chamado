@@ -12,7 +12,7 @@ class Login_Controller {
         
         if (Usuario::verificarLoginUsuario($login, $senha)) {
 
-            require_once 'view/principal.php';
+            require_once 'view/telaCliente.php';
             
         } else {
             $_SESSION['msg_erro'] = "Login ou Senha inválidos";
