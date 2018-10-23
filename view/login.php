@@ -19,9 +19,9 @@
 
     <body class="text-center">
 
-        <div class="container" id="row" >
+      
             img <img src="../assets/img/logo.png" />
-        </div>
+   
 
         <div class="container">
             <div class="form-signin">

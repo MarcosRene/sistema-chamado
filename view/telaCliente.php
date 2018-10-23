@@ -1,3 +1,11 @@
+<?php
+
+include_once 'acesso.php';
+
+$permissoes = ['cliente'];
+verificarAcesso($permissoes);
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
