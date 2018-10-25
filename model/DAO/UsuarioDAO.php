@@ -3,6 +3,7 @@
 include_once 'conexao/Conexao.php';
 include_once 'conexao/config.php';
 include_once 'model/Usuario.php';
+include_once 'control/Perfil_Controller.php';
 
 class UsuarioDAO {
 
@@ -78,11 +79,7 @@ class UsuarioDAO {
 
 
             return $p_sql->execute();
-        } catch (Exception $e) {
-            print "Ocorreu um erro ao tentar executar esta ação, foi gerado um LOG do mesmo, tente novamente mais tarde.";
-            GeraLog::getInstance()->inserirLog("Erro: Código: " .
-                    $e->getCode() . " Mensagem: " . $e->getMessage());
-        }
+        } catch (Exception $e) {}
     }
 
     public function BuscarPorCOD($cod) {
@@ -93,12 +90,7 @@ class UsuarioDAO {
             $p_sql->execute();
             return $this->populaUsuario($p_sql->fetch(PDO::FETCH_ASSOC));
       
-        } catch (Exception $e) {
-            print "Ocorreu um erro ao tentar executar esta ação, foi gerado
- um LOG do mesmo, tente novamente mais tarde.";
-            GeraLog::getInstance()->inserirLog("Erro: Código: " . $e->
-                            getCode() . " Mensagem: " . $e->getMessage());
-        }
+        } catch (Exception $e) {}
     }
 
     private function populaUsuario($row) {
@@ -112,7 +104,7 @@ class UsuarioDAO {
         $usuario->setAtivo($row['ativo']);
         $usuario->setDataCadastro($row['dataCadastro']);
         
-        $usuario->setPerfil(ControllerPerfil::getInstance()->buscarPorCOD($row['cod_perfil']));
+        $usuario->setPerfil(Perfil_Controller::getInstance()->buscarPorCOD($row['cod_perfil']));
         
         return $usuario;
     }
