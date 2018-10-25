@@ -4,13 +4,13 @@
 <p></p>
 
 <div class="item9-2">
-    <form method="POST" action="../../app/routes.php">
+    <form method="POST" action="routes.php">
         <label>Nome</label>
         <input class="input" type="text" name="nome" required>
         <br><br>
 
         <label>Sobrenome</label>
-        <input class="input" type="text" name="nome" required>
+        <input class="input" type="text" name="sobrenome" required>
         <br><br>
 
         <label>E-Mail</label>
@@ -18,12 +18,14 @@
         <br><br>
         
         <label>Tipo usuário</label>
-        <select id=tipo>
+        <select class="input" name="lista"size="4" >
             <option value="" ></option>
             <option value="comum" >Usuário comum</option>
             <option value="tecnico" >Técnico</option>
             <option value="admin" >Administrador</option>
         </select> <br><br>
+      
+        
         <label>Login</label>
         <input class="input" type="text" name="login" required>
         <br><br>
@@ -32,7 +34,7 @@
         <input class="input" type="password" name="senha" required>
         <br><br>
 
-        <input type="hidden" name="acao" value="cadastrar-admin">
+        <input type="hidden" name="acao" value="cadastrarUsuario">
         <button type="submit" class="button">Cadastrar</button>
     </form>
 </div>

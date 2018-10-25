@@ -62,24 +62,28 @@ class UsuarioDAO {
             return false;
     }
 
-    public function Inserir(Usuario $usuario) {
+    public static function Inserir(Usuario $usuario) {
         try {
-            $sql = "INSERT INTO usuario (nome, sobrenome, email, senha, ativo, cod_perfil) 
-                VALUES ( :nome, :email, :senha, :ativo, :id_perfil)";
+            $sql = "INSERT INTO usuario (id_perfil,nome, sobrenome, email, login, senha) 
+                VALUES (:id_perfil, :nome,:sobrenome, :email,:login, :senha )";
 
             $p_sql = Conexao::getInstance()->prepare($sql);
 
 
+            $p_sql->bindValue(":id_perfil", $usuario->getId_perfil());
             $p_sql->bindValue(":nome", $usuario->getNome());
             $p_sql->bindValue(":sobrenome", $usuario->getSobrenome());
             $p_sql->bindValue(":email", $usuario->getEmail());
+            $p_sql->bindValue(":login", $usuario->getLogin());
             $p_sql->bindValue(":senha", $usuario->getSenha());
-            $p_sql->bindValue(":ativo", $usuario->getAtivo());
-            $p_sql->bindValue(":id_perfil", $usuario->getId_perfil());
 
 
             return $p_sql->execute();
-        } catch (Exception $e) {}
+       
+        } catch (Exception $e) {
+            
+            echo "erro ao  $e";
+        }
     }
 
     public function BuscarPorCOD($cod) {

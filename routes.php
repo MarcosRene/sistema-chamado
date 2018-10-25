@@ -11,9 +11,18 @@ $acao = filter_input(INPUT_POST, 'acao');
 switch ($acao) {
 
     case 'login':
-       
-     Login_Controller::verificarLogin();
+
+        Login_Controller::verificarLogin();
         break;
+
+    case 'cadastrarUsuario':
+
+        
+       // var_dump(filter_input_array(INPUT_POST));
+       Usuario_Controller::cadastrarUsuario();
+        break;
+
+
 
     default:
         header("Location: ../index.php");
