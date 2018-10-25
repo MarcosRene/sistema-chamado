@@ -1,6 +1,6 @@
 <?php
 
-include_once 'model/Usuario.php';
+include_once 'model/DAO/UsuarioDAO.php';
 
 class Login_Controller {
 
@@ -10,7 +10,7 @@ class Login_Controller {
         $senha = filter_input(INPUT_POST, 'senha');
 
         
-        if (Usuario::verificarLoginUsuario($login, $senha)) {
+        if (UsuarioDAO::verificarLoginUsuario($login, $senha)) {
 
             require_once 'view/telaCliente.php';
             
