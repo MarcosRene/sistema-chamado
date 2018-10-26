@@ -74,7 +74,7 @@ class PerfilDAO {
         $perfil->setId_perfil($row['id_usuario']);
         $perfil->setDescricao($row['descricao']);
   
-       // $perfil->setPerfil(Perfil_Controller::getInstance()->buscarPorCOD($row['id_perfil']));
+        $perfil->setPerfil(Perfil_Controller::getInstance()->buscarPorCOD($row['id_perfil']));
         
         return $perfil;
     }

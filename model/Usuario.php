@@ -12,15 +12,8 @@ class Usuario {
     private $ativo;
     private $dataCadastro;
     
-    function __construct($id_usuario, $nome, $sobrenome, $email, $login, $senha, $tipoUsuario, $dataCadastro) {    
-        $this->id_usuario = $id_usuario;
-        $this->nome = $nome;
-        $this->sobrenome = $sobrenome;
-        $this->email = $email;
-        $this->login = $login;
-        $this->senha = $senha;
-        $this->tipoUsuario = $tipoUsuario;
-        $this->dataCadastro = $dataCadastro;
+    function __construct() {    
+  
     }
 
     function getId_usuario() {

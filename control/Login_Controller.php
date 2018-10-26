@@ -12,11 +12,11 @@ class Login_Controller {
         
         if (UsuarioDAO::verificarLoginUsuario($login, $senha)) {
 
-            require_once 'view/telaCliente.php';
+            require_once 'view/admin/cadastroUsuario.php';
             
         } else {
             $_SESSION['msg_erro'] = "Login ou Senha inválidos";
-            require_once 'view/login.php';
+            require_once 'view/geral/login.php';
         }
     }
 

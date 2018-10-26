@@ -3,6 +3,7 @@
 include_once 'conexao/Conexao.php';
 include_once 'conexao/config.php';
 include_once 'model/Usuario.php';
+include_once 'control/Perfil_Controller.php';
 
 class UsuarioDAO {
 
@@ -17,7 +18,7 @@ class UsuarioDAO {
 
             $row = $stmt->fetch(PDO::FETCH_OBJ);
 
-            if ($senha == $row->senha) {
+            if (crypt($senha, $row->senha) == $row->senha) {
                 $_SESSION['usuario_logado']['nv_acesso'] = "cliente";
                 $_SESSION['usuario_logado']['dados'] = $row;
                 return true;
@@ -46,42 +47,27 @@ class UsuarioDAO {
         return $users;
     }
 
-    function cadastrar_Usuario($nome, $sobrenome, $email, $login, $senha) {
-        $conn = Conexao::getInstance();
-        $stmt = $conn->prepare("INSERT INTO usuario(nome,sobrenome, email, login, senha) VALUES(?, ?, ?, ?)");
-        $stmt->bindParam(1, $nome);
-        $stmt->bindParam(2, $sobrenome);
-        $stmt->bindParam(3, $email);
-        $stmt->bindParam(4, $login);
-        $stmt->bindParam(5, $senha);
-
-        if ($stmt->execute())
-            return true;
-        else
-            return false;
-    }
-
-    public function Inserir(Usuario $usuario) {
+    public static function Inserir(Usuario $usuario) {
         try {
-            $sql = "INSERT INTO usuario (nome, sobrenome, email, senha, ativo, cod_perfil) 
-                VALUES ( :nome, :email, :senha, :ativo, :id_perfil)";
+            $sql = "INSERT INTO usuario (id_perfil,nome, sobrenome, email, login, senha) 
+                VALUES (:id_perfil, :nome,:sobrenome, :email,:login, :senha )";
 
             $p_sql = Conexao::getInstance()->prepare($sql);
 
 
+            $p_sql->bindValue(":id_perfil", $usuario->getId_perfil());
             $p_sql->bindValue(":nome", $usuario->getNome());
             $p_sql->bindValue(":sobrenome", $usuario->getSobrenome());
             $p_sql->bindValue(":email", $usuario->getEmail());
+            $p_sql->bindValue(":login", $usuario->getLogin());
             $p_sql->bindValue(":senha", $usuario->getSenha());
-            $p_sql->bindValue(":ativo", $usuario->getAtivo());
-            $p_sql->bindValue(":id_perfil", $usuario->getId_perfil());
 
 
             return $p_sql->execute();
+       
         } catch (Exception $e) {
-            print "Ocorreu um erro ao tentar executar esta ação, foi gerado um LOG do mesmo, tente novamente mais tarde.";
-            GeraLog::getInstance()->inserirLog("Erro: Código: " .
-                    $e->getCode() . " Mensagem: " . $e->getMessage());
+            
+            echo "erro ao  $e";
         }
     }
 
@@ -93,12 +79,7 @@ class UsuarioDAO {
             $p_sql->execute();
             return $this->populaUsuario($p_sql->fetch(PDO::FETCH_ASSOC));
       
-        } catch (Exception $e) {
-            print "Ocorreu um erro ao tentar executar esta ação, foi gerado
- um LOG do mesmo, tente novamente mais tarde.";
-            GeraLog::getInstance()->inserirLog("Erro: Código: " . $e->
-                            getCode() . " Mensagem: " . $e->getMessage());
-        }
+        } catch (Exception $e) {}
     }
 
     private function populaUsuario($row) {
@@ -112,7 +93,7 @@ class UsuarioDAO {
         $usuario->setAtivo($row['ativo']);
         $usuario->setDataCadastro($row['dataCadastro']);
         
-        $usuario->setPerfil(ControllerPerfil::getInstance()->buscarPorCOD($row['cod_perfil']));
+        $usuario->setPerfil(Perfil_Controller::getInstance()->buscarPorCOD($row['cod_perfil']));
         
         return $usuario;
     }
