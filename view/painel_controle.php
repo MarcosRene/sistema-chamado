@@ -5,11 +5,11 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link href="assets/Sass/node_modules/bootstrap/compiler/bootstrap.css" rel="stylesheet">
-        <link href="assets/font-awesome/css/font-awesome.min.css" real="stylesheet">
+        <link href="../assets/Sass/node_modules/bootstrap/compiler/bootstrap.css" rel="stylesheet">
+        <link href="../assets/font-awesome/css/font-awesome.min.css" real="stylesheet">
         <link href="assets/font-awesome/font-awesome-4.7.0/css/font-awesome.min.css" real="stylesheet">
         <title>SB Admin - Tables</title>
-        <link href="assets/_css/sb-admin.css" rel="stylesheet">
+        <link href="../assets/_css/sb-admin.css" rel="stylesheet">
         
   </head>
 
@@ -154,77 +154,6 @@
                       <td>Accountant</td>
                       <td>Tokyo</td>
                       <td>33</td>
-                     
-                    </tr>
-                    <tr>
-                      <td>Sonya Frost</td>
-                      <td>Software Engineer</td>
-                      <td>Edinburgh</td>
-                      <td>23</td>
-                      
-                    </tr>
-                    <tr>
-                      <td>Jena Gaines</td>
-                      <td>Office Manager</td>
-                      <td>London</td>
-                      <td>30</td>
-                      
-                    </tr>
-                    <tr>
-                      <td>Quinn Flynn</td>
-                      <td>Support Lead</td>
-                      <td>Edinburgh</td>
-                      <td>22</td>
-                     
-                    </tr>
-                    <tr>
-                      <td>Paul Byrd</td>
-                      <td>Chief Financial Officer (CFO)</td>
-                      <td>New York</td>
-                      <td>64</td>
-                    
-                    </tr>
-                    <tr>
-                      <td>Gloria Little</td>
-                      <td>Systems Administrator</td>
-                      <td>New York</td>
-                      <td>59</td>
-                     
-                    </tr>
-                    <tr>
-                      <td>Bradley Greer</td>
-                      <td>Software Engineer</td>
-                      <td>London</td>
-                      <td>41</td>
-                      
-                    </tr>
-                    <tr>
-                      <td>Dai Rios</td>
-                      <td>Personnel Lead</td>
-                      <td>Edinburgh</td>
-                      <td>35</td>
-                      
-                    </tr>
-                    <tr>
-                      <td>Jenette Caldwell</td>
-                      <td>Development Lead</td>
-                      <td>New York</td>
-                      <td>30</td>
-                     
-                    </tr>
-                    <tr>
-                      <td>Yuri Berry</td>
-                      <td>Chief Marketing Officer (CMO)</td>
-                      <td>New York</td>
-                      <td>40</td>
-                     
-                    </tr>
-                    <tr>
-                      <td>Caesar Vance</td>
-                      <td>Pre-Sales Support</td>
-                      <td>New York</td>
-                      <td>21</td>
-                      
                     </tr>
                   </tbody>
                 </table>
@@ -249,9 +178,9 @@
     </a>
       
 
-    <script src="assets/Sass/node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="assets/Sass/node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="assets/Sass/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>  
+    <script src="../assets/Sass/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../assets/Sass/node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../assets/Sass/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>  
 
   </body>
 

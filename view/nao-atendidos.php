@@ -5,30 +5,16 @@
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Chamado</title>
-
-        <link href="assets/assets/Sass/node_modules/bootstrap/compiler/bootstrap.css" rel="stylesheet">
-        <link href="assets/font-awesome/css/font-awesome.min.css" real="stylesheet">
-        <link href="assets/_css/estilo.css" rel="stylesheet">
+        <link href="../assets/Sass/node_modules/bootstrap/compiler/bootstrap.css" rel="stylesheet">
+        <link href="../assets/font-awesome/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="../assets/_css/estilo.css" rel="stylesheet">
 
     </head>
 
     <body>
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="principal.html"><img src="assets/img/logo.png" height="35px" width="45px"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                     <ul class="nav navbar-nav ml-auto">
-                        <li><span class="fa fa-user"></span>Usuário: </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
+       
+        <?php include_once('includes/cabecalho.php')?>
 
         <div class="jumbotron">
             <div class="container-fluid">
@@ -120,15 +106,11 @@
             </nav>  
         </div>
 
-        <footer id="footer" class="py-5 bg-dark fixed mt-5">
-            <div class="container-fluid">
-                <p class="m-0 text-center text-white"></p>
-            </div>
-        </footer>
+        <?php include_once('includes/rodape.php')?>
 
-        <script src="assets/node_modules/jquery/dist/jquery.min.js"></script>
-        <script src="assets/Sass/node_modules/popper.js/dist/umd/popper.min.js"></script>
-        <script src="assets/Sass/node_modules/bootstrap/dist/js/bootstrap.min.js"></script> 
+        <script src="../assets/node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="../assets/Sass/node_modules/popper.js/dist/umd/popper.min.js"></script>
+        <script src="../assets/Sass/node_modules/bootstrap/dist/js/bootstrap.min.js"></script> 
 
     </body>
 
