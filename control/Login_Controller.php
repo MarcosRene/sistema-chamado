@@ -16,7 +16,7 @@ class Login_Controller {
             
         } else {
             $_SESSION['msg_erro'] = "Login ou Senha inválidos";
-            require_once 'view/login.php';
+            require_once 'view/geral/login.php';
         }
     }
 
