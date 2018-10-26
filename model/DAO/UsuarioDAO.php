@@ -18,7 +18,7 @@ class UsuarioDAO {
 
             $row = $stmt->fetch(PDO::FETCH_OBJ);
 
-            if ($senha == $row->senha) {
+            if (crypt($senha, $row->senha) == $row->senha) {
                 $_SESSION['usuario_logado']['nv_acesso'] = "cliente";
                 $_SESSION['usuario_logado']['dados'] = $row;
                 return true;
@@ -45,21 +45,6 @@ class UsuarioDAO {
         }
 
         return $users;
-    }
-
-    function cadastrar_Usuario($nome, $sobrenome, $email, $login, $senha) {
-        $conn = Conexao::getInstance();
-        $stmt = $conn->prepare("INSERT INTO usuario(nome,sobrenome, email, login, senha) VALUES(?, ?, ?, ?)");
-        $stmt->bindParam(1, $nome);
-        $stmt->bindParam(2, $sobrenome);
-        $stmt->bindParam(3, $email);
-        $stmt->bindParam(4, $login);
-        $stmt->bindParam(5, $senha);
-
-        if ($stmt->execute())
-            return true;
-        else
-            return false;
     }
 
     public static function Inserir(Usuario $usuario) {

@@ -2,8 +2,6 @@
 
 include_once 'model/DAO/UsuarioDAO.php';
 include_once 'model/Usuario.php';
-
-
 class Usuario_controller {
 
    public static function cadastrarUsuario() {
@@ -14,8 +12,12 @@ class Usuario_controller {
         $usuario->setSobrenome(filter_input(INPUT_POST, 'sobrenome'));
         $usuario->setEmail(filter_input(INPUT_POST, 'email'));
         $usuario->setLogin(filter_input(INPUT_POST, 'login'));
-        $usuario->setSenha(filter_input(INPUT_POST, 'nome'));
-      //  if(filter_input(INPUT_POST, 'lista')->)
+        $senha = filter_input(INPUT_POST, 'senha');
+        $senha = crypt($senha, 'wfweferfdfsd3554#@@!!@vyguygufsdfsdfsdf');
+        $usuario->setSenha($senha);
+         
+
+//  if(filter_input(INPUT_POST, 'lista')->)
         $usuario->setId_perfil(3);
      
       //  var_dump($usuario);
