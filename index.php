@@ -12,12 +12,7 @@ require_once 'autoload.php';
 
     <body>
 
-        <?php
-        
-        require_once 'view/geral/login.php';
-   
- 
-        ?>
+        <?php require_once 'view/geral/login.php'; ?>
      
     </body>
 </html>
