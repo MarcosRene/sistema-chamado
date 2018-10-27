@@ -13,7 +13,7 @@
 
   <body id="page-top">
 
-    <?php include_once('includes/cabecalho_admin.php')?>
+    <?php require_once('includes/cabecalho_admin.php')?>
     
       
     <div id="wrapper">
@@ -41,49 +41,17 @@
       </ul>
 
 
-<div id="content-wrapper">
 
-        <div class="container-fluid"> 
-            
-            <div class="card mb-3">
-            <div class="card-header">
-              <i class="fa fa-table"></i>
-              Chamados</div>
-            <div class="card-body">
-              <div class="table-responsive">
-                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                  <thead>
-                    <tr>
-                      <th>Código</th>
-                      <th>Descrição</th>
-                      <th>Aberto a</th>
-                      <th>Status</th>
-    
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Tiger Nixon</td>
-                      <td>System Architect</td>
-                      <td>Edinburgh</td>
-                      <td>San Francisco</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            </div>
-
-        </div>
         
-        <footer class="sticky-footer">
-          <div class="container my-auto">
-          </div>
-        </footer>
-
+        <?php
+        
+        require_once('includes/tabela_chamados_atender.php');
+        
+        require_once('includes/rodape_admin.php');
+        
+        ?>
+    
       </div>
-
-    </div>
       
     
     <script src="../assets/Sass/node_modules/jquery/dist/jquery.min.js"></script>

@@ -14,7 +14,7 @@
 
     <body>
        
-        <?php include_once('includes/cabecalho.php')?>
+        <?php require_once('includes/cabecalho.php')?>
 
         <div class="jumbotron">
             <div class="container-fluid">
@@ -106,7 +106,7 @@
             </nav>  
         </div>
 
-        <?php include_once('includes/rodape.php')?>
+        <?php require_once('includes/rodape.php')?>
 
         <script src="../assets/node_modules/jquery/dist/jquery.min.js"></script>
         <script src="../assets/Sass/node_modules/popper.js/dist/umd/popper.min.js"></script>

@@ -9,10 +9,10 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>chamado</title>
 
-        <link href="../assets/Sass/node_modules/bootstrap/compiler/bootstrap.css" rel="stylesheet">
-        <link href="../assets/font-awesome/css/font-awesome.min.css" real="stylesheet">
-        <link href="../assets/_css/estilo.css" rel="stylesheet">
-        <link href="../assets/_css/estilo-form.css" rel="stylesheet">
+        <link href="../../assets/Sass/node_modules/bootstrap/compiler/bootstrap.css" rel="stylesheet">
+        <link href="../../assets/font-awesome/css/font-awesome.min.css" real="stylesheet">
+        <link href="../../assets/_css/estilo.css" rel="stylesheet">
+        <link href="../../assets/_css/estilo-form.css" rel="stylesheet">
 
     </head>
 
@@ -23,7 +23,8 @@
             <div class="form-signin">
                 <h1 class="h4 mb-3 font-weight-normal">Login</h1>
 
-
+                <?php require_once('../includes/alerta_erro.php')?>
+                
                 <form method="POST" action="routes.php">
 
                     <div class="grid-item mb-2">
