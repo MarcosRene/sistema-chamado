@@ -1,4 +1,13 @@
+<<<<<<< HEAD:view/telaCliente.php
 
+=======
+<?php
+include_once 'acesso.php';
+
+$permissoes = ['cliente'];
+verificarAcesso($permissoes);
+?>
+>>>>>>> 97038e65c1b5e5bfbf8a0c03c42e04b82ead2ac5:view/admin/telaCliente.php
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -19,10 +28,6 @@
         <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
             <a class="navbar-brand mr-1" href="index.html">Gerenciamento</a>
-
-            <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
-                <i class="fa fa-bars"></i>
-            </button>
 
             <ul class="navbar-nav ml-auto ml-md-12">
                 <li class="nav-item dropdown no-arrow">
