@@ -1,3 +1,7 @@
+<?php
+require_once 'autoload.php';
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>

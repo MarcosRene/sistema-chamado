@@ -1,10 +1,8 @@
 <?php
-
 include_once 'acesso.php';
 
 $permissoes = ['cliente'];
 verificarAcesso($permissoes);
-
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -26,10 +24,6 @@ verificarAcesso($permissoes);
         <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
             <a class="navbar-brand mr-1" href="index.html">Gerenciamento</a>
-
-            <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
-                <i class="fa fa-bars"></i>
-            </button>
 
             <ul class="navbar-nav ml-auto ml-md-12">
                 <li class="nav-item dropdown no-arrow">
