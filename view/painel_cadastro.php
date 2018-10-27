@@ -9,7 +9,7 @@
         <link href="../assets/font-awesome/css/font-awesome.min.css" real="stylesheet">
         <link href="assets/font-awesome/font-awesome-4.7.0/css/font-awesome.min.css" real="stylesheet">
         <title>SB Admin - Tables</title>
-        <link href="../assets/_css/sb-admin.css" rel="stylesheet">
+        <link href="../assets/_css/sb-admin.css" rel="stylesheet">  
         
   </head>
 
@@ -18,8 +18,7 @@
     <?php 
       
       require_once('includes/cabecalho_admin.php');
-      
-      require_once('includes/tabela_chamados_controle.php');
+      require_once('includes/cadastro_usuario.php')
       
     ?>
 

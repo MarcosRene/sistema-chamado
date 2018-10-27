@@ -356,12 +356,3 @@ body.sidebar-toggled footer.sticky-footer {
     width: calc(100% - 90px);
   }
 }
-
-#status{
-    color: #FF0000 !important; 
-}
-
-#status1 {
-    color: #FF8000 !important;
-}
-

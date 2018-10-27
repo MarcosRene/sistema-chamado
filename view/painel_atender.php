@@ -13,35 +13,6 @@
 
   <body id="page-top">
 
-    <?php require_once('includes/cabecalho_admin.php')?>
-    
-      
-    <div id="wrapper">
-      <ul class="sidebar navbar-nav">
-         <li class="nav-item">
-            <a class="nav-link" href="adm.html">
-            <i class="fa fa-fw fa-dashboard"></i>
-                <span>Dashboard</span></a>
-        </li>  
-        <li class="nav-item">
-            <a class="nav-link" href="index.html">
-            <i class="fa fa-fw fa-clock-o"></i>
-                <span>Atender</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="fa fa-fw fa-bar-chart"></i>
-            <span>Relatório</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-            <i class="fa fa-fw fa-user"></i>
-            <span>Usuários</span></a>
-        </li>
-      </ul>
-
-
-
         
         <?php
         
@@ -49,9 +20,11 @@
         
         require_once('includes/rodape_admin.php');
         
+        require_once('includes/cabecalho_admin.php')
+      
         ?>
     
-      </div>
+
       
     
     <script src="../assets/Sass/node_modules/jquery/dist/jquery.min.js"></script>

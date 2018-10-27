@@ -1,3 +1,29 @@
+
+
+  <div id="wrapper">
+      <ul class="sidebar navbar-nav">
+         <li class="nav-item">
+            <a class="nav-link" href="adm.html">
+            <i class="fa fa-fw fa-dashboard"></i>
+                <span>Dashboard</span></a>
+        </li>  
+        <li class="nav-item">
+            <a class="nav-link" href="index.html">
+            <i class="fa fa-fw fa-clock-o"></i>
+                <span>Atender</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fa fa-fw fa-bar-chart"></i>
+            <span>Relatório</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <i class="fa fa-fw fa-user"></i>
+            <span>Usuários</span></a>
+        </li>
+      </ul>
+
 <div id="content-wrapper">
     <div class="container-fluid"> 
         <div class="card mb-3">
@@ -29,4 +55,5 @@
             </div>
         </div>
     </div>
+</div>
 </div>
