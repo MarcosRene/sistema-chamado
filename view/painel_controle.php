@@ -13,7 +13,7 @@
         
   </head>
 
-  <body id="page-top">
+  <body>
 
     <?php 
       
