@@ -7,15 +7,17 @@ require_once "model/DAO/PerfilDAO.php";
 class PerfilDAO {
 
     public static $instance;
+  
 
     private function __construct() {
-        //
+ 
     }
 
     public static function getInstance() {
         
         if (!isset(self::$instance))
             self::$instance = new PerfilDAO();
+        
 
         return self::$instance;
     }
@@ -54,6 +56,23 @@ class PerfilDAO {
         } catch (Exception $e) {}
     }
 
+    public function lista(){
+        $sql = "SELECT * FROM perfil";
+        $qry = Conexao::getInstance()->prepare($sql);
+        $lista  = $qry->fetchALL (\PDO::FETCH_OBJ);
+    
+        $listaPerfil = new ArrayObject();
+       
+        foreach ($lista as $perfil){
+            $perf = new Perfil();    
+            $perf->setId_perfil(perfil["id_perfil"]);
+            $perf->setDescricao($perfil["descricao"]);
+           
+            $listaPerfil[] = $perf;          
+        }
+        return $listaPerfil;
+    }
+   
     public function buscarPorCOD($cod) {
         try {
             
@@ -62,7 +81,7 @@ class PerfilDAO {
             $p_sql->bindValue(":id_perfil", $cod);
             $p_sql->execute();
          
-            return $this->populaUsuario($p_sql->fetch(PDO::FETCH_ASSOC));
+            return $this->populaPerfil($p_sql->fetch(PDO::FETCH_ASSOC));
         
             
         } catch (Exception $e) {}
@@ -74,8 +93,6 @@ class PerfilDAO {
         $perfil->setId_perfil($row['id_usuario']);
         $perfil->setDescricao($row['descricao']);
   
-        $perfil->setPerfil(Perfil_Controller::getInstance()->buscarPorCOD($row['id_perfil']));
-        
         return $perfil;
     }
 

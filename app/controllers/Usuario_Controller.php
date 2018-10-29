@@ -1,9 +1,19 @@
 <?php
 
-include_once 'model/DAO/UsuarioDAO.php';
-include_once 'model/Usuario.php';
-class Usuario_controller {
+namespace app\controllers;
+use app\core\Controller;
+use app\models\UsuarioDAO;
 
+
+class Usuario_controller extends Controller{
+
+    
+    public function index(){
+    
+        
+        
+    }
+    
    public static function cadastrarUsuario() {
        
         $usuario = new Usuario();
