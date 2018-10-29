@@ -1,7 +1,6 @@
 <?php
 
-require_once 'config.php';
-
+require_once "config/config.php";
 
 class Conexao {
 
@@ -12,7 +11,7 @@ class Conexao {
         if (!isset(self::$instance)) {
 
             try {
-                self::$instance = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME, DB_USER, DB_PASS);
+                self::$instance = new PDO('mysql:host=' . SERVIDOR . ';dbname=' . BANCO, USUARIO, SENHA);
                 self::$instance->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 self::$instance->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
            

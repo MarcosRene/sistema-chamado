@@ -1,24 +1,21 @@
 <?php
 
-require_once "conexao/Conexao.php";
-require_once "conexao/config.php";
-require_once "model/DAO/PerfilDAO.php";
+namespace app\models;
 
-class PerfilDAO {
+use app\core\Model;
+use app\classes\Perfil;
+
+class PerfilDAO extends Model {
 
     public static $instance;
-  
 
     private function __construct() {
- 
+        parent::__construct();
     }
 
     public static function getInstance() {
-        
         if (!isset(self::$instance))
             self::$instance = new PerfilDAO();
-        
-
         return self::$instance;
     }
 
@@ -26,12 +23,11 @@ class PerfilDAO {
         try {
             $sql = "INSERT INTO usuario (decricao) VALUES ( :descricao )";
 
-            $p_sql = Conexao::getInstance()->prepare($sql);
+            $p_sql = getDb()->prepare($sql);
             $p_sql->bindValue(":descricao", $perfil->getDescricao());
             return $p_sql->execute();
-           
         } catch (Exception $e) {
-
+            
         }
     }
 
@@ -43,7 +39,9 @@ class PerfilDAO {
             $p_sql->bindValue(":id_perfil", $perfil->getId_perfil());
 
             return $p_sql->execute();
-        } catch (Exception $e) {}
+        } catch (Exception $e) {
+            
+        }
     }
 
     public function Deletar($cod) {
@@ -53,47 +51,43 @@ class PerfilDAO {
             $p_sql->bindValue(":id_perfil", $cod);
 
             return $p_sql->execute();
-        } catch (Exception $e) {}
+        } catch (Exception $e) {
+            
+        }
     }
 
-    public function lista(){
+    public function lista() {
         $sql = "SELECT * FROM perfil";
         $qry = Conexao::getInstance()->prepare($sql);
-        $lista  = $qry->fetchALL (\PDO::FETCH_OBJ);
-    
+        $lista = $qry->fetchALL(\PDO::FETCH_OBJ);
+
         $listaPerfil = new ArrayObject();
-       
-        foreach ($lista as $perfil){
-            $perf = new Perfil();    
+
+        foreach ($lista as $perfil) {
+            $perf = new Perfil();
             $perf->setId_perfil(perfil["id_perfil"]);
             $perf->setDescricao($perfil["descricao"]);
-           
-            $listaPerfil[] = $perf;          
+
+            $listaPerfil[] = $perf;
         }
         return $listaPerfil;
     }
-   
-    public function buscarPorCOD($cod) {
-        try {
-            
-            $sql = "SELECT * FROM perfil WHERE id_perfil = :id_perfil";
-            $p_sql = Conexao::getInstance()->prepare($sql);
-            $p_sql->bindValue(":id_perfil", $cod);
-            $p_sql->execute();
-         
-            return $this->populaPerfil($p_sql->fetch(PDO::FETCH_ASSOC));
-        
-            
-        } catch (Exception $e) {}
-    }
 
-    private function populaPerfil($row) {
-        
+    public function buscarPorCOD($cod) {
+
+        $resultado = array();
         $perfil = new Perfil();
-        $perfil->setId_perfil($row['id_usuario']);
-        $perfil->setDescricao($row['descricao']);
-  
-        return $perfil;
+
+        $sql = "SELECT * FROM perfil WHERE id_perfil = :id_perfil";
+        $p_sql = parent::getDb()->prepare($sql);
+        $p_sql->bindValue(":id_perfil", $cod);
+        $p_sql->execute();
+
+        if ($p_sql->rowCount() > 0) {
+
+            $resultado = $p_sql->fetch(\PDO::FETCH_OBJ);
+        }
+        return $resultado;
     }
 
 }
