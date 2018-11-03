@@ -33,7 +33,7 @@
 
                 <select id="id_perfil" name="id_perfil" class="form-control form-control-md">
                     <?php foreach ($viewData["perfil"] as $perfil) { ?>
-                        <option><?php echo $perfil->descricao ?></option>
+                        <option><?php echo $perfil->id_perfil . " ".$perfil->descricao ?></option>
                     <?php } ?>	
                 </select> 
 

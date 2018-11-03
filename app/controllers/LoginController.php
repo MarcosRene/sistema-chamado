@@ -8,19 +8,24 @@ use app\models\UsuarioModel;
 class LoginController extends Controller {
 
     public function index() {
-        
+
         $dados["view"] = "Login";
         $this->load("login", $dados);
-       
+    }
+
+    public function sair() {
+        session_destroy();
+        $dados["view"] = "Login";
+        $this->load("login", $dados);
     }
 
     static function verificarLogin() {
-        
-        $login = filter_input(INPUT_POST, 'login');
+
+        $login = filter_input(INPUT_POST, 'login');  
         $senha = filter_input(INPUT_POST, 'senha');
 
         $use = new UsuarioModel();
-        
+
         if ($use->verificarlogin($login, $senha)) {
             header("location:" . URL_BASE . "usuario/index");
         } else {

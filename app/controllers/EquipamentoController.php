@@ -5,6 +5,8 @@ namespace app\controllers;
 use app\core\Controller;
 use app\models\EquipamentoModel;
 require_once 'config/acesso.php';
+
+
 $permissoes = ['admin'];
 verificarAcesso($permissoes);
 
