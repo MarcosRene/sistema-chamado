@@ -2,22 +2,22 @@
 
 namespace app\core;
 
-require_once 'conexao/Conexao.php';
+use app\core\Conexao;
 
-abstract class Model{
-   
+abstract class Model {
+
     private $db;
-    
+
     public function __construct() {
-        $this->setDb(\Conexao::getInstance());
+        $this->db = new \PDO("mysql:dbname=".BANCO.";host=".SERVIDOR,USUARIO,SENHA);
     }
-    
-    public function getDb() {
+
+    function getDb() {
         return $this->db;
     }
 
     private function setDb($db) {
         $this->db = $db;
     }
-}
 
+}

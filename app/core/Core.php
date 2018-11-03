@@ -1,5 +1,7 @@
 <?php
 
+
+session_start();
 class Core{
     private $controller;
     private $metodo;
@@ -10,8 +12,7 @@ class Core{
     }
     
     public function run(){
-        $controllerCorrente = $this->getController();        
-        
+       $controllerCorrente = $this->getController();         
        $c = new $controllerCorrente;
        call_user_func_array(array($c, $this->getMetodo()), $this->getParametros());      
         

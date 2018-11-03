@@ -1,5 +1,7 @@
 <?php
 
+namespace app\classes;
+
 class Usuario {
     
     private $id_usuario;

@@ -1,30 +1,24 @@
 <?php
 
+namespace app\classes;
+
 class Equipamento {
-    
+
     private $id_equipamento;
-    private $nome;
-    private $tipo;
+    private $tombamento;
+    private $descricao;
     private $marca;
-    
-    function __construct($id_equipamento, $nome, $tipo, $marca) {
-       
-        $this->id_equipamento = $id_equipamento;
-        $this->nome = $nome;
-        $this->tipo = $tipo;
-        $this->marca = $marca;
-    }
     
     function getId_equipamento() {
         return $this->id_equipamento;
     }
 
-    function getNome() {
-        return $this->nome;
+    function getTombamento() {
+        return $this->tombamento;
     }
 
-    function getTipo() {
-        return $this->tipo;
+    function getDescricao() {
+        return $this->descricao;
     }
 
     function getMarca() {
@@ -35,12 +29,12 @@ class Equipamento {
         $this->id_equipamento = $id_equipamento;
     }
 
-    function setNome($nome) {
-        $this->nome = $nome;
+    function setTombamento($tombamento) {
+        $this->tombamento = $tombamento;
     }
 
-    function setTipo($tipo) {
-        $this->tipo = $tipo;
+    function setDescricao($descricao) {
+        $this->descricao = $descricao;
     }
 
     function setMarca($marca) {

@@ -2,10 +2,10 @@
 
 function verificarAcesso($permissoes) {
 
-    if (!isset($_SESSION['usuario_logado']))
-        require_once 'view/login.php';
-
-    if (!in_array($_SESSION['usuario_logado']['nv_acesso'], $permissoes))
-        require_once 'view/login.php';
-    
+    if (!isset($_SESSION['logado'])) {
+        header("location:" . URL_BASE . "login");
+    }
+    if (!in_array($_SESSION['logado']['nv_acesso'], $permissoes)) {
+        header("location:" . URL_BASE . "login");
+    }
 }

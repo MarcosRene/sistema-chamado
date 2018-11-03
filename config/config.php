@@ -6,7 +6,7 @@ define("USUARIO", "root");
 define("SENHA", "");
 
 
-define('CONTROLLER_PADRAO', 'index');
+define('CONTROLLER_PADRAO', 'login');
 define('METODO_PADRAO', 'index');
 define('NAMESPACE_CONTROLLER', 'app\\controllers\\');
 
