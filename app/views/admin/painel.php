@@ -27,9 +27,11 @@
             </div>
         </div>
         
-        <script src=" <?php echo URL_BASE . "assets/vendor/jquery/jquery.min.js"?>"></script>
+        <script src=" <?php echo URL_BASE . "assets/Sass/node_modules/jquery/dist/jquery.min.js"?>"></script>
         <script src=" <?php echo URL_BASE . "assets/Sass/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"?>"></script>
+        <script src=" <?php echo URL_BASE . "assets/vendor/jquery-easing/jquery.easing.min.js"?>"></script>
         <script src=" <?php echo URL_BASE . "assets/_js/sb-admin.min.js" ?>"</script>
+        <script src=" <?php echo URL_BASE . "assets/Sass/node_modeules/popper/dist/popper.min.js" ?>"</script>
          
     </body>
 </html>

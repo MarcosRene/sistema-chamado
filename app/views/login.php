@@ -6,9 +6,8 @@ session_destroy();
     <head>
         <meta charset="utf-8">
    
-        <link href="assets/css/Sass/node_modules/bootstrap/compiler/bootstrap.css" rel="stylesheet">
-        <link href="assets/font-awesome/css/font-awesome.min.css" real="stylesheet">
-        <link href="<?php echo URL_BASE . "assets/css/estilo-form.css" ?>" rel="stylesheet">
+        <link href=" <?php echo URL_BASE . "assets/Sass/node_modules/bootstrap/compiler/bootstrap.css" ?>" rel="stylesheet">
+        <link href=" <?php echo URL_BASE . "assets/_css/estilo-form.css" ?>" rel="stylesheet">
 
     </head>
 
