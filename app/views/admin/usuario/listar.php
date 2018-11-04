@@ -23,10 +23,10 @@
 
 
                                 <td align="center">
-                                    <a href="<?php echo URL_BASE . "cliente/edite/" . $equipamento->id_cliente ?>"  class="btn">Editar</a>
+                                    <a href="<?php echo URL_BASE . "cliente/edite/" . $equipamento->id_cliente ?>"  class="btn btn-primary">Editar</a>
                                 </td>
                                 <td align="center">
-                                    <a href="<?php echo URL_BASE . "cliente/delete/" . $equipamento->id_cliente ?>" class="btn excluir">excluir</a>
+                                    <a href="<?php echo URL_BASE . "cliente/delete/" . $equipamento->id_cliente ?>" class="btn btn-danger">Excluir</a>
                                 </td>
                             </tr>	
                         <?php } ?>		
