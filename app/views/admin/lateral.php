@@ -1,12 +1,12 @@
 <ul class="sidebar navbar-nav">
     <li class="nav-item active">
-        <a class="nav-link" href="">
+        <a class="nav-link" href="<?php echo URL_BASE . "usuario/home" ?>">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span>
         </a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="">
+        <a class="nav-link" href="<?php echo URL_BASE . "cliente/salvar" ?>">
             <i class="fas fa-fw fa-bullhorn"></i>
             <span>Atender</span></a>
     </li>
@@ -16,8 +16,8 @@
             <span>Usuário</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-            <a class="dropdown-item" href="">Listar</a>
-            <a class="dropdown-item" href="#">Cadastrar</a>
+            <a class="dropdown-item" href="<?php echo URL_BASE . "usuario/mostrarusuarios" ?>">Listar</a>
+            <a class="dropdown-item" href="<?php echo URL_BASE . "usuario/novo" ?>">Cadastrar</a>
         </div>
     </li>
     <li class="nav-item">
