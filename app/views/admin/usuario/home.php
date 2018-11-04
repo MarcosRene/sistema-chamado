@@ -1,24 +1,49 @@
-<div class="base-home">
-    <h1 class="titulo"><span class="cor">SEJA</span> BEM VINDO</h1>
-    <div class="base-colunas">	
-        <a href="<?php echo URL_BASE . "cliente/novo"?> " class="col">
-            <i class="icone ico1"></i>
-            <span><b>NOVO</b> CADASTRO</span>
-        </a>	
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="#">Dashboard</a>
+    </li>
+    <li class="breadcrumb-item active">Overview</li>
+</ol>
 
-        <a href="<?php echo URL_BASE . "cliente"?> "class="col">
-            <i class="icone ico2"></i>
-            <span><b>lista de</b> contatos</span>
-        </a>
+<div class="row">
+    <div class="col-xl-3 col-sm-6 mb-3">
+        <div class="card text-white bg-danger o-hidden h-100">
+            <div class="card-body">
+                <div class="mr-5">Não atendidos</div>
+            </div>
+            <a class="card-footer text-white p-3">
 
-        <a href="<?php echo URL_BASE . "cliente"?> " class="col">
-            <i class="icone ico3"></i>
-            <span><b>Editar</b> contatos</span>
-        </a>
+            </a>
+        </div>
+    </div>
+    <div class="col-xl-3 col-sm-6 mb-3">
+        <div class="card text-white bg-success o-hidden h-100">
+            <div class="card-body">
+                <div class="mr-5">Atendidos</div>
+            </div>
+            <a class="card-footer text-white p-3">
 
-        <a href="<?php echo URL_BASE . "cliente"?> " class="col">
-            <i class="icone ico4"></i>
-            <span><b>Excluir</b> contatos</span>
-        </a>
-    </div>	
-</div>	
+            </a>
+        </div>
+    </div>
+    <div class="col-xl-3 col-sm-6 mb-3">
+        <div class="card text-white bg-warning o-hidden h-100">
+            <div class="card-body"> 
+                <div class="mr-5">Aguardando terceiros</div>
+            </div>
+            <a class="card-footer text-white p-3">
+
+            </a>
+        </div>
+    </div>
+    <div class="col-xl-3 col-sm-6 mb-3">
+        <div class="card text-white bg-dark o-hidden h-100">
+            <div class="card-body">
+                <div class="mr-5">Encerrados</div>
+            </div>
+            <a class="card-footer text-white p-3">
+
+            </a>
+        </div>
+    </div>
+</div>

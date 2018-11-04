@@ -1,39 +1,39 @@
-<ul  class="sidebar navbar-nav">
+<ul class="sidebar navbar-nav">
+    <li class="nav-item active">
+        <a class="nav-link" href="">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Dashboard</span>
+        </a>
+    </li>
     <li class="nav-item">
-        <a class="nav-link" href="<?php echo URL_BASE . "usuario/index"  ?>">
-            <i class="fa fa-fw fa-dashboard"></i>
-            <span>Dashboard</span></a>
-    </li>  
-    <li class="nav-item">
-        <a class="nav-link" href="index.html">
-            <i class="fa fa-fw fa-clock-o"></i>
+        <a class="nav-link" href="">
+            <i class="fas fa-fw fa-bullhorn"></i>
             <span>Atender</span></a>
     </li>
-   
-   <li class="nav-item">
-        <a class="nav-link" href="<?php echo URL_BASE . "usuario/mostrarusuarios"  ?>">
-           <i class="fa fa-fw fa-user-o"></i>
-            <span>Cadastrar Usuário</span></a>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-fw fa-user"></i>
+            <span>Usuário</span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <a class="dropdown-item" href="">Listar</a>
+            <a class="dropdown-item" href="#">Cadastrar</a>
+        </div>
     </li>
-   <li class="nav-item">
-        <a class="nav-link" href="<?php echo URL_BASE . "usuario/novo"  ?>">
-           <i class="fa fa-fw fa-user"></i>
-            <span>Cadastrar Usuário</span></a>
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Equipamentos</span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <a class="dropdown-item" href="#">Listar</a>
+            <a class="dropdown-item" href="#">Cadastrar</a>
+        </div>
     </li>
-    
-    
-    <li class="nav-item">
-        <a class="nav-link" href="<?php echo URL_BASE . "equipamento/novo"  ?>">
-           <i class="fa fa-fw fa-user"></i>
-            <span>Cadastrar Equipamento</span></a>
-    </li>
-    
-           
-   </li>        
-    
+
     <li class="nav-item">
         <a class="nav-link" href="#">
-            <i class="fa fa-fw fa-bar-chart"></i>
-            <span>Relatório</span></a>
+            <i class="fas fa-fw fa-chart-bar"></i>
+            <span>Relatórios</span></a>
     </li>
-</ul>     
+</ul>
