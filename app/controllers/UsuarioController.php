@@ -82,13 +82,15 @@ class UsuarioController extends Controller {
             header("location:" . URL_BASE . "usuario/mostrarUsuarios");
         }
     }
-
-    public function edite($id_cliente) {
-        $cliente = new ClienteModel();
-        $dados["cliente"] = $cliente->getCliente($id_cliente);
-
-        $dados["view"] = "cliente/Edite";
-        $this->load("template", $dados);
+    
+    public function edite($id_usuario) {
+       
+        $usuario = new UsuarioModel();
+        $dados["usuario"] = $usuario->getUsuario($id_usuario);
+        $dados["view"] = "admin/usuario/editar_usuario";
+        $this->load("painel", $dados);
+    
+        
     }
 
     public function delete($id_cliente, $excluir = null) {

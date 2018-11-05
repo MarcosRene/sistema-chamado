@@ -15,17 +15,19 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($viewData["usuarios"] as $equipamento) { ?>
+                    <?php foreach ($viewData["usuarios"] as $usuario) { ?>
                         <tr class="cor1">
-                            <td><?php echo $equipamento->id_usuario ?></td>
-                            <td><?php echo $equipamento->nome . " " . $equipamento->sobrenome ?></td>
-                            <td><?php echo $equipamento->email ?></td>
-                            <td><?php echo $equipamento->login ?></td>
+                            <td><?php echo $usuario->id_usuario ?></td>
+                            <td><?php echo $usuario->nome . " " . $usuario->sobrenome ?></td>
+                            <td><?php echo $usuario->email ?></td>
+                            <td><?php echo $usuario->login ?></td>
 
-
+  
+                            
                             <td align="center">
-                                <a href="<?php echo URL_BASE . "cliente/edite/" . $equipamento->id_cliente ?>"  class="btn btn-primary mr-3">Editar</a>
-                                <a href="<?php echo URL_BASE . "cliente/delete/" . $equipamento->id_cliente ?>" class="btn btn-danger">Excluir</a>
+    
+                                <a href="<?php echo URL_BASE . "usuario/edite/" . $usuario->id_usuario ?>"  class="btn btn-primary mr-3">Editar</a>
+                                <a href="<?php echo URL_BASE . "cliente/delete/" . $usuario->id_cliente ?>" class="btn btn-danger">Excluir</a>
                             </td>
 
                         </tr>	

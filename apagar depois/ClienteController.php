@@ -53,6 +53,7 @@ class ClienteController extends Controller {
     }
 
     public function edite($id_cliente) {
+        
         $cliente = new ClienteModel();
         $dados["cliente"] = $cliente->getCliente($id_cliente);
 

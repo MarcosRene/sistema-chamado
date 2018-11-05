@@ -74,6 +74,21 @@ class UsuarioModel extends Model {
         return $qry->execute();
     }
 
+    public function getUsuario($id_usuario) {
+
+        $resultado = array();
+        $sql = "SELECT * FROM usuario WHERE id_usuario = :id_usuario";
+        $qry = $this->getDb()->prepare($sql);
+        $qry->bindValue(":id_usuario", $id_usuario);
+        $qry->execute();
+
+        if ($qry->rowCount() > 0) {
+            $resultado = $qry->fetch(\PDO::FETCH_OBJ);
+        }
+        return $resultado;
+    }
+    
+    
     public function BuscarPorCOD($cod) {
         try {
             $sql = "SELECT * FROM usuario WHERE cod_usuario = :cod";
@@ -103,5 +118,29 @@ class UsuarioModel extends Model {
 
         return $usuario;
     }
+    
+    public function editar($id_cliente, $nome, $email, $fone) {
+
+        $sql = "UPDATE cliente SET nome = :nome, email = :email, fone = :fone WHERE id_cliente = :id_cliente";
+
+        $qry = $this->getDb()->prepare($sql);
+        $qry->bindValue(":nome", $nome);
+        $qry->bindValue(":email", $email);
+        $qry->bindValue(":fone", $fone);
+        $qry->bindValue(":id_cliente", $id_cliente);
+        $qry->execute();
+    }
+    
+    
+    public function excluir($id_cliente) {
+
+        $sql = "DELETE FROM cliente WHERE id_cliente = :id_cliente";
+
+        $qry = $this->getDb()->prepare($sql);
+        $qry->bindValue(":id_cliente", $id_cliente);
+        $qry->execute();
+        
+    }
+    
 
 }

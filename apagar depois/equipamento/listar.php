@@ -20,18 +20,18 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($viewData["equipamento"] as $equipamento) { ?>
+                                <?php foreach ($viewData["equipamento"] as $usuario) { ?>
                                     <tr class="cor1">
-                                        <td><?php echo $equipamento->tombamento ?></td>
-                                        <td><?php echo $equipamento->descricao  ?></td>
-                                        <td><?php echo $equipamento->marca ?></td>
+                                        <td><?php echo $usuario->tombamento ?></td>
+                                        <td><?php echo $usuario->descricao  ?></td>
+                                        <td><?php echo $usuario->marca ?></td>
                               
                                         
                                         <td align="center">
-                                            <a href="<?php echo URL_BASE . "equipamento/edite/" . $equipamento->id_equipamento ?>"  class="btn">Editar</a>
+                                            <a href="<?php echo URL_BASE . "equipamento/edite/" . $usuario->id_equipamento ?>"  class="btn">Editar</a>
                                         </td>
                                         <td align="center">
-                                            <a href="<?php echo URL_BASE . "equipamento/delete/" . $equipamento->id_equipamento ?>" class="btn excluir">excluir</a>
+                                            <a href="<?php echo URL_BASE . "equipamento/delete/" . $usuario->id_equipamento ?>" class="btn excluir">excluir</a>
                                         </td>
                                     </tr>	
                                 <?php } ?>							  

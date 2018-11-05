@@ -15,18 +15,18 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($clientes as $equipamento){?>
+                    <?php foreach ($clientes as $usuario){?>
                     <tr class="cor1">
-                         <td><?php echo $equipamento->id_cliente ?></td>
-                        <td><?php echo $equipamento->nome ?></td>
-                        <td><?php echo $equipamento->email ?></td>
-                        <td><?php echo $equipamento->fone ?></td>
-                        <td><?php echo $equipamento->ativo ?></td>
+                         <td><?php echo $usuario->id_cliente ?></td>
+                        <td><?php echo $usuario->nome ?></td>
+                        <td><?php echo $usuario->email ?></td>
+                        <td><?php echo $usuario->fone ?></td>
+                        <td><?php echo $usuario->ativo ?></td>
                         <td align="center">
-                            <a href="<?php echo URL_BASE . "cliente/edite/" . $equipamento->id_cliente  ?>"class="btn">Editar</a>
+                            <a href="<?php echo URL_BASE . "cliente/edite/" . $usuario->id_cliente  ?>"class="btn">Editar</a>
                         </td>
                         <td align="center">
-                            <a href="<?php echo URL_BASE . "cliente/delete/" . $equipamento->id_cliente  ?>" class="btn">excluir</a>
+                            <a href="<?php echo URL_BASE . "cliente/delete/" . $usuario->id_cliente  ?>" class="btn">excluir</a>
                         </td>
                     </tr>	
                    <?php } ?>							  
