@@ -5,13 +5,6 @@
 
         <div class="col-sm-12 col-md-10 col-lg-8">
 
-            <div id="alerta" class="alert alert-danger pb-0" role="alert">
-                <ul class="pr-5">
-                    <li><?php echo $_SESSION["msg_erro"] ?></li>    
-                </ul>
-            </div>
-
-
             <form action="<?php echo URL_BASE . "usuario/salvar" ?>" method="POST"> 
 
                 <div  class="form-row">
