@@ -12,7 +12,7 @@ class UsuarioController extends Controller {
     public function index() {
         
         $dados["view"] = "admin/usuario/home";
-        $this->load("admin/painel", $dados);
+        $this->load("painel", $dados);
     
     }
 
@@ -21,7 +21,7 @@ class UsuarioController extends Controller {
         $perfil = new PerfilModel();
         $dados["perfil"] = $perfil->lista();
         $dados["view"] = "admin/usuario/cadastro_usuario";
-        $this->load("admin/painel", $dados);
+        $this->load("painel", $dados);
     }
     
     
@@ -33,7 +33,7 @@ class UsuarioController extends Controller {
         
 
         $dados["view"] = "admin/usuario/listar";
-        $this->load("admin/painel", $dados);
+        $this->load("painel", $dados);
     }
     
     public function salvar() {

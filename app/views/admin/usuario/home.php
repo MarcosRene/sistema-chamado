@@ -1,10 +1,3 @@
-<ol class="breadcrumb">
-    <li class="breadcrumb-item">
-        <a href="#">Dashboard</a>
-    </li>
-    <li class="breadcrumb-item active">Overview</li>
-</ol>
-
 <div class="row">
     <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
         <div class="card text-white bg-danger o-hidden h-100">

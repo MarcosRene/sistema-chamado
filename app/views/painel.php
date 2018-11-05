@@ -16,9 +16,9 @@
     </head>
 
     <body>
-        <?php include "cabecalho_admin.php" ?> 
+        <?php include "cabecalho.php" ?> 
         <div id="wrapper">
-            <?php include "lateral.php" ?>  
+            <?php include "admin/lateral.php" ?>  
             <div id="content-wrapper">
                 <div class="container-fluid">
                     <?php $this->load($view, $viewData)?>
