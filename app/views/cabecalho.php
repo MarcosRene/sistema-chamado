@@ -9,7 +9,7 @@
     <ul class="navbar-nav ml-auto ml-md-12">
         <li class="nav-item dropdown no-arrow">
             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <h5 id="alinha" <?php echo $_SESSION['usuario'] ?> </h5>
+                <!--<h5 id="alinha" <?php echo $_SESSION['usuario'] ?> </h5>-->
                 <i  class="fas fa-fw fa-user-circle"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">

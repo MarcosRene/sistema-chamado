@@ -1,9 +1,9 @@
 
-<div class="container">
+<div class="container mt-5">  
 
-    <div class="row justify-content-center mb-5">
+    <div class="row justify-content-center">
 
-        <div class="col-sm-12 col-md-10 col-lg-8">
+        <div class="col-sm-12 col-md-10 col-lg-10">
 
             <form action="<?php echo URL_BASE . "usuario/salvar" ?>" method="POST"> 
 
@@ -30,7 +30,7 @@
 
                         <select id="id_perfil" name="id_perfil" class="form-control form-control-md">
                             <?php foreach ($viewData["perfil"] as $perfil) { ?>
-                                <option><?php echo $perfil->id_perfil . " " . $perfil->descricao ?></option>
+                                <option><?php echo $perfil->descricao ?></option>
                             <?php } ?>	
                         </select> 
 
