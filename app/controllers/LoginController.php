@@ -14,7 +14,7 @@ class LoginController extends Controller {
     }
 
     public function sair() {
-        session_destroy();
+       // session_destroy();
         $dados["view"] = "Login";
         $this->load("login", $dados);
     }

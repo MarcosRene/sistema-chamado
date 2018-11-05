@@ -23,6 +23,7 @@ class UsuarioModel extends Model {
 
             if (crypt($senha, $row->senha) == $row->senha) {
 
+                $_SESSION['usuario'] = $login;
                 $_SESSION['logado']['nv_acesso'] = "admin";
                 $_SESSION['logado']['dados'] = $row;
 
