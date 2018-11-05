@@ -1,4 +1,3 @@
-
 <div class="container mt-5">  
 
     <div class="row justify-content-center">
@@ -26,14 +25,13 @@
 
                     <div class="form-group col-sm-6">
 
-                        <label for="tipo">Tipo</label>
+                        <label for="tipo">Perfil</label>
 
-                        <select id="id_perfil" name="id_perfil" class="form-control form-control-md">
+                        <select id="perfil" name="perfil" class="form-control form-control-md">
                             <?php foreach ($viewData["perfil"] as $perfil) { ?>
                                 <option><?php echo $perfil->descricao ?></option>
                             <?php } ?>	
                         </select> 
-
                     </div>
 
                     <div class="form-group col-sm-6">

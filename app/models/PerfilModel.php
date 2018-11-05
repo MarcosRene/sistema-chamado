@@ -18,14 +18,15 @@ class PerfilModel extends Model {
 
     public function getCodPerfil($descricao) {
 
+        var_dump($descricao);
+        
         $sql = "SELECT * FROM perfil WHERE descricao = :descricao";
         $qry = $this->getDb()->prepare($sql);
-        $qry->bindValue(":descricao", "descricao");
+        $qry->bindValue(":descricao", $descricao);
         $qry->execute();
           
-        $resultado = $qry->fetch(\PDO::FETCH_OBJ);
-
-        return $resultado->id_perfil;
+       $result =  $qry->fetch(\PDO::FETCH_OBJ);
+        return $result->id_perfil;
     }
     
     

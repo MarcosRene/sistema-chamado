@@ -45,7 +45,7 @@ class UsuarioController extends Controller {
         $usuario = new Usuario();
 
         $id_usuario = isset($_POST["id_usuario"]) ? strip_tags(filter_input(INPUT_POST, "id_usuario")) : NULL;
-        $perfil = isset($_POST["id_perfil"]) ? strip_tags(filter_input(INPUT_POST, "id_perfil")) : NULL;
+        $perfil = isset($_POST["perfil"]) ? strip_tags(filter_input(INPUT_POST, "perfil")) : NULL;
         $nome = isset($_POST["nome"]) ? strip_tags(filter_input(INPUT_POST, "nome")) : NULL;
         $sobrenome = isset($_POST["sobrenome"]) ? strip_tags(filter_input(INPUT_POST, "sobrenome")) : NULL;
         $email = isset($_POST["email"]) ? strip_tags(filter_input(INPUT_POST, "email")) : NULL;
@@ -53,15 +53,14 @@ class UsuarioController extends Controller {
         $senha = isset($_POST["senha"]) ? strip_tags(filter_input(INPUT_POST, "senha")) : NULL;
         $senha = crypt($senha, 'wfweferfdfsd3554#@@!!@vyguygufsdfsdfsdf');
 
-        $codPerfil = $p->getCodPerfil($perfil);
-     
+        $id_perfil = $p->getCodPerfil($perfil);
         $usuario->setId_usuario($id_usuario);
         $usuario->setNome($nome);
         $usuario->setSobrenome($sobrenome);
         $usuario->setEmail($email);
         $usuario->setLogin($login);
         $usuario->setSenha($senha);
-        $usuario->setId_perfil(3);   
+        $usuario->setId_perfil($id_perfil);   
        
         
         if ($model->verificarEmail($email)) {  
@@ -80,7 +79,7 @@ class UsuarioController extends Controller {
                  $_SESSION['msg_erro'] = "Salvo com sucesso!";
             }
 
-            header("location:" . URL_BASE . "usuario/novo");
+            header("location:" . URL_BASE . "usuario/mostrarUsuarios");
         }
     }
 

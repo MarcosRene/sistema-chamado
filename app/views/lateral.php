@@ -5,6 +5,18 @@
             <span>Dashboard</span>
         </a>
     </li>
+   
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-fw fa-user"></i>
+            <span>Chamado</span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+            <a class="dropdown-item" href="#">Meus chamados</a>
+            <a class="dropdown-item" href="#">Abrir chamado</a>
+        </div>
+    </li>
+   
     <li class="nav-item">
         <a class="nav-link" href="<?php echo URL_BASE . "cliente/salvar" ?>">
             <i class="fas fa-fw fa-bullhorn"></i>
