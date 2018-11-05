@@ -3,6 +3,10 @@ html {
   min-height: 100%;
 }
 
+#alinha{
+    display: inline-block !important;
+}
+
 body {
   height: 100%;
 }
