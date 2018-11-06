@@ -7,6 +7,14 @@ body {
   height: 100%;
 }
 
+.btn-primary, .btn-danger{
+    width: 40% !important;
+}
+
+.card-footer ul{
+    margin-bottom: 0rem !important;
+}
+
 #wrapper {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -23,14 +23,14 @@
                     </div>
 
                     <div class="form-group col-sm-6">
-
-                        <label for="tipo">Perfil</label>
-
-                        <select id="perfil" name="perfil" class="form-control form-control-md">
-                            <?php foreach ($viewData["perfil"] as $perfil) { ?>
-                                <option><?php echo $perfil->descricao ?></option>
-                            <?php } ?>	
-                        </select> 
+                        <fieldset disabled>
+                            <label for="tipo">Perfil</label>
+                            <select id="perfil" name="perfil" class="form-control form-control-md">
+                                <?php foreach ($viewData["perfil"] as $perfil) { ?>
+                                    <option><?php echo $perfil->descricao ?></option>
+                                <?php } ?>	
+                            </select> 
+                        </fieldset>
                     </div>
 
                     <div class="form-group col-sm-6">
@@ -43,10 +43,12 @@
                         <input type="password" class="form-control" name="senha" placeholder="Senha">
                     </div>
 
-                    <div class="form-group mb-3">
+                    <div class="form-group col-md-3 mb-3">
                          <input type="hidden" name="id_usuario" value="<?php echo $usuario->id_usuario ?>">
-                         <button type="button" class="btn btn-primary mr-4" data-toggle="modal" data-target="#modalEditar">Salvar alterações</button>
-                         <a href="<?php echo URL_BASE . "usuario/mostrarUsuarios" ?>" class="btn btn-danger">Cancelar</a>      
+                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEditar">Salvar</button>
+                         <a href="<?php echo URL_BASE . "usuario/mostrarUsuarios" ?>">
+                             <button class="btn btn-danger">Cancelar</button>
+                         </a>      
                     </div>
                 </div>
             </form>
@@ -69,8 +71,9 @@
                 ...
             </div>
             <div class="modal-footer">
-                <a href="<?php echo URL_BASE . "usuario/salvar"  ?>" class="btn btn-primary mr-4">Salvar alterações</a>
-                <a href="" class="btn btn-danger">Cancelar</a>
+                <a href="<?php echo URL_BASE . "usuario/salvar"  ?>">
+                    <button class="btn btn-primary">Salvar</button>
+                </a>
             </div
         </div>
     </div>
