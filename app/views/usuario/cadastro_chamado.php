@@ -43,6 +43,10 @@
                         <label for="descProblema">Descrição problema</label>
                         <textarea class="form-control" id="descProblema" rows="5"></textarea>
                     </div>
+                    <div class="form-group col-md-3">
+                        <button type="submit" class="btn btn-primary">Cadastrar</button>
+                        <button type="reset" class="btn btn-danger">Cancelar</button>
+                    </div>
                 </div>
             </form>
         </div>
