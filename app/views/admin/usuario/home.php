@@ -40,3 +40,9 @@
         </div>
     </div>
 </div>
+
+<?php
+
+    include "listar_home.php";
+
+?>
