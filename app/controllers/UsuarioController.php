@@ -30,11 +30,17 @@ class UsuarioController extends Controller {
         
         $usuario = new UsuarioModel();
         $dados["usuarios"] = $usuario->lista();
-        
-
+     
         $dados["view"] = "admin/usuario/listar";
         $this->load("painel", $dados);
     }
+    
+    public function confirmarEdicao() {
+        
+        $dados["view"] = "confirmaEdicao";
+        $this->load("painel", $dados);
+    }
+    
     
     public function salvar() {
 

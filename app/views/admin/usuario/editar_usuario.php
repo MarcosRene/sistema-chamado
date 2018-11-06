@@ -45,11 +45,33 @@
 
                     <div class="form-group mb-3">
                          <input type="hidden" name="id_usuario" value="<?php echo $usuario->id_usuario ?>">
-                        <button type="submit" class="btn btn-primary  ml-1" id="cadastrar">Salvar Alterações</button>                    
-                         <a href="<?php echo URL_BASE . "usuario/mostrarUsuarios" ?>" class="btn btn-danger">Cancelar</a>                    
+                         <button type="button" class="btn btn-primary mr-4" data-toggle="modal" data-target="#modalEditar">Salvar alterações</button>
+                         <a href="<?php echo URL_BASE . "usuario/mostrarUsuarios" ?>" class="btn btn-danger">Cancelar</a>      
                     </div>
                 </div>
             </form>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="modal fade" id="modalEditar" tabindex="-1" role="dialog" aria-labelledby="modalAlterar" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Deseja salvar as alterações ?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <a href="<?php echo URL_BASE . "usuario/salvar"  ?>" class="btn btn-primary mr-4">Salvar alterações</a>
+                <a href="" class="btn btn-danger">Cancelar</a>
+            </div
         </div>
     </div>
 </div>
