@@ -5,7 +5,7 @@ namespace app\models;
 use app\core\Model;
 use app\classes\Usuario;
 
-session_start();
+//session_start();
 
 class UsuarioModel extends Model {
 

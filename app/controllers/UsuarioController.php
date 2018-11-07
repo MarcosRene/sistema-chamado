@@ -7,16 +7,16 @@ use app\models\UsuarioModel;
 use app\models\PerfilModel;
 use app\classes\Usuario;
 
-session_start();
+//session_start();
 
 class UsuarioController extends Controller {
 
     public function index() {
-        if ($_SESSION['perfil'] == 'admin') {
+       // if ($_SESSION['perfil'] == 'admin') {
             $dados["view"] = "admin/home";
-        } else {
-            $dados["view"] = "usuario/listar_chamado";
-        }
+      //  } else {
+        //    $dados["view"] = "usuario/listar_chamado";
+      //  }
         $this->load("painel", $dados);
     }
 
@@ -34,7 +34,7 @@ class UsuarioController extends Controller {
         $usuario = new UsuarioModel();
         $dados["usuarios"] = $usuario->lista();
 
-        $dados["view"] = "admin/listar";
+        $dados["view"] = "admin/listar_usuario";
         $this->load("painel", $dados);
     }
 
