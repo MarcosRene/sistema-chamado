@@ -1,3 +1,9 @@
+<?php
+   if(!isset($_SESSION['usuario'])){
+        header("location:" . URL_BASE . "index");
+   }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -17,7 +23,7 @@
     <body>
         <?php include "cabecalho.php" ?>
         <div id="wrapper">
-            <?php include "admin/lateral.php" ?>
+            <?php include $_SESSION['perfil']."/lateral.php"?>
             <div id="content-wrapper">
                 <div class="container-fluid">
                     <?php $this->load($view, $viewData)?>

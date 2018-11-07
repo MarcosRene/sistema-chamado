@@ -1,7 +1,5 @@
 <?php
 
-
-session_start();
 class Core{
     private $controller;
     private $metodo;

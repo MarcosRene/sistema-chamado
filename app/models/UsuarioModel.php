@@ -5,6 +5,8 @@ namespace app\models;
 use app\core\Model;
 use app\classes\Usuario;
 
+session_start();
+
 class UsuarioModel extends Model {
 
     function __construct() {
@@ -23,9 +25,19 @@ class UsuarioModel extends Model {
 
             if (crypt($senha, $row->senha) == $row->senha) {
 
+                if($row->id_perfil == 1){
+                    
+                    $_SESSION['perfil'] = "usuario";
+                    
+                }else{
+                    
+                    $_SESSION['perfil'] = "admin";
+                }
+                
                 $_SESSION['usuario'] = $login;
-                $_SESSION['logado']['nv_acesso'] = "admin";
-                $_SESSION['logado']['dados'] = $row;
+                $_SESSION['dados'] = $row;
+                //$_SESSION['logado']['nv_acesso'] = "admin";
+              //  $_SESSION['logado']['dados'] = $row;
 
                 return true;
             }

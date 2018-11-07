@@ -7,47 +7,49 @@ use app\models\UsuarioModel;
 use app\models\PerfilModel;
 use app\classes\Usuario;
 
+session_start();
+
 class UsuarioController extends Controller {
 
     public function index() {
-        
-        $dados["view"] = "admin/usuario/home";
+        if ($_SESSION['perfil'] == 'admin') {
+            $dados["view"] = "admin/home";
+        } else {
+            $dados["view"] = "usuario/listar_chamado";
+        }
         $this->load("painel", $dados);
-    
     }
 
     public function novo() {
 
         $perfil = new PerfilModel();
         $dados["perfil"] = $perfil->lista();
-        $dados["view"] = "admin/usuario/cadastro_usuario";
+        $dados["view"] = "admin/cadastro_usuario";
         $this->load("painel", $dados);
     }
-    
-    
+
     public function mostrarUsuarios() {
-        
-        
+
+
         $usuario = new UsuarioModel();
         $dados["usuarios"] = $usuario->lista();
-     
-        $dados["view"] = "admin/usuario/listar";
+
+        $dados["view"] = "admin/listar";
         $this->load("painel", $dados);
     }
-    
+
     public function confirmarEdicao() {
-        
+
         $dados["view"] = "confirmaEdicao";
         $this->load("painel", $dados);
     }
-    
-    
+
     public function salvar() {
 
-     
+
         $model = new UsuarioModel();
         $p = new PerfilModel();
-        
+
         $usuario = new Usuario();
 
         $id_usuario = isset($_POST["id_usuario"]) ? strip_tags(filter_input(INPUT_POST, "id_usuario")) : NULL;
@@ -66,37 +68,34 @@ class UsuarioController extends Controller {
         $usuario->setEmail($email);
         $usuario->setLogin($login);
         $usuario->setSenha($senha);
-        $usuario->setId_perfil($id_perfil);   
-       
-        
-        if ($model->verificarEmail($email)) {  
+        $usuario->setId_perfil($id_perfil);
+
+
+        if ($model->verificarEmail($email)) {
             $_SESSION['msg_erro'] = "Esse E-Mail já está em uso!";
             header("location:" . URL_BASE . "usuario/novo");
-      
         } else if ($model->verificarLoginDisponivel($login)) {
             $_SESSION['msg_erro'] = "Esse login já está em uso!";
             header("location:" . URL_BASE . "usuario/novo");
         } else {
-         
+
             if ($id_usuario) {
                 $model->editar($usuario);
             } else {
                 $model->inserir($usuario);
-                 $_SESSION['msg_erro'] = "Salvo com sucesso!";
+                $_SESSION['msg_erro'] = "Salvo com sucesso!";
             }
 
             header("location:" . URL_BASE . "usuario/mostrarUsuarios");
         }
     }
-    
+
     public function edite($id_usuario) {
-       
+
         $usuario = new UsuarioModel();
         $dados["usuario"] = $usuario->getUsuario($id_usuario);
         $dados["view"] = "admin/usuario/editar_usuario";
         $this->load("painel", $dados);
-    
-        
     }
 
     public function delete($id_cliente, $excluir = null) {

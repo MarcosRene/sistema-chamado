@@ -5,6 +5,8 @@ namespace app\controllers;
 use app\core\Controller;
 use app\models\UsuarioModel;
 
+session_start();
+
 class LoginController extends Controller {
 
     public function index() {
@@ -15,7 +17,7 @@ class LoginController extends Controller {
 
     public function sair() {
        // session_destroy();
-        $dados["view"] = "Login";
+        $dados["view"] = "index";
         $this->load("login", $dados);
     }
 
