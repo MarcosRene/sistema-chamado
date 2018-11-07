@@ -94,7 +94,7 @@ class UsuarioController extends Controller {
 
         $usuario = new UsuarioModel();
         $dados["usuario"] = $usuario->getUsuario($id_usuario);
-        $dados["view"] = "admin/usuario/editar_usuario";
+        $dados["view"] = "admin/editar_usuario";
         $this->load("painel", $dados);
     }
 
