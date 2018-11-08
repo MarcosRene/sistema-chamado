@@ -24,26 +24,30 @@ class UsuarioModel extends Model {
             $row = $qry->fetch(\PDO::FETCH_OBJ);
 
             if (crypt($senha, $row->senha) == $row->senha) {
-
-                if($row->id_perfil == 1){
-                    
-                    $_SESSION['perfil'] = "usuario";
-                    
-                }else{
-                    
-                    $_SESSION['perfil'] = "admin";
-                }
                 
+                $_SESSION['perfil'] = $this->verificarPerfil($row->id_perfil);
                 $_SESSION['usuario'] = $login;
                 $_SESSION['dados'] = $row;
                 //$_SESSION['logado']['nv_acesso'] = "admin";
               //  $_SESSION['logado']['dados'] = $row;
-
                 return true;
             }
         }
     }
 
+    private function verificarPerfil($id_perfil){
+        
+        switch ($id_perfil){
+            
+            case 1: return "usuario";
+                break;
+            case 2: return "tecnico";
+                break;
+            case 3: return "admin";
+                break;
+        } 
+    }
+    
     public function lista() {
       
         $sql = "SELECT * FROM usuario";
