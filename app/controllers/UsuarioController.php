@@ -12,15 +12,10 @@ session_start();
 class UsuarioController extends Controller {
 
     public function index() {
-             if ($_SESSION['perfil'] == 'admin') {
-            $dados['view'] = 'admin/home';
-        } else {
-           $dados['view'] = 'usuario/listar_chamado';
-       }
+                   
+        $dados['view'] =  $_SESSION['home'];
         $this->load('painel', $dados);
     }
-
-    
     
     public function novo() {
 

@@ -5,7 +5,7 @@ namespace app\models;
 use app\core\Model;
 use app\classes\Usuario;
 
-//session_start();
+session_start();
 
 class UsuarioModel extends Model {
 
@@ -39,11 +39,18 @@ class UsuarioModel extends Model {
         
         switch ($id_perfil){
             
-            case 1: return "usuario";
+            case 1:
+                $_SESSION['home'] = 'usuario/listar_chamado';
+                return 'usuario';
                 break;
-            case 2: return "tecnico";
+            case 2: 
+                $_SESSION['home'] = 'admin/home';
+                return 'tecnico';
                 break;
-            case 3: return "admin";
+            case 3: 
+                 $_SESSION['home'] = 'admin/home';
+                return 'admin';
+                 
                 break;
         } 
     }
@@ -157,6 +164,4 @@ class UsuarioModel extends Model {
         $qry->execute();
         
     }
-    
-
 }
