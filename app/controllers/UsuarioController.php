@@ -20,6 +20,8 @@ class UsuarioController extends Controller {
         $this->load('painel', $dados);
     }
 
+    
+    
     public function novo() {
 
         $perfil = new PerfilModel();
