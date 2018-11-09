@@ -16,11 +16,10 @@
                     
                    <fieldset disabled>             
                         <div class="form-group col-sm-6">
-                            <label for="nome">Data cadastrado</label>
-                            <input type="date" class="form-control"  name="nome" value="<?php echo $usuario->datacadastrado ?>">
+                            <label for="nome">Data cadastro</label>
+                            <input type="text" class="form-control"  name="nome" value="<?php echo date('d/m/Y', strtotime($usuario->dataCadastro)) ?>">
                         </div>
                     </fieldset>
-
 
                     <div class="form-group col-sm-6">
                         <label for="nome">Nome</label>

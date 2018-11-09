@@ -13,7 +13,7 @@
                 <i  class="fas fa-fw fa-user-circle"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="<?php   session_destroy(); 
+                <a class="dropdown-item" href="<?php   
                                                        echo URL_BASE?>">Sair</a>
             </div>
         </li>
