@@ -5,8 +5,6 @@ namespace app\models;
 use app\core\Model;
 use app\classes\Usuario;
 
-session_start();
-
 class UsuarioModel extends Model {
 
     function __construct() {
@@ -28,8 +26,7 @@ class UsuarioModel extends Model {
                 $_SESSION['perfil'] = $this->verificarPerfil($row->id_perfil);
                 $_SESSION['usuario'] = $login;
                 $_SESSION['dados'] = $row;
-                //$_SESSION['logado']['nv_acesso'] = "admin";
-              //  $_SESSION['logado']['dados'] = $row;
+        
                 return true;
             }
         }

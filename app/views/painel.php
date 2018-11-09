@@ -1,6 +1,6 @@
 <?php
   if(!isset($_SESSION['usuario'])){
-      header("location:" . URL_BASE . "index");
+      header("location:" . URL_BASE);
   }
 ?>
 

@@ -30,9 +30,7 @@
                                 <a href="<?php echo URL_BASE . "usuario/edite/" . $usuario->id_usuario ?>">
                                     <button class="btn btn-primary mr-3">Editar</button>
                                 </a>
-                                <a href="<?php echo URL_BASE . "usuario/delete/" . $usuario->id_usuario ?>">
-                                    <button class="btn btn-danger">Excluir</button>
-                                </a>
+                                 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir">Excluir</button>
 
                             </td>   
 
@@ -59,13 +57,15 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Deseja realmente excluir ?</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Vai realmente excluir esse usuário?</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                ...
+                
+                <?php echo 'ID '  . $usuario->id_usuario . ' Nome' . $usuario->login ." ". $usuario->sobrenome?>
+                
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-info" data-dismiss="modal">Excluir</button>

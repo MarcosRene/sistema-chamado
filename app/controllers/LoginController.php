@@ -10,14 +10,14 @@ session_start();
 class LoginController extends Controller {
 
     public function index() {
-
+     
         $dados["view"] = "Login";
         $this->load("login", $dados);
     }
 
     public function sair() {
         session_destroy();
-        $dados["view"] = "index";
+        $dados["view"] = "login";
         $this->load("login", $dados);
     }
 
@@ -28,11 +28,11 @@ class LoginController extends Controller {
 
         $use = new UsuarioModel();
 
-        if ($use->verificarlogin($login, $senha)) {
+        if ($use->verificarlogin($login, $senha)){
             header("location:" . URL_BASE . "usuario/index");
         } else {
             $_SESSION['msg_erro'] = "Login ou Senha inválidos";
-            header("location:" . URL_BASE . "login");
+            header("location:" . URL_BASE);
         }
     }
 

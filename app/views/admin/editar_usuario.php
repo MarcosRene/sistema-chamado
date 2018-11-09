@@ -7,6 +7,21 @@
             <form action="<?php echo URL_BASE . "usuario/salvar" ?>" method="POST"> 
 
                 <div  class="form-row">
+                    <fieldset disabled>             
+                        <div class="form-group col-sm-6">
+                            <label for="nome">Id</label>
+                            <input type="text" class="form-control"  name="nome" value="<?php echo $usuario->id_usuario ?>">
+                        </div>
+                    </fieldset>
+                    
+                   <fieldset disabled>             
+                        <div class="form-group col-sm-6">
+                            <label for="nome">Data cadastrado</label>
+                            <input type="date" class="form-control"  name="nome" value="<?php echo $usuario->datacadastrado ?>">
+                        </div>
+                    </fieldset>
+
+
                     <div class="form-group col-sm-6">
                         <label for="nome">Nome</label>
                         <input type="text" class="form-control"  name="nome" value="<?php echo $usuario->nome ?>">
@@ -38,17 +53,12 @@
                         <input type="text" class="form-control" name="login" value="<?php echo $usuario->login ?>">
                     </div>
 
-                    <div class="form-group col-sm-6">
-                        <label for="senha">Senha</label>
-                        <input type="password" class="form-control" name="senha" placeholder="Senha">
-                    </div>
-
+             
                     <div class="form-group col-md-3 mb-3">
-                         <input type="hidden" name="id_usuario" value="<?php echo $usuario->id_usuario ?>">
-                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEditar">Salvar</button>
-                         <a href="<?php echo URL_BASE . "usuario/mostrarUsuarios" ?>">
-                             <button class="btn btn-danger">Cancelar</button>
-                         </a>      
+                        <input type="hidden" name="id_usuario" value="<?php echo $usuario->id_usuario ?>">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEditar">Salvar</button>
+
+                        <a class="btn btn-danger" href="<?php echo URL_BASE . "usuario/mostrarUsuarios" ?>">Cancelar</a>      
                     </div>
                 </div>
             </form>
@@ -71,7 +81,7 @@
                 ...
             </div>
             <div class="modal-footer">
-                <a href="<?php echo URL_BASE . "usuario/salvar"  ?>">
+                <a href="<?php echo URL_BASE . "usuario/salvar" ?>">
                     <button class="btn btn-primary">Salvar</button>
                 </a>
             </div
