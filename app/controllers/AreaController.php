@@ -5,8 +5,8 @@ namespace app\controllers;
 use app\core\Controller;
 use app\models\EquipamentoModel;
 
-$permissoes = ['admin'];
-verificarAcesso($permissoes);
+
+session_start();
 
 class AreaController extends Controller {
 
@@ -15,14 +15,14 @@ class AreaController extends Controller {
         $area = new AreaModel();
         $dados["area"] = $area->lista();
         $dados["view"] = "area/index";
-        $this->load("area/painel", $dados);
+        $this->load("painel", $dados);
         
     }
 
     public function novo() {
      
-        $dados["view"] = "admin/area/cadastroArea";
-        $this->load("admin/painel", $dados);
+        $dados['view'] = 'admin/cadastro_area';
+        $this->load('painel', $dados);
         
     }
     
@@ -33,8 +33,8 @@ class AreaController extends Controller {
         $dados["area"] = $area->lista();
         
 
-        $dados["view"] = "admin/area/listar";
-        $this->load("admin/painel", $dados);
+        $dados["view"] = "admin/listar";
+        $this->load("painel", $dados);
     }
     
 
