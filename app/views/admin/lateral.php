@@ -28,12 +28,11 @@
     
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="fas fa-fw fa-area-chart"></i>
+            <i class="fas fa-fw fa-cogs"></i>
             <span>Áreas</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
             <a class="dropdown-item" href="<?php echo URL_BASE . "area/novo" ?>">Cadastrar</a>
-            <a class="dropdown-item" href="<?php echo URL_BASE . "area/novo" ?>">Listar</a>
         </div>
     </li>
     <li class="nav-item">

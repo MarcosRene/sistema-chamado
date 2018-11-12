@@ -62,11 +62,11 @@
                        
                     <div class="form-group col-sm-12"></div>
              
-                    <div class="form-group col-sm-4 mb-3">
+                    <div class="form-group col-lg-5 col-md-10 col-sm-12">
                         <input type="hidden" name="id_usuario" value="<?php echo $usuario->id_usuario ?>">
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEditar">Salvar</button>
 
-                        <a class="btn btn-danger" href="<?php echo URL_BASE . "usuario/mostrarUsuarios" ?>">Cancelar</a>      
+                        <a class="btn btn-danger" href="<?php echo URL_BASE . "usuario/mostrarUsuarios" ?>">Cancelar</a>
                     </div>
                 </div>
             </form>

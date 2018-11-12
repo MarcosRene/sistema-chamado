@@ -14,8 +14,7 @@
         <title>Gerenciamento</title>     
         <link href=" <?php echo URL_BASE . "assets/Sass/node_modules/bootstrap/compiler/bootstrap.css" ?>" rel="stylesheet">
         <link href=" <?php echo URL_BASE . "assets/vendor/fontawesome-free/css/all.min.css" ?>" rel="stylesheet" type="text/css">
-        <link href=" <?php echo URL_BASE . "assets/_css/sb-admin.css" ?>" rel="stylesheet">  
-        <link href=" <?php echo URL_BASE . "assets/vendor/datatables/dataTables.bootstrap4.css" ?>" rel="stylesheet">
+        <link href=" <?php echo URL_BASE . "assets/_css/sb-admin.css" ?>" rel="stylesheet">
 
     
     </head>
@@ -37,9 +36,6 @@
         <script src=" <?php echo URL_BASE . "assets/vendor/jquery-easing/jquery.easing.min.js"?>"></script>
         <script src=" <?php echo URL_BASE . "assets/_js/sb-admin.min.js" ?>"</script>
         <script src=" <?php echo URL_BASE . "assets/Sass/node_modeules/popper/dist/popper.min.js" ?>"</script>
-        <script src=" <?php echo URL_BASE . "assets/_js/demo/datatable-demo.js" ?>"</script>
-        <script src=" <?php echo URL_BASE . "assets/vendor/datatables/jquery.dataTables.js"?>"></script> 
-        <script src=" <?php echo URL_BASE . "assets/vendor/datatables/dataTables.bootstrap2.css"?>"></script> 
          
     </body>
 </html

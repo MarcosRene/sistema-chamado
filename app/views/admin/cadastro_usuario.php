@@ -44,8 +44,8 @@
                         <input type="password" class="form-control" name="senha" placeholder="Senha">
                     </div>
 
-                    <div class="form-group col-md-3">
-                        <button type="submit" class="btn btn-primary">Cadastrar</button>                    
+                    <div class="form-group col-lg-5 col-md-10 col-sm-12">
+                        <button type="submit" class="btn btn-primary">Cadastrar</button>
                         <button type="reset" class="btn btn-danger">Cancelar</button>                    
                     </div>
                 </div>

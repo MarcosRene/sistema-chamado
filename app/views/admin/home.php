@@ -4,8 +4,8 @@
             <div class="card-body">
                 <div class="mr-5">Não atendidos</div>
             </div>
-            <a class="card-footer text-white p-3">
-
+            <a class="card-footer text-white text-right p-auto">
+                <h5>3</h5>
             </a>
         </div>
     </div>
@@ -14,8 +14,8 @@
             <div class="card-body">
                 <div class="mr-5">Atendidos</div>
             </div>
-            <a class="card-footer text-white p-3">
-
+            <a class="card-footer text-white text-right p-auto">
+                <h5>3</h5>
             </a>
         </div>
     </div>
@@ -24,8 +24,8 @@
             <div class="card-body"> 
                 <div class="mr-5">Aguardando terceiros</div>
             </div>
-            <a class="card-footer text-white p-3">
-
+            <a class="card-footer text-white text-right p-auto">
+                <h5>3</h5>
             </a>
         </div>
     </div>
@@ -34,8 +34,8 @@
             <div class="card-body">
                 <div class="mr-5">Encerrados</div>
             </div>
-            <a class="card-footer text-white p-3">
-
+            <a class="card-footer text-white text-right p-auto">
+                <h5>3</h5>
             </a>
         </div>
     </div>
@@ -43,6 +43,6 @@
 
 <?php
 
-    include "lista_home.php";
+    include 'lista_home.php';
 
 ?>
