@@ -7,20 +7,28 @@
             <form action="<?php echo URL_BASE . "usuario/salvar" ?>" method="POST"> 
 
                 <div  class="form-row">
-                    <fieldset disabled>             
-                        <div class="form-group col-sm-6">
-                            <label for="nome">Id</label>
+                                 
+                    <div class="form-group col-sm-4">
+                        <fieldset disabled>
+                            <label for="nome">Código</label>
                             <input type="text" class="form-control"  name="nome" value="<?php echo $usuario->id_usuario ?>">
-                        </div>
-                    </fieldset>
-                    
-                   <fieldset disabled>             
-                        <div class="form-group col-sm-6">
+                        </fieldset>
+                    </div>
+                               
+                    <div class="form-group col-sm-4">
+                        <fieldset disabled> 
                             <label for="nome">Data cadastro</label>
                             <input type="text" class="form-control"  name="nome" value="<?php echo date('d/m/Y', strtotime($usuario->dataCadastro)) ?>">
-                        </div>
-                    </fieldset>
-
+                        </fieldset>
+                    </div>
+                   
+                    <div class="form-group col-sm-4">
+                        <fieldset disabled> 
+                            <label for="nome">SEILA</label>
+                            <input type="text" class="form-control"  name="nome" value="<?php echo date('d/m/Y', strtotime($usuario->dataCadastro)) ?>">
+                        </fieldset>
+                    </div>
+                    
                     <div class="form-group col-sm-6">
                         <label for="nome">Nome</label>
                         <input type="text" class="form-control"  name="nome" value="<?php echo $usuario->nome ?>">
@@ -51,9 +59,10 @@
                         <label for="login">Login</label>
                         <input type="text" class="form-control" name="login" value="<?php echo $usuario->login ?>">
                     </div>
-
+                       
+                    <div class="form-group col-sm-12"></div>
              
-                    <div class="form-group col-md-3 mb-3">
+                    <div class="form-group col-sm-4 mb-3">
                         <input type="hidden" name="id_usuario" value="<?php echo $usuario->id_usuario ?>">
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEditar">Salvar</button>
 
