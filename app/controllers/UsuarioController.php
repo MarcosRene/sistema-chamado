@@ -40,6 +40,14 @@ class UsuarioController extends Controller {
         $dados["view"] = "confirmaEdicao";
         $this->load("painel", $dados);
     }
+    
+    
+    public function abrirChamado() {
+
+        $dados["view"] = "usuario/cadastro_chamado";
+        $this->load("painel", $dados);
+    }
+    
 
     public function salvar() {
 
