@@ -1,10 +1,9 @@
 
-<div class="container mt-5">
     <div class="row justify-content-center">
 
         <div class="col-sm-12 col-md-10 col-lg-10">
 
-            <form action="<?php echo URL_BASE . "usuario/salvar" ?>" method="POST"> 
+            <form action="<?php echo URL_BASE . "usuario/salvar" ?>" method="POST">
 
                 <div  class="form-row">
                                  
@@ -72,7 +71,7 @@
             </form>
         </div>
     </div>
-</div>
+
 
 
 

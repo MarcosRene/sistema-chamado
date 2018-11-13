@@ -21,7 +21,7 @@ body {
   display: flex;
 }
 
-#wrapper #content-wrapper {
+#wrapper #content-wrapper{
   overflow-x: hidden;
   width: 100%;
   padding-top: 1rem;

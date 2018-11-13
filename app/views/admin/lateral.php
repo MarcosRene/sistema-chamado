@@ -21,8 +21,8 @@
             <span>Usuário</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
-            <a class="dropdown-item" href="<?php echo URL_BASE . "usuario/mostrarusuarios" ?>">Listar</a>
             <a class="dropdown-item" href="<?php echo URL_BASE . "usuario/novo" ?>">Cadastrar</a>
+            <a class="dropdown-item" href="<?php echo URL_BASE . "usuario/mostrarusuarios" ?>">Listar</a>
         </div>
     </li>
     
