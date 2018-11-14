@@ -46,7 +46,11 @@
 
                     <div class="form-group col-lg-5 col-md-10 col-sm-12">
                         <button type="submit" class="btn btn-primary">Cadastrar</button>
-                        <button type="reset" class="btn btn-danger">Cancelar</button>                    
+                        
+                        <a href="<?php echo URL_BASE . "usuario" ?>">
+                            <button class="btn btn-danger" type="button">Cancelar</button>
+                        </a>
+
                     </div>
                 </div>
             </form>

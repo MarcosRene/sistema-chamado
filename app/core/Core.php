@@ -1,5 +1,6 @@
 <?php
 
+
 class Core{
     private $controller;
     private $metodo;

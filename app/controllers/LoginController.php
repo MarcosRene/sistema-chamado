@@ -11,6 +11,7 @@ class LoginController extends Controller {
 
     public function index() {
      
+
         $dados["view"] = "Login";
         $this->load("login", $dados);
     }

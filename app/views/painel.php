@@ -22,7 +22,7 @@
     <body>
         <?php include "cabecalho.php" ?>
         <div id="wrapper">
-            <?php include  $_SESSION['perfil']  ."/lateral.php"?>
+            <?php include $_SESSION['perfil']  ."/lateral.php"?>
             <div id="content-wrapper">
                 <div class="container-fluid">
                     <?php $this->load($view, $viewData)?>

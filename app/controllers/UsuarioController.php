@@ -8,7 +8,10 @@ use app\models\PerfilModel;
 use app\classes\Usuario;
 
 session_start();
-
+if(empty($_SESSION['home'])){
+    header("location:" . URL_BASE);
+}
+    
 class UsuarioController extends Controller {
 
     public function index() {
