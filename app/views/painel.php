@@ -24,7 +24,7 @@
         <div id="wrapper">
             <?php include $_SESSION['perfil']  ."/lateral.php"?>
             <div id="content-wrapper">
-                <div class="container-fluid">
+                <div class="container">
                     <?php $this->load($view, $viewData)?>
                 </div>
                     <?php include "rodape.php" ?>
