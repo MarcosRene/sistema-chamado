@@ -1,12 +1,3 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: marco
- * Date: 06/11/2018
- * Time: 13:01
- */
-?>
-
 <div class="card">
     <div class="card-header">
         <i class="fas fa-table"></i>
@@ -16,11 +7,11 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                 <tr>
-                    <th>Código</th>
+                    <th>Id</th>
                     <th>Aberto a</th>
-                    <th>Descrição</th>
+                    <th>Prioridade</th>
                     <th>Status</th>
-                    <th>Lista</th>
+               
                 </tr>
                 </thead>
                 <tbody>

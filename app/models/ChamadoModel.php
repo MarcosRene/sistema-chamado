@@ -15,30 +15,17 @@ class ChamadoModel extends Model {
        
         $sql = "SELECT * FROM chamado";
         $qry = $this->getDb()->query($sql);
-   
-        
         return $qry->fetchALL(\PDO::FETCH_OBJ);
         
     }
-    
-    public function getChamado($id_chamado) {
+   
 
-        $resultado = array();
-        $sql = "SELECT * FROM chamado WHERE id_chamado = :id_chamado";
-        $qry = $this->getDb()->prepare($sql);
-        $qry->bindValue(":id_chamado", $id_chamado);
-        $qry->execute();
-
+    public function getLista(){
         
-        if ($qry->rowCount() > 0) {
-            
-            $resultado = $qry->fetch(\PDO::FETCH_OBJ);
-       
-        }
-        
-        return $resultado;
+        $model = new ChamadoModel();
+        $listaBanco = $model->lista();        
     }
-
+    
     public function inserirChamado($chamado) {
 
         $sql = "INSERT INTO chamado (area, abertoPor,  local, prioridade, status, problema ) 
@@ -90,5 +77,19 @@ class ChamadoModel extends Model {
     }
 
 
+    public function getChamado($id_chamado) {
+
+        $resultado = array();
+        $sql = "SELECT * FROM chamado WHERE id_chamado = :id_chamado";
+        $qry = $this->getDb()->prepare($sql);
+        $qry->bindValue(":id_chamado", $id_chamado);
+        $qry->execute();
+
+        if ($qry->rowCount() > 0) {
+            $resultado = $qry->fetch(\PDO::FETCH_OBJ);
+        }
+        return $resultado;
+    }
+    
     
 }

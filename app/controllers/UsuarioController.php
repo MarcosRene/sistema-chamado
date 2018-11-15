@@ -7,6 +7,7 @@ use app\models\UsuarioModel;
 use app\models\PerfilModel;
 use app\classes\Usuario;
 use app\models\AreaModel;
+use app\models\ChamadoModel;
 
 session_start();
 if(empty($_SESSION['home'])){
@@ -16,7 +17,10 @@ if(empty($_SESSION['home'])){
 class UsuarioController extends Controller {
 
     public function index() {
-                   
+                  
+        $chamado = new ChamadoModel();
+        $dados["chamados"] = $chamado->lista();
+        
         $dados['view'] =  $_SESSION['home'];
         $this->load('painel', $dados);
     }
@@ -123,4 +127,7 @@ class UsuarioController extends Controller {
         $this->load("template", $dados);
     }
 
+    
+    
+    
 }

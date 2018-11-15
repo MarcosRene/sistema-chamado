@@ -5,7 +5,7 @@
                 <div class="mr-5">Não atendidos</div>
             </div>
             <a class="card-footer text-white text-right p-auto">
-                <h5>3</h5>
+                <h5><?php echo count($viewData['chamados']) ?></h5>
             </a>
         </div>
     </div>

@@ -7,6 +7,7 @@ use app\classes\Chamado;
 use app\classes\ChamadoEquipamento;
 use app\models\ChamadoModel;
 use app\models\AreaModel;
+use app\core\Data;
 
 session_start();
 
@@ -29,6 +30,15 @@ class ChamadoController extends Controller {
         $dados['view'] = 'usuario/cadastro_chamado';
         $this->load('painel', $dados);
         
+    }
+    
+    public function atender($id_chamado){
+        
+        $chamadoModel = new ChamadoModel();
+        $dados["chamado"] = $chamadoModel->getChamado($id_chamado);
+        $dados['view'] = 'admin/atender';
+        $this->load('painel', $dados); 
+   
     }
     
     public function mostrarArea() {
@@ -59,7 +69,7 @@ class ChamadoController extends Controller {
         
         if($tombamento == ""){
            
-            echo "chamdo normal";
+           
             $chamado = new Chamado();
           
             $chamado->setId_area($AreaModel->getCodArea($area));
@@ -73,7 +83,7 @@ class ChamadoController extends Controller {
             
         }else{
            
-            echo "chamdo equipamento";
+        
             
             $chamadoEquip = new ChamadoEquipamento();
             
@@ -89,17 +99,9 @@ class ChamadoController extends Controller {
             $chamadoModel->inserirChamadoEquip($chamadoEquip);
         }
  
-        //header("location:" . URL_BASE . "chamado/novo");
+        header("location:" . URL_BASE . "chamado/novo");
     }
     
-    public function validarFor(){
-        
-        
-        
-        
-    }
-    
-
     public function edite($id_area) {
         $area = new AreaModel();
         $dados["areas"] = $area->getArea($id_area);

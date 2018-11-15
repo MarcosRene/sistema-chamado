@@ -1,11 +1,3 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: marco
- * Date: 06/11/2018
- * Time: 12:09
- */
-?>
 
 <div class="card">
     <div class="card-header">
@@ -17,28 +9,38 @@
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <tr>
-                        <th>Códido</th>
+                        <th>Id</th>
+                        <th width="5%">Problema</th>
                         <th>Aberto a</th>
-                        <th>Descricao</th>
+                        <th>Prioridade</th>
                         <th>Status</th>
-                        <th>Excluir</th>
+                        <th>Atender</th>
                     </tr>
                 </thead>
                 <tbody>
+                    
+                    <?php use app\core\Data; ?>
+                    <?php foreach ($viewData["chamados"] as $chamado) { ?>
+                        <tr class="cor1">
+                            <td><?php echo $chamado->id_chamado ?></td>
+                            <td><?php echo $chamado->problema ?></td>
+                            <td><?php echo Data::calcularTempoAbertura($chamado->dataAbertura) ?></td>
+                            <td><?php echo $chamado->prioridade ?></td>
+                            <td><?php echo $chamado->status ?></td>
+                             
+                     
+                            <td class="text-center">
+                                <a href="<?php echo URL_BASE . "chamado/Atender/" . $chamado->id_chamado?>">
+                                <button class="btn btn-primary mr-3">Atender</button>
+                            </a>
+                         
+
+                        </td>   
+                    <?php } ?>	
+                    </tr>	
 
                 </tbody>
             </table>
         </div>
     </div>
-    <div class="card-footer">
-        <nav aria-label="pageUsuario">
-            <ul class="pagination justify-content-center">
-                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">Next</a></li>
-            </ul>
-        </nav>
-    </div>
-</div>
+ </div>

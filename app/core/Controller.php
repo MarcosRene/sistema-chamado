@@ -2,7 +2,6 @@
 
 namespace app\core;
 
-
 class Controller {
 
     public function load($viewName, $viewData = array()) {
