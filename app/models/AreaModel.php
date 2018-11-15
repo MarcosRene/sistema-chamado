@@ -1,6 +1,7 @@
 <?php
 namespace app\models;
 use app\core\Model;
+use app\classes\Area;
 
 class AreaModel extends Model {
 
@@ -12,8 +13,10 @@ class AreaModel extends Model {
         $sql = "SELECT * FROM area";
         $qry = $this->getDb()->query($sql);
         return $qry->fetchALL(\PDO::FETCH_OBJ);
+        
+        
     }
-
+    
     public function getArea($id_area) {
 
         $resultado = array();
@@ -22,10 +25,16 @@ class AreaModel extends Model {
         $qry->bindValue(":id_area", $id_area);
         $qry->execute();
 
+        $area = null;
+        
         if ($qry->rowCount() > 0) {
+            
             $resultado = $qry->fetch(\PDO::FETCH_OBJ);
+            $area = new Area($resultado->id_area, $resultado->descricao);
+        
         }
-        return $resultado;
+        
+        return $area;
     }
 
     public function inserir($descricao) {
@@ -35,7 +44,7 @@ class AreaModel extends Model {
         $qry = $this->getDb()->prepare($sql);
         $qry->bindValue(":descricao", $descricao);
         $qry->execute();
-        
+    
         return $this->getDb()->lastInsertId();
     }
     
@@ -56,5 +65,16 @@ class AreaModel extends Model {
         $qry->bindValue(":id_area", $id_area);
         $qry->execute();
        
+    }
+    
+    public function getCodArea($descricao) {
+        
+        $sql = "SELECT * FROM area WHERE descricao = :descricao";
+        $qry = $this->getDb()->prepare($sql);
+        $qry->bindValue(":descricao", $descricao);
+        $qry->execute();
+          
+       $result =  $qry->fetch(\PDO::FETCH_OBJ);
+        return $result->id_area;
     }
 }

@@ -5,7 +5,7 @@
             <div class="form-row">
                 <div class="form-group col-sm-6">
                     <label for="nome">Descrição</label>
-                    <input type="text" class="form-control"  name="nome" placeholder="Descrição">
+                    <input type="text" class="form-control"  name="descricao" placeholder="Descrição">
                 </div>
 
                 <div class="form-group col-sm-6">
@@ -26,6 +26,10 @@
         </form>
     </div>
 </div>
+
+<?php 
+    include 'lista_area.php';
+?>
 
 
 

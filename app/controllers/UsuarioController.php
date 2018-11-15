@@ -6,6 +6,7 @@ use app\core\Controller;
 use app\models\UsuarioModel;
 use app\models\PerfilModel;
 use app\classes\Usuario;
+use app\models\AreaModel;
 
 session_start();
 if(empty($_SESSION['home'])){
@@ -47,6 +48,8 @@ class UsuarioController extends Controller {
     
     public function abrirChamado() {
 
+        $area = new AreaModel();
+        $dados["areas"] = $area->lista();
         $dados["view"] = "usuario/cadastro_chamado";
         $this->load("painel", $dados);
     }

@@ -2,21 +2,23 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-sm-12 col-md-10 col-lg-8">
-            <form action="<?php echo URL_BASE . "" ?>" method="POST">
+            <form action="<?php echo URL_BASE . "Chamado/Salvar" ?>" method="POST">
                 <div class="form-row">
 
+            
                     <div class="form-group col-sm-4">
-                        <label for="problema">Local</label>
-                        <select class="form-control form-control-md" name="local">
-                            <option>Selecione</option>
-                        </select>
+                        <label for="local">Local</label>
+                        <input type="text" class="form-control" name="local" placeholder="Local">
                     </div>
+
 
                     <div class="form-group col-sm-4">
                         <label for="problema">Área</label>
-                        <select class="form-control form-control-md" name="problema">
-                            <option>Selecione</option>
-                        </select>
+                          <select id="area" name="area" class="form-control form-control-md">
+                         <?php foreach ($viewData["areas"] as $area) { ?>
+                             <option><?php echo $area->descricao ?></option>
+                         <?php } ?>
+                     </select>
                     </div>
 
                     <div class="form-group col-sm-4">
@@ -43,12 +45,12 @@
                                     <div class="row">
                                         <div class="form-group col-lg-6 col-md-12 col-sm-12">
                                             <label for="nome" class="sr-only" >Tombamento</label>
-                                            <input type="text" class="form-control"  name="nome" placeholder="Tombamento">
+                                            <input type="text" class="form-control"  name="tombamento" placeholder="Tombamento">
                                         </div>
 
                                         <div class="form-group col-lg-6 col-md-12 col-sm-12">
                                             <label for="nome" class="sr-only">Nome</label>
-                                            <input type="text" class="form-control"  name="nome" placeholder="Nome">
+                                            <input type="text" class="form-control"  name="nomeEquip" placeholder="Nome">
                                         </div>
                                     </div>
                                 </div>
@@ -57,13 +59,16 @@
                     </div>
 
                     <div class="form-group col-sm-12">
-                        <label for="descProblema">Descrição problema</label>
+                        <label for="problema">Descrição problema</label>
                         <textarea class="form-control" id="descProblema" rows="5"></textarea>
                     </div>
 
                     <div class="form-group col-lg-6 col-md-10 col-sm-12">
                         <button type="submit" class="btn btn-primary">Cadastrar</button>
-                        <button type="reset" class="btn btn-danger">Cancelar</button>
+                        <a href="<?php echo URL_BASE . "usuario" ?>">
+                            <button class="btn btn-danger" type="button">Cancelar</button>
+                        </a>
+
                     </div>
 
                 </div>

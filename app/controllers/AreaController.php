@@ -4,7 +4,7 @@ namespace app\controllers;
 
 use app\core\Controller;
 use app\models\EquipamentoModel;
-
+use app\models\AreaModel;
 
 session_start();
 
@@ -21,6 +21,10 @@ class AreaController extends Controller {
 
     public function novo() {
      
+        
+        $area = new AreaModel();
+        $dados["areas"] = $area->lista();
+           
         $dados['view'] = 'admin/cadastro_area';
         $this->load('painel', $dados);
         
@@ -32,7 +36,6 @@ class AreaController extends Controller {
         $area = new AreaModel();
         $dados["area"] = $area->lista();
         
-
         $dados["view"] = "admin/listar";
         $this->load("painel", $dados);
     }
@@ -47,15 +50,16 @@ class AreaController extends Controller {
         if ($id_area) {
             $area->editar($id_area, $descricao);
         } else {
+           
             $area->inserir($descricao);
         }
-        header("location:" . URL_BASE . "area/mostrarAreas");
+        header("location:" . URL_BASE . "area/novo");
     }
 
     public function edite($id_area) {
         $area = new AreaModel();
-        $dados["area"] = $area->getArea($id_area);
-        $dados["view"] = "area/edite";
+        $dados["areas"] = $area->getArea($id_area);
+        $dados["view"] = "admin/editar_area";
         $this->load("painel", $dados);
    
     }
@@ -75,4 +79,7 @@ class AreaController extends Controller {
         $this->load("painel", $dados);
     }
 
+        
+
+    
 }
