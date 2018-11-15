@@ -10,7 +10,7 @@
                 <thead>
                     <tr>
                         <th>Id</th>
-                        <th width="5%">Problema</th>
+                        <th>Local</th>
                         <th>Aberto a</th>
                         <th>Prioridade</th>
                         <th>Status</th>
@@ -23,7 +23,7 @@
                     <?php foreach ($viewData["chamados"] as $chamado) { ?>
                         <tr class="cor1">
                             <td><?php echo $chamado->id_chamado ?></td>
-                            <td><?php echo $chamado->problema ?></td>
+                            <td><?php echo $chamado->local ?></td>
                             <td><?php echo Data::calcularTempoAbertura($chamado->dataAbertura) ?></td>
                             <td><?php echo $chamado->prioridade ?></td>
                             <td><?php echo $chamado->status ?></td>
