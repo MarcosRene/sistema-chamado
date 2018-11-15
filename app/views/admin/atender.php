@@ -2,13 +2,13 @@
 <div class="container">
     <div class="row justify-content-center">
 
-        <div class="col-sm-12 col-md-10 col-lg-10">
+        <div class="col-sm-12 col-md-10 col-lg-8">
 
             <form action="" method="POST">
 
                 <div class="row">
 
-                    <div class="form-row col-lg-7" id=form_row>
+                    <div class="form-row col-lg-12">
 
                         <div class="form-group col-sm-4">
                             <fieldset disabled>
@@ -60,8 +60,8 @@
                             <fieldset disabled>
                                 <label for="data-abertura">Aberto a</label>
                                 <?php
-
-                                use app\core\Data ?>
+                                    use app\core\Data;
+                                ?>
                                 <input type="text" class="form-control" value="<?php echo Data::calcularTempoAbertura($chamado->dataAbertura) ?>" >
                             </fieldset>
                         </div>
@@ -73,17 +73,19 @@
                             </fieldset>
                         </div>
 
-
                         <div class="form-group col-sm-12">
                             <fieldset disabled>
                                 <label for="descricao-problema">Descrição problema</label>
-                                <input class="form-control" type="text" value="<?php echo $chamado->problema ?>" rows="5"></input>
+                                <textarea class="form-control" value="<?php echo $chamado->problema ?>" rows="4"></textarea>
                             </fieldset>
                         </div>
 
+                        <div class="form-group col-lg-12 col-md-10 col-sm-12">
+                            <button type="button" class="btn btn-warning text-white">Terceiros</button>
+                            <button type="button" class="btn btn-dark">Encerrar</button>
+                            <button type="button" class="btn btn-success ">Atender</button>
+                        </div>
                     </div>
-
-
                 </div>
             </form>
         </div>

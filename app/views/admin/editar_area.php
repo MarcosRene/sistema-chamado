@@ -49,7 +49,7 @@
             </div>
             <div class="modal-footer">
                 <a href="<?php echo URL_BASE . "area/salvar" ?>">
-                    <button class="btn btn-primary">Salvar</button>
+                    <button class="btn btn-secondary">Salvar</button>
                 </a>
             </div
         </div>

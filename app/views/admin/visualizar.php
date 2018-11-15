@@ -15,7 +15,7 @@
 
                 <div class="row">
 
-                    <div class="form-row col-lg-7" id=form_row>
+                    <div class="form-row col-lg-7">
 
                         <div class="form-group col-sm-4">
                             <fieldset disabled>
@@ -77,11 +77,11 @@
 
                     </div>
 
-                    <div class="form-row col-lg-4" id=form_row>
+                    <div class="form-row col-lg-4">
                         <div class="form-group col-sm-12">
                             <fieldset disabled>
                                 <label for="resposavel">Status</label>
-                                <input type="text" class="form-control" name="responsavel" placeholder="teste">
+                                <input type="text" id="atendido" class="form-control" name="responsavel" placeholder="teste">
                             </fieldset>
                         </div>
 

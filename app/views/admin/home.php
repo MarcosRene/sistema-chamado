@@ -5,7 +5,7 @@
                 <div class="mr-5">Não atendidos</div>
             </div>
             <a class="card-footer text-white text-right p-auto">
-                <h5><?php echo count($viewData['chamados']) ?></h5>
+                <span><?php echo count($viewData['chamados']) ?></span>
             </a>
         </div>
     </div>
@@ -15,7 +15,7 @@
                 <div class="mr-5">Atendidos</div>
             </div>
             <a class="card-footer text-white text-right p-auto">
-                <h5>3</h5>
+                <span>3</span>
             </a>
         </div>
     </div>
@@ -25,7 +25,7 @@
                 <div class="mr-5">Aguardando terceiros</div>
             </div>
             <a class="card-footer text-white text-right p-auto">
-                <h5>3</h5>
+                <span>3</span>
             </a>
         </div>
     </div>
@@ -35,7 +35,7 @@
                 <div class="mr-5">Encerrados</div>
             </div>
             <a class="card-footer text-white text-right p-auto">
-                <h5>3</h5>
+                <span>3</span>
             </a>
         </div>
     </div>

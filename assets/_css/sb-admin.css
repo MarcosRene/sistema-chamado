@@ -11,6 +11,11 @@ body {
     width: 40% !important;
 }
 
+.btn-dark, .btn-success, .btn-warning,
+.btn-secondary, .btn-info{
+  width:30% !important;
+}
+
 .card-footer ul{
     margin-bottom: 0rem !important;
 }
@@ -365,9 +370,30 @@ body.sidebar-toggled footer.sticky-footer {
   }
 }
 
-#form_row{
-  border-radius: 0.3rem;
-  background-color: #FFF;
-  margin: auto;
-  padding: 1rem;
+#atendido {
+  display: inline-block;
+  background-position: 15rem;
+  background-repeat: no-repeat;
+  background-image: url(../img/verdePX.png);
+}
+
+#nao-atendido {
+  display: inline-block;
+  background-position: 15rem;
+  background-repeat: no-repeat;
+  background-image: url(../img/vermelhoPX.png);
+}
+
+#aguardando {
+  display: inline-block;
+  background-position: 15rem;
+  background-repeat: no-repeat;
+  background-image: url(../img/amareloPX.png);
+}
+
+#encerrado {
+  display: inline-block;
+  background-position: 15rem;
+  background-repeat: no-repeat;
+  background-image: url(../img/pretoPX.png);
 }
