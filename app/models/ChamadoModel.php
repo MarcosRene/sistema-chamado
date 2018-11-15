@@ -12,10 +12,12 @@ class ChamadoModel extends Model {
     }
 
     public function lista() {
+       
         $sql = "SELECT * FROM chamado";
         $qry = $this->getDb()->query($sql);
-        return $qry->fetchALL(\PDO::FETCH_OBJ);
+   
         
+        return $qry->fetchALL(\PDO::FETCH_OBJ);
         
     }
     
@@ -56,10 +58,9 @@ class ChamadoModel extends Model {
 
     
     public function inserirChamadoEquip($chamado) {
-        
+      
 
-
-          $sql = "INSERT INTO chamado (area, abertoPor, status, local, prioridade, problema, tombamento, nomeEquip ) 
+        $sql = "INSERT INTO chamado (area, abertoPor, status, local, prioridade, problema, tombamento, nomeEquip ) 
                 VALUES (:area,:abertoPor,:status,:local,:prioridade, :problema, :tombamento, :nomeEquip )";
 
         $qry = $this->getDb()->prepare($sql);
@@ -73,7 +74,6 @@ class ChamadoModel extends Model {
         $qry->bindValue(":tombamento", $chamado->getTombamento());
         $qry->bindValue(":nomeEquip", $chamado->getNomeEquip());
 
-        
         return $qry->execute();
         
     }
@@ -88,15 +88,7 @@ class ChamadoModel extends Model {
         $qry->bindValue(":id_area", $id_area);
         $qry->execute();
     }
-    
-    public function excluir($id_area) {
 
-        $sql = "DELETE FROM area WHERE id_area = :id_area";
-        $qry = $this->getDb()->prepare($sql);
-        $qry->bindValue(":id_area", $id_area);
-        $qry->execute();
-       
-    }
 
     
 }
