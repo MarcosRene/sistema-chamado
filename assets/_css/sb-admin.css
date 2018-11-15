@@ -364,3 +364,10 @@ body.sidebar-toggled footer.sticky-footer {
     width: calc(100% - 90px);
   }
 }
+
+#form_row{
+  border-radius: 0.3rem;
+  background-color: #FFF;
+  margin: auto;
+  padding: 1rem;
+}
