@@ -81,7 +81,8 @@
                         <div class="form-group col-sm-12">
                             <fieldset disabled>
                                 <label for="resposavel">Status</label>
-                                <input type="text" id="atendido" class="form-control" name="responsavel" placeholder="teste">
+                                <input type="text" id="atendido" class="form-control" name="responsavel"
+                                       placeholder="teste">
                             </fieldset>
                         </div>
 

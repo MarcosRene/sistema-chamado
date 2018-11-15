@@ -7,13 +7,16 @@ body {
   height: 100%;
 }
 
-.btn-primary, .btn-danger{
-    width: 40% !important;
+a .btn-primary {
+  width: 100% !important;
 }
 
-.btn-dark, .btn-success, .btn-warning,
-.btn-secondary, .btn-info{
-  width:30% !important;
+a{
+  text-decoration: none !important;
+}
+
+.btn-primary, .btn-danger{
+    width: 40% !important;
 }
 
 .card-footer ul{

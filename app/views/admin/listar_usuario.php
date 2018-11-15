@@ -1,41 +1,45 @@
 <div class="card">
     <div class="card-header">
         <i class="fas fa-table"></i>
-        Usuários</div>
+        Usuários
+    </div>
     <div class="card-body">
         <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
-                    <tr>
-                        <th width="1%" align="left">ID</th>
-                        <th width="7%" align="left">Nome</th>
-                        <th width="7%" align="left">Email</th>
-                        <th width="5%" align="left">Login</th>
-                        <th width="5%" align="left">Perfil</th>
-                        <th width="10%" align="left">Alterar</th>
-                    </tr>
+                <tr>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Login</th>
+                    <th>Perfil</th>
+                    <th>Alterar</th>
+                </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($viewData["usuarios"] as $usuario) { ?>
-                        <tr class="cor1">
-                            <td><?php echo $usuario->id_usuario ?></td>
-                            <td><?php echo $usuario->nome . " " . $usuario->sobrenome ?></td>
-                            <td><?php echo $usuario->email ?></td>
-                            <td><?php echo $usuario->login ?></td>
-                            <td><?php echo $usuario->id_perfil ?></td>
+                <?php foreach ($viewData["usuarios"] as $usuario) { ?>
+                    <tr>
+                        <td><?php echo $usuario->id_usuario ?></td>
+                        <td><?php echo $usuario->nome . " " . $usuario->sobrenome ?></td>
+                        <td><?php echo $usuario->email ?></td>
+                        <td><?php echo $usuario->login ?></td>
+                        <td><?php echo $usuario->id_perfil ?></td>
 
 
-                            <td class="text-center">
-
-                                <a href="<?php echo URL_BASE . "usuario/edite/" . $usuario->id_usuario ?>">
-                                    <button class="btn btn-primary mr-3">Editar</button>
+                        <td>
+                            <div class="row justify-content-center">
+                                <a class="btn btn-primary btn-sm mr-2"
+                                   href="<?php echo URL_BASE . "usuario/edite/" . $usuario->id_usuario ?>">
+                                    Editar
                                 </a>
-                                 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalExcluir">Excluir</button>
+                                <button type="button" class="btn btn-danger btn-sm"
+                                        data-toggle="modal" data-target="#modalExcluir">Excluir
+                                </button>
+                            </div>
+                        </td>
 
-                            </td>   
-
-                        </tr>	
-                    <?php } ?>		
+                    </tr>
+                <?php } ?>
                 </tbody>
             </table>
         </div>
@@ -63,13 +67,14 @@
                 </button>
             </div>
             <div class="modal-body">
-                
-                <?php echo 'ID '  . $usuario->id_usuario . ' Nome' . $usuario->login ." ". $usuario->sobrenome?>
-                
+
+                <?php echo 'ID ' . $usuario->id_usuario . ' Nome' . $usuario->login . " " . $usuario->sobrenome ?>
+
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-info" data-dismiss="modal">Excluir</button>
-                <button type="button" class="btn btn-secondary">Cancelar</button>
+                <button type="button" class="btn btn-info col-lg-4 col-md-5 col-sm-5" data-dismiss="modal">Excluir
+                </button>
+                <button type="button" class="btn btn-secondary col-lg-4 col-md-5 col-sm-5">Cancelar</button>
             </div>
         </div>
     </div>

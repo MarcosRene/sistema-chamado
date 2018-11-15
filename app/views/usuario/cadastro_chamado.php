@@ -23,7 +23,7 @@
 
                     <div class="form-group col-sm-4">
                         <label for="problema">Prioridade</label>
-                        <select class="form-control form-control-md" name="prioridade">
+                        <select class="form-control form-control-md" name="prioridade" required>
                             <option>Selecione</option>
                             <option>Alta</option>
                             <option>Normal</option>
@@ -44,8 +44,8 @@
                                 <div class="card-body">
                                     <div class="row">
                                         <div class="form-group col-lg-6 col-md-12 col-sm-12">
-                                            <label for="nome" class="sr-only" >Tombamento</label>
-                                            <input type="text" class="form-control"  name="tombamento" placeholder="Tombamento">
+                                            <label for="nome" class="sr-only">Tombamento</label>
+                                            <input type="number" class="form-control"  name="tombamento" placeholder="Tombamento">
                                         </div>
 
                                         <div class="form-group col-lg-6 col-md-12 col-sm-12">
