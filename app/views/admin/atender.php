@@ -27,7 +27,7 @@
                         <div class="form-group col-sm-4">
                             <fieldset disabled>
                                 <label for="nome">Área</label>
-                                <input type="text" class="form-control" value="<?php echo $chamado->descricao ?>">
+                                <input type="text" class="form-control" value="<?php echo $chamado->descricaoArea ?>">
                             </fieldset>
                         </div>
 
@@ -80,7 +80,7 @@
                             <fieldset disabled>
                                 <label for="descricao-problema">Descrição problema</label>
                                 <textarea class="form-control" value="<?php echo $chamado->problema ?>"
-                                          rows="4"></textarea>
+                                          rows="4"><?php echo $chamado->problema ?></textarea>
                             </fieldset>
                         </div>
 

@@ -55,18 +55,22 @@ class UsuarioModel extends Model {
 
     public function lista() {
 
-        $sql = "SELECT * FROM usuario";
+        $sql = "SELECT * FROM usuario ";
         $qry = $this->getDb()->query($sql);
 
         return $qry->fetchALL(\PDO::FETCH_OBJ);
     }
     
     public function listaUser() {
-
         
-        $sql =  "SELECT * FROM usuario INNER JOIN perfil ON (usuario.id_perfil = perfil.id_perfil)";
-        $qry = $this->getDb()->query($sql);
-
+       $sql =  'SELECT * FROM usuario 
+           INNER JOIN perfil ON usuario.id_perfil = perfil.id_perfil
+           WHERE usuario.ativo = :ativo';
+       
+       $qry = $this->getDb()->prepare($sql);
+       $qry->bindValue(':ativo', 'Ativo');
+       $qry->execute();
+       
         return $qry->fetchALL(\PDO::FETCH_OBJ);
     }
     
@@ -90,9 +94,10 @@ class UsuarioModel extends Model {
     }
 
     public function inserir(Usuario $usuario) {
-
-        $sql = "INSERT INTO usuario (id_perfil, nome, sobrenome, email, login, senha) 
-                VALUES (:id_perfil,:nome,:sobrenome,:email,:login, :senha )";
+       
+        
+        $sql = "INSERT INTO usuario (id_perfil, nome, sobrenome, email, login, senha, ativo) 
+                VALUES (:id_perfil,:nome,:sobrenome,:email,:login, :senha, :ativo )";
 
         $qry = $this->getDb()->prepare($sql);
 
@@ -102,14 +107,19 @@ class UsuarioModel extends Model {
         $qry->bindValue(":email", $usuario->getEmail());
         $qry->bindValue(":login", $usuario->getLogin());
         $qry->bindValue(":senha", $usuario->getSenha());
-
+        $qry->bindValue(":ativo", $usuario->getAtivo());
+        
         return $qry->execute();
     }
 
     public function getUsuario($id_usuario) {
 
         $resultado = array();
-        $sql = "SELECT * FROM usuario WHERE id_usuario = :id_usuario";
+        $sql = "SELECT * FROM usuario "
+                . "inner JOIN perfil ON (usuario.id_perfil = perfil.id_perfil)"
+                . "left JOIN area ON (usuario.responsavelPor = area.id_area)"
+                . "WHERE id_usuario = :id_usuario";
+      
         $qry = $this->getDb()->prepare($sql);
         $qry->bindValue(":id_usuario", $id_usuario);
         $qry->execute();
@@ -161,6 +171,19 @@ class UsuarioModel extends Model {
         $qry->bindValue(":id_cliente", $id_cliente);
         $qry->execute();
     }
+    
+    public function desativarUsuario($id_usuario) {
+
+        $sql = "UPDATE usuario SET ativo = :ativo WHERE id_usuario = :id_usuario";
+
+        $qry = $this->getDb()->prepare($sql);
+        $qry->bindValue(":ativo", 'Desativado');
+        $qry->bindValue(":id_usuario", $id_usuario);
+        $qry->execute();
+    
+        
+    }
+    
 
     public function excluir($id_cliente) {
 

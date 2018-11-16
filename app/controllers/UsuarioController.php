@@ -46,7 +46,7 @@ class UsuarioController extends Controller {
 
 
         $usuario = new UsuarioModel();
-        $dados["usuarios"] = $usuario->lista();
+        $dados["usuarios"] = $usuario->listaUser();
 
         $dados["view"] = "admin/listar_usuario";
         $this->load("painel", $dados);
@@ -63,23 +63,23 @@ class UsuarioController extends Controller {
         
     }
 
-    
-    public function carregarChamados(){
-        
-        
-        
-        
-        
-    }
-
-    
+   
     public function confirmarEdicao() {
+
 
         $dados["view"] = "confirmaEdicao";
         $this->load("painel", $dados);
     }
     
-    
+    public function desativarUsuario($id_usuario) {
+
+        $usuario = new UsuarioModel();
+        $usuario->desativarUsuario($id_usuario);
+        
+        header("location:" . URL_BASE . "usuario/mostrarUsuarios");
+        
+    }
+
     public function abrirChamado() {
 
         $area = new AreaModel();
@@ -113,6 +113,7 @@ class UsuarioController extends Controller {
         $usuario->setEmail($email);
         $usuario->setLogin($login);
         $usuario->setSenha($senha);
+        $usuario->setAtivo("Ativo");
         $usuario->setId_perfil($id_perfil);
 
 
@@ -131,7 +132,7 @@ class UsuarioController extends Controller {
                 $_SESSION['msg_erro'] = "Salvo com sucesso!";
             }
 
-            header("location:" . URL_BASE . "usuario/mostrarUsuarios");
+           header("location:" . URL_BASE . "usuario/mostrarUsuarios");
         }
     }
 
@@ -143,21 +144,15 @@ class UsuarioController extends Controller {
         $this->load("painel", $dados);
     }
 
-    public function delete($id_cliente, $excluir = null) {
-        $cliente = new ClienteModel();
-        if ($excluir == "S") {
-
-            $cliente->excluir($id_cliente);
-            header("location:" . URL_BASE . "cliente");
-            exit;
-        }
-
-        $dados["cliente"] = $cliente->getCliente($id_cliente);
-        $dados["view"] = "cliente/Delete";
-        $this->load("template", $dados);
+    public function desativar($id_usuario) {
+     
+        $usuario = new UsuarioModel();
+        
+        $dados["usuario"] = $usuario->getUsuario($id_usuario);
+        $dados["view"] = "admin/desativar_usuario";
+        $this->load("painel", $dados);
+    
+        
     }
 
-    
-    
-    
 }

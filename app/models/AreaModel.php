@@ -39,7 +39,7 @@ class AreaModel extends Model {
 
     public function inserir($descricao) {
 
-        $sql = "INSERT INTO area SET descricao = :descricao";
+        $sql = "INSERT INTO area SET descricaoArea = :descricao";
 
         $qry = $this->getDb()->prepare($sql);
         $qry->bindValue(":descricao", $descricao);
@@ -50,7 +50,7 @@ class AreaModel extends Model {
     
     public function editar($id_area, $descricao) {
 
-        $sql = "UPDATE area SET descricao = :descricao WHERE id_area = :id_area";
+        $sql = "UPDATE area SET descricaoArea = :descricao WHERE id_area = :id_area";
 
         $qry = $this->getDb()->prepare($sql);
         $qry->bindValue(":descricao", $descricao);
@@ -69,7 +69,7 @@ class AreaModel extends Model {
     
     public function getCodArea($descricao) {
         
-        $sql = "SELECT * FROM area WHERE descricao = :descricao";
+        $sql = "SELECT * FROM area WHERE descricaoArea = :descricao";
         $qry = $this->getDb()->prepare($sql);
         $qry->bindValue(":descricao", $descricao);
         $qry->execute();

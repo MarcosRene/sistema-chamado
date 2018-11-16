@@ -32,9 +32,13 @@
                                    href="<?php echo URL_BASE . "usuario/edite/" . $usuario->id_usuario ?>">
                                     Editar
                                 </a>
-                                <button type="button" class="btn btn-danger btn-sm"
-                                        data-toggle="modal" data-target="#modalExcluir">Excluir
-                                </button>
+                                
+                                <a class="btn btn-primary btn-danger"
+                                   href="<?php echo URL_BASE . "usuario/desativar/" . $usuario->id_usuario ?>">
+                                    Desativar
+                                </a>
+                               
+                               
                             </div>
                         </td>
 

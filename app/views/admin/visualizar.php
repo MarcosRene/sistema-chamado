@@ -19,7 +19,7 @@
                         <div class="form-group col-sm-4">
                             <fieldset disabled>
                                 <label for="nome">Área</label>
-                                <input type="text" class="form-control" value="<?php echo $chamado->descricao ?>">
+                                <input type="text" class="form-control" value="<?php echo $chamado->descricaoArea ?>">
                             </fieldset>
                         </div>
 
@@ -63,7 +63,7 @@
                         <div class="form-group col-sm-12">
                             <fieldset disabled>
                                 <label for="descricao-problema">Descrição problema</label>
-                                <textarea class="form-control" id="descricao-problema" rows="5"></textarea>
+                                <textarea class="form-control" id="descricao-problema" rows="5"><?php echo $chamado->problema ?></textarea>
                             </fieldset>
                         </div>
 
@@ -73,15 +73,14 @@
                         <div class="form-group col-sm-12">
                             <fieldset disabled>
                                 <label for="resposavel">Status</label>
-                                <input type="text" id="atendido" class="form-control" name="responsavel"
-                                       placeholder="teste">
+                                <input type="text" id="nao-atendido" class="form-control" value="<?php echo $chamado->status ?>" >
                             </fieldset>
                         </div>
 
                         <div class="form-group col-sm-12">
                             <fieldset disabled>
                                 <label for="data-abertura">Data Atendimento</label>
-                                <input type="text" class="form-control" value="<?php echo $chamado->id_chamado ?>">
+                                <input type="text" class="form-control" value="<?php echo $chamado->dataAtendimento ?>">
                             </fieldset>
                         </div>
 
@@ -89,7 +88,9 @@
                         <div class="form-group col-sm-12">
                             <fieldset disabled>
                                 <label for="resposavel">Responsável</label>
-                                <input type="text" class="form-control" value="<?php echo $chamado->id_chamado ?>">
+                                <input type="text" class="form-control" value="<?php echo "" ?>">
+                                  
+                                
                             </fieldset>
                         </div>
 

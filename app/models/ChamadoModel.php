@@ -20,47 +20,44 @@ class ChamadoModel extends Model {
         return $qry->fetchALL(\PDO::FETCH_OBJ);
     }
 
-    public function  infoChamados(){
-        
-    $sql = " SELECT c.id_chamado, c.local, a.descricao,c.status, c.prioridade, u.login, c.dataAbertura, c.tombamento, c.problema "
-        . "FROM chamado AS c "
-        . "INNER JOIN usuario AS u ON (c.abertoPor = u.id_usuario) "
-        . "INNER JOIN area as a on (c.area = a.id_area)";
-        
+    public function infoChamados() {
+
+        $sql = " SELECT c.id_chamado, c.local, a.descricaoArea, c.status, c.prioridade, u.login, c.dataAbertura, c.tombamento, c.problema "
+                . "FROM chamado AS c "
+                . "INNER JOIN usuario AS u ON (c.abertoPor = u.id_usuario) "
+                . "INNER JOIN area as a on (c.area = a.id_area)";
+
         $qry = $this->getDb()->query($sql);
         return $qry->fetchALL(\PDO::FETCH_OBJ);
     }
 
-
-    
-    
     public function listaMeusChamados($id_usuario) {
-        
+
         $sql = "SELECT * FROM chamado WHERE abertoPor = :id_usuario";
         $qry = $this->getDb()->prepare($sql);
-       
+
         $qry->bindValue(':id_usuario', $id_usuario);
         $qry->execute();
 
         return $qry->fetchALL(\PDO::FETCH_OBJ);
     }
-    
+
     public function naoAtendidos() {
-        
+
         $sql = 'SELECT * FROM chamado WHERE status = :status';
         $qry = $this->getDb()->prepare($sql);
-       
+
         $qry->bindValue(':status', 'Não atendido');
         $qry->execute();
 
         return $qry->fetchALL(\PDO::FETCH_OBJ);
     }
 
-       public function emAtendimento() {
-        
+    public function emAtendimento() {
+
         $sql = 'SELECT * FROM chamado WHERE status = :status';
         $qry = $this->getDb()->prepare($sql);
-       
+
         $qry->bindValue(':status', 'Em atendimento');
         $qry->execute();
 
@@ -68,28 +65,27 @@ class ChamadoModel extends Model {
     }
 
     public function aguardandoTerceiros() {
-        
+
         $sql = 'SELECT * FROM chamado WHERE status = :status';
         $qry = $this->getDb()->prepare($sql);
-       
+
         $qry->bindValue(':status', 'Aguardando terceiros');
         $qry->execute();
 
         return $qry->fetchALL(\PDO::FETCH_OBJ);
     }
-    
-     public function encerrados() {
-        
+
+    public function encerrados() {
+
         $sql = 'SELECT * FROM chamado WHERE status = :status';
         $qry = $this->getDb()->prepare($sql);
-       
+
         $qry->bindValue(':status', 'Encerrado');
         $qry->execute();
 
         return $qry->fetchALL(\PDO::FETCH_OBJ);
     }
 
-    
     public function getLista() {
 
         $model = new ChamadoModel();
@@ -143,16 +139,15 @@ class ChamadoModel extends Model {
         $qry->execute();
     }
 
-   
-     public function getChamado($id_chamado) {
+    public function getChamado($id_chamado) {
 
         $resultado = array();
-        $sql = " SELECT c.id_chamado, c.local, a.descricao, c.prioridade, u.login, c.dataAbertura, c.tombamento, c.problema "
-        . "FROM chamado AS c "
-        . "INNER JOIN usuario AS u ON (c.abertoPor = u.id_usuario) "
-        . "INNER JOIN area as a on (c.area = a.id_area)"
-        . "WHERE id_chamado = :id_chamado";
-           
+        $sql = " SELECT c.id_chamado, c.local, a.descricaoArea, c.status, c.prioridade, u.login, c.dataAbertura, c.tombamento, c.problema "
+                . "FROM chamado AS c "
+                . "INNER JOIN usuario AS u ON (c.abertoPor = u.id_usuario) "
+                . "INNER JOIN area as a on (c.area = a.id_area)"
+                . "WHERE id_chamado = :id_chamado";
+
         $qry = $this->getDb()->prepare($sql);
         $qry->bindValue(":id_chamado", $id_chamado);
         $qry->execute();
