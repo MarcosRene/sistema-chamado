@@ -1,55 +1,42 @@
 <div class="card">
     <div class="card-header">
         <i class="fas fa-table"></i>
-        Ocorrências</div>
+        <span>Ocorrências</span>
+    </div>
     <div class="card-body">
         <div class="table-responsive">
             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                 <tr>
                     <th>Id</th>
+                    <th>Local</th>
                     <th>Aberto a</th>
                     <th>Prioridade</th>
                     <th>Status</th>
-               
+                    <th>Atender</th>
                 </tr>
                 </thead>
                 <tbody>
+
+                <?php use app\core\Data; ?>
+                <?php foreach ($viewData["meuschamados"] as $chamado) { ?>
+                <tr>
+                    <td><?php echo $chamado->id_chamado ?></td>
+                    <td><?php echo $chamado->local ?></td>
+                    <td><?php echo Data::calcularTempoAbertura($chamado->dataAbertura) ?></td>
+                    <td><?php echo $chamado->prioridade ?></td>
+                    <td><?php echo $chamado->status ?></td>
+
+                    <td>
+                        <a href="<?php echo URL_BASE . "usuario/visualizar/" . $chamado->id_chamado ?>">
+                            <button class="btn">Visualizar</button>
+                        </a>
+                    </td>
+                    <?php } ?>
+                </tr>
 
                 </tbody>
             </table>
         </div>
     </div>
-    <div class="card-footer">
-        <nav aria-label="pageUsuario">
-            <ul class="pagination justify-content-center">
-                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item"><a class="page-link" href="#">Next</a></li>
-            </ul>
-        </nav>
-    </div>
 </div>
-
-<div class="modal fade" id="modalAtender" tabindex="-1" role="dialog" aria-labelledby="modalAlterar" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Deseja realmente excluir ?</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-info" data-dismiss="modal">Excluir</button>
-                <button type="button" class="btn btn-secondary">Cancelar</button>
-            </div>
-        </div>
-    </div>
-</div>
-

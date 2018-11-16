@@ -12,8 +12,7 @@
                         <div class="form-group col-sm-4">
                             <fieldset disabled>
                                 <label for="codigo">Código</label>
-                                <input class="form-control" type="text" name="codigo"
-                                       value="<?php echo $chamado->id_chamado ?>">
+                                <input class="form-control" type="text"  value="<?php echo $chamado->id_chamado ?>">
                             </fieldset>
                         </div>
 

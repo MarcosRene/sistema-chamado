@@ -19,11 +19,20 @@ class UsuarioController extends Controller {
     public function index() {
                   
         $chamado = new ChamadoModel();
-        $dados["chamados"] = $chamado->lista();
+        $dados["meuschamados"] = $chamado->listaMeusChamados($_SESSION['dados']->id_usuario);
+        $dados["chamados"]= $chamado->lista();
+        $dados["naoatendidos"] = $chamado->naoAtendidos();
+        $dados["ematendimento"] = $chamado->aguardandoTerceiros();
+        $dados["aguardando"] = $chamado->emAtendimento();
+        $dados["encerrados"] = $chamado->encerrados();
         
         $dados['view'] =  $_SESSION['home'];
         $this->load('painel', $dados);
     }
+    
+    
+    
+    
     
     public function novo() {
 
@@ -43,6 +52,27 @@ class UsuarioController extends Controller {
         $this->load("painel", $dados);
     }
 
+    
+    public function meusChamados(){
+        
+        $chamado = new ChamadoModel();
+        $dados['meuschamados'] = $chamado->listaMeusChamados($_SESSION['dados']->id_usuario);
+       
+        $dados['view'] =  "usuario/listar_chamado";
+        $this->load('painel', $dados);
+        
+    }
+
+    
+    public function carregarChamados(){
+        
+        
+        
+        
+        
+    }
+
+    
     public function confirmarEdicao() {
 
         $dados["view"] = "confirmaEdicao";

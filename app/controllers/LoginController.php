@@ -15,9 +15,10 @@ class LoginController extends Controller {
     }
 
     public function sair() {
+       
         session_destroy();
-        $dados["view"] = "login";
-        $this->load("login", $dados);
+        header("location:" . URL_BASE);
+    
     }
 
     static function verificarLogin() {
@@ -28,7 +29,7 @@ class LoginController extends Controller {
         $use = new UsuarioModel();
 
         if ($use->verificarlogin($login, $senha)){
-            header("location:" . URL_BASE . "usuario/index");
+            header("location:" . URL_BASE . "usuario");
         } else {
             $_SESSION['msg_erro'] = "Login ou Senha inválidos";
             header("location:" . URL_BASE);

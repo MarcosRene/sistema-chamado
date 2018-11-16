@@ -1,5 +1,7 @@
 <?php
+
 namespace app\models;
+
 use app\core\Model;
 use app\classes\Chamado;
 use app\classes\ChamadoEquipamento;
@@ -12,24 +14,82 @@ class ChamadoModel extends Model {
     }
 
     public function lista() {
-       
+
         $sql = "SELECT * FROM chamado";
         $qry = $this->getDb()->query($sql);
         return $qry->fetchALL(\PDO::FETCH_OBJ);
-        
     }
-   
 
-    public function getLista(){
+    public function listaMeusChamados($id_usuario) {
         
-        $model = new ChamadoModel();
-        $listaBanco = $model->lista();        
+        $sql = "SELECT * FROM chamado WHERE abertoPor = :id_usuario";
+        $qry = $this->getDb()->prepare($sql);
+       
+        $qry->bindValue(':id_usuario', $id_usuario);
+        $qry->execute();
+
+        return $qry->fetchALL(\PDO::FETCH_OBJ);
     }
     
+    public function naoAtendidos() {
+        
+        $sql = 'SELECT * FROM chamado WHERE status = :status';
+        $qry = $this->getDb()->prepare($sql);
+       
+        $qry->bindValue(':status', 'Não atendido');
+        $qry->execute();
+
+        return $qry->fetchALL(\PDO::FETCH_OBJ);
+    }
+
+       public function emAtendimento() {
+        
+        $sql = 'SELECT * FROM chamado WHERE status = :status';
+        $qry = $this->getDb()->prepare($sql);
+       
+        $qry->bindValue(':status', 'Em atendimento');
+        $qry->execute();
+
+        return $qry->fetchALL(\PDO::FETCH_OBJ);
+    }
+
+    public function aguardandoTerceiros() {
+        
+        $sql = 'SELECT * FROM chamado WHERE status = :status';
+        $qry = $this->getDb()->prepare($sql);
+       
+        $qry->bindValue(':status', 'Aguardando terceiros');
+        $qry->execute();
+
+        return $qry->fetchALL(\PDO::FETCH_OBJ);
+    }
+    
+     public function encerrados() {
+        
+        $sql = 'SELECT * FROM chamado WHERE status = :status';
+        $qry = $this->getDb()->prepare($sql);
+       
+        $qry->bindValue(':status', 'Encerrado');
+        $qry->execute();
+
+        return $qry->fetchALL(\PDO::FETCH_OBJ);
+    }
+
+    
+
+    
+    
+
+    public function getLista() {
+
+        $model = new ChamadoModel();
+        $listaBanco = $model->lista();
+    }
+
     public function inserirChamado($chamado) {
 
-        $sql = "INSERT INTO chamado (area, abertoPor,  local, prioridade, status, problema ) 
-                           VALUES (:area, :abertoPor, :local, :prioridade,:status,:problema )";
+        $sql = "INSERT INTO chamado (area, abertoPor, local, prioridade, status, problema )
+                                     VALUES (:area, :abertoPor, :local, :prioridade, :status, :problema )";
 
         $qry = $this->getDb()->prepare($sql);
 
@@ -43,12 +103,11 @@ class ChamadoModel extends Model {
         return $qry->execute();
     }
 
-    
     public function inserirChamadoEquip($chamado) {
-      
 
-        $sql = "INSERT INTO chamado (area, abertoPor, status, local, prioridade, problema, tombamento, nomeEquip ) 
-                VALUES (:area,:abertoPor,:status,:local,:prioridade, :problema, :tombamento, :nomeEquip )";
+
+        $sql = "INSERT INTO chamado (area, abertoPor, status, local, prioridade, problema, tombamento, nomeEquip )
+                  VALUES (:area, :abertoPor, :status, :local, :prioridade, :problema, :tombamento, :nomeEquip )";
 
         $qry = $this->getDb()->prepare($sql);
 
@@ -62,10 +121,8 @@ class ChamadoModel extends Model {
         $qry->bindValue(":nomeEquip", $chamado->getNomeEquip());
 
         return $qry->execute();
-        
     }
 
-    
     public function editar($id_area, $descricao) {
 
         $sql = "UPDATE area SET descricao = :descricao WHERE id_area = :id_area";
@@ -75,7 +132,6 @@ class ChamadoModel extends Model {
         $qry->bindValue(":id_area", $id_area);
         $qry->execute();
     }
-
 
     public function getChamado($id_chamado) {
 
@@ -90,6 +146,5 @@ class ChamadoModel extends Model {
         }
         return $resultado;
     }
-    
-    
+
 }

@@ -99,7 +99,7 @@ class ChamadoController extends Controller {
             $chamadoModel->inserirChamadoEquip($chamadoEquip);
         }
  
-        header("location:" . URL_BASE . "chamado/novo");
+        header("location:" . URL_BASE . "usuario");
     }
     
     public function edite($id_area) {
