@@ -20,7 +20,7 @@ class UsuarioController extends Controller {
                   
         $chamado = new ChamadoModel();
         $dados["meuschamados"] = $chamado->listaMeusChamados($_SESSION['dados']->id_usuario);
-        $dados["chamados"]= $chamado->lista();
+        $dados["chamados"]= $chamado->infoChamados();
         $dados["naoatendidos"] = $chamado->naoAtendidos();
         $dados["ematendimento"] = $chamado->aguardandoTerceiros();
         $dados["aguardando"] = $chamado->emAtendimento();

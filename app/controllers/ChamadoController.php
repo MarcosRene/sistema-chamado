@@ -51,7 +51,17 @@ class ChamadoController extends Controller {
         $this->load("painel", $dados);
     }
     
+    public function visualizarChamado($id_chamado){
+       
+    
+        $chamadoModel = new ChamadoModel();
+        $dados["chamado"] = $chamadoModel->getChamado($id_chamado);
+        $dados['view'] = 'admin/visualizar';
+        $this->load('painel', $dados); 
 
+    }
+    
+    
     public function salvar() {
    
         

@@ -28,7 +28,7 @@
                     <td><?php echo $chamado->status ?></td>
 
                     <td>
-                        <a href="<?php echo URL_BASE . "usuario/visualizar/" . $chamado->id_chamado ?>">
+                        <a href="<?php echo URL_BASE . "chamado/visualizarChamado/" . $chamado->id_chamado ?>">
                             <button class="btn">Visualizar</button>
                         </a>
                     </td>

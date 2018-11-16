@@ -60,6 +60,17 @@ class UsuarioModel extends Model {
 
         return $qry->fetchALL(\PDO::FETCH_OBJ);
     }
+    
+    public function listaUser() {
+
+        
+        $sql =  "SELECT * FROM usuario INNER JOIN perfil ON (usuario.id_perfil = perfil.id_perfil)";
+        $qry = $this->getDb()->query($sql);
+
+        return $qry->fetchALL(\PDO::FETCH_OBJ);
+    }
+    
+    
 
     function verificarEmail($email) {
         $sql = "SELECT * FROM usuario WHERE email = ?";

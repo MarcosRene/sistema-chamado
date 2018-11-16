@@ -24,7 +24,6 @@
                     <div class="form-group col-sm-4">
                         <label for="problema">Prioridade</label>
                         <select class="form-control form-control-md" name="prioridade" required>
-                            <option>Selecione</option>
                             <option>Alta</option>
                             <option>Normal</option>
                             <option>Baixa</option>

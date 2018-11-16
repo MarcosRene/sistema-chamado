@@ -10,6 +10,7 @@
                 <tr>
                     <th>Id</th>
                     <th>Local</th>
+                    <th>Aberto por</th>
                     <th>Aberto a</th>
                     <th>Prioridade</th>
                     <th>Status</th>
@@ -23,6 +24,7 @@
                 <tr>
                     <td><?php echo $chamado->id_chamado ?></td>
                     <td><?php echo $chamado->local ?></td>
+                    <td><?php echo $chamado->login ?></td>
                     <td><?php echo Data::calcularTempoAbertura($chamado->dataAbertura) ?></td>
                     <td><?php echo $chamado->prioridade ?></td>
                     <td><?php echo $chamado->status ?></td>

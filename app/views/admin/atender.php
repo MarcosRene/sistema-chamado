@@ -27,7 +27,7 @@
                         <div class="form-group col-sm-4">
                             <fieldset disabled>
                                 <label for="nome">Área</label>
-                                <input type="text" class="form-control" value="<?php echo $chamado->area ?>">
+                                <input type="text" class="form-control" value="<?php echo $chamado->descricao ?>">
                             </fieldset>
                         </div>
 
@@ -43,7 +43,7 @@
                         <div class="form-group col-sm-4">
                             <fieldset disabled>
                                 <label for="resposavel">Aberto por</label>
-                                <input type="text" class="form-control" value="<?php echo $chamado->abertoPor ?>">
+                                <input type="text" class="form-control" value="<?php echo $chamado->login ?>">
                             </fieldset>
                         </div>
 

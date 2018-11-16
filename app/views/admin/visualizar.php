@@ -1,11 +1,3 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: marco
- * Date: 15/11/2018
- * Time: 09:14
- */
-?>
 <div class="container">
     <div class="row justify-content-center">
 
@@ -20,14 +12,14 @@
                         <div class="form-group col-sm-4">
                             <fieldset disabled>
                                 <label for="codigo">Código</label>
-                                <input class="form-control" type="text" name="codigo" placeholder="teste">
+                                <input class="form-control" type="text" value="<?php echo $chamado->id_chamado ?>" >
                             </fieldset>
                         </div>
 
                         <div class="form-group col-sm-4">
                             <fieldset disabled>
                                 <label for="nome">Área</label>
-                                <input type="text" class="form-control" name="area" placeholder="teste">
+                                <input type="text" class="form-control" value="<?php echo $chamado->descricao ?>">
                             </fieldset>
                         </div>
 
@@ -35,28 +27,28 @@
                         <div class="form-group col-sm-4">
                             <fieldset disabled>
                                 <label for="prioridade">Prioridade</label>
-                                <input type="text" class="form-control" name="prioridade" placeholder="teste">
+                                <input type="text" class="form-control" value="<?php echo $chamado->prioridade ?>">
                             </fieldset>
                         </div>
 
                         <div class="form-group col-sm-6">
                             <fieldset disabled>
                                 <label for="tombamento">Tombamento</label>
-                                <input type="text" class="form-control" name="tombamento" placeholder="teste">
+                                <input type="text" class="form-control" value="<?php echo $chamado->tombamento ?>">
                             </fieldset>
                         </div>
 
                         <div class="form-group col-sm-6">
                             <fieldset disabled>
                                 <label for="resposavel">Aberto por</label>
-                                <input type="text" class="form-control" name="responsavel" placeholder="teste">
+                                <input type="text" class="form-control" value="<?php echo $chamado->login ?>">
                             </fieldset>
                         </div>
 
                         <div class="form-group col-sm-6">
                             <fieldset disabled>
                                 <label for="data-abertura">Data Abertura</label>
-                                <input type="text" class="form-control" name="data-abertura" placeholder="teste">
+                                <input type="text" class="form-control" value="<?php echo date('d/m/Y  h:m ', strtotime($chamado->dataAbertura)) ?>">
                             </fieldset>
                         </div>
 
@@ -64,7 +56,7 @@
                         <div class="form-group col-sm-6">
                             <fieldset disabled>
                                 <label for="data-abertura">Data Encerramento</label>
-                                <input type="text" class="form-control" name="data-abertura" placeholder="teste">
+                                <input type="text" class="form-control"value=" <?php echo $chamado->id_chamado ?>">
                             </fieldset>
                         </div>
 
@@ -89,7 +81,7 @@
                         <div class="form-group col-sm-12">
                             <fieldset disabled>
                                 <label for="data-abertura">Data Atendimento</label>
-                                <input type="text" class="form-control" name="data-abertura" placeholder="teste">
+                                <input type="text" class="form-control" value="<?php echo $chamado->id_chamado ?>">
                             </fieldset>
                         </div>
 
@@ -97,7 +89,7 @@
                         <div class="form-group col-sm-12">
                             <fieldset disabled>
                                 <label for="resposavel">Responsável</label>
-                                <input type="text" class="form-control" name="responsavel" placeholder="teste">
+                                <input type="text" class="form-control" value="<?php echo $chamado->id_chamado ?>">
                             </fieldset>
                         </div>
 
