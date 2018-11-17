@@ -412,7 +412,5 @@ table-bordered th, .table-bordered td {
 .form-row{
   background-color: #ffffff !important;
   border-radius: 0.5rem;
-  padding: 0rem 0 0 1rem;
-
-
+  padding: 1rem;
 }
