@@ -11,8 +11,9 @@ a .btn-primary {
   width: 100% !important;
 }
 
-a{
+.a {
   text-decoration: none !important;
+  color: #fff !important;
 }
 
 .btn-primary, .btn-danger{
