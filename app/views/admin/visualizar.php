@@ -48,7 +48,7 @@
                         <div class="form-group col-sm-6">
                             <fieldset disabled>
                                 <label for="data-abertura">Data Abertura</label>
-                                <input type="text" class="form-control" value="<?php echo date('d/m/Y  h:i ', strtotime($chamado->dataAbertura)) ?>">
+                                <input type="text" class="form-control" value="<?php echo date('d/m/Y  H:i ', strtotime($chamado->dataAbertura)) ?>">
                             </fieldset>
                         </div>
 
@@ -60,7 +60,7 @@
                                 
                                 if($chamado->dataEncerrado != null){
                                     
-                                    echo date('d/m/Y  h:i ', strtotime($chamado->dataEncerrado));
+                                    echo date('d/m/Y  H:i ', strtotime($chamado->dataEncerrado));
                                     
                                 }?>">
                             </fieldset>
@@ -91,7 +91,7 @@
                                 
                                 if($chamado->dataAtendido != null){
                                     
-                                    echo date('d/m/Y  h:i ', strtotime($chamado->dataAtendido));
+                                    echo date('d/m/Y  H:i ', strtotime($chamado->dataAtendido));
                                     
                                 }?>">
                             </fieldset>
