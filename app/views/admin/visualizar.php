@@ -5,14 +5,14 @@
 
             <form action="" method="POST">
 
-                <div class="row">
+                <div class="row form-row">
 
                     <div class="form-row col-lg-8">
 
                         <div class="form-group col-sm-4">
                             <fieldset disabled>
                                 <label for="codigo">Código</label>
-                                <input class="form-control" type="text" value="<?php echo $chamado->id_chamado ?>" >
+                                <input class="form-control" type="text" value="<?php echo $chamado->id_chamado ?>">
                             </fieldset>
                         </div>
 
@@ -48,7 +48,8 @@
                         <div class="form-group col-sm-6">
                             <fieldset disabled>
                                 <label for="data-abertura">Data Abertura</label>
-                                <input type="text" class="form-control" value="<?php echo date('d/m/Y  H:i ', strtotime($chamado->dataAbertura)) ?>">
+                                <input type="text" class="form-control"
+                                       value="<?php echo date('d/m/Y  H:i ', strtotime($chamado->dataAbertura)) ?>">
                             </fieldset>
                         </div>
 
@@ -56,20 +57,21 @@
                         <div class="form-group col-sm-6">
                             <fieldset disabled>
                                 <label for="data-abertura">Data Encerramento</label>
-                                <input type="text" class="form-control" value="<?php 
-                                
-                                if($chamado->dataEncerrado != null){
-                                    
+                                <input type="text" class="form-control" value="<?php
+
+                                if ($chamado->dataEncerrado != null) {
+
                                     echo date('d/m/Y  H:i ', strtotime($chamado->dataEncerrado));
-                                    
-                                }?>">
+
+                                } ?>">
                             </fieldset>
                         </div>
 
                         <div class="form-group col-sm-12">
                             <fieldset disabled>
                                 <label for="descricao-problema">Descrição problema</label>
-                                <textarea class="form-control" id="descricao-problema" rows="4"><?php echo $chamado->problema ?></textarea>
+                                <textarea class="form-control" id="descricao-problema"
+                                          rows="4"><?php echo $chamado->problema ?></textarea>
                             </fieldset>
                         </div>
 
@@ -80,20 +82,20 @@
                             <fieldset disabled>
                                 <label for="resposavel">Status</label>
                                 <input type="text" id="<?php echo \app\core\Helper::verificarCorStatus($chamado->status)
-                                        ?>" class="form-control" value="<?php echo $chamado->status ?>" >
+                                ?>" class="form-control" value="<?php echo $chamado->status ?>">
                             </fieldset>
                         </div>
 
                         <div class="form-group col-sm-12">
                             <fieldset disabled>
                                 <label for="data-abertura">Data Atendimento</label>
-                                <input type="text" class="form-control" value="<?php 
-                                
-                                if($chamado->dataAtendido != null){
-                                    
+                                <input type="text" class="form-control" value="<?php
+
+                                if ($chamado->dataAtendido != null) {
+
                                     echo date('d/m/Y  H:i ', strtotime($chamado->dataAtendido));
-                                    
-                                }?>">
+
+                                } ?>">
                             </fieldset>
                         </div>
 
@@ -101,20 +103,25 @@
                         <div class="form-group col-sm-12">
                             <fieldset disabled>
                                 <label for="resposavel">Responsável</label>
-                                <input type="text" class="form-control" value="<?php echo $chamado->nome ." ".$chamado->sobrenome ?>">
+                                <input type="text" class="form-control"
+                                       value="<?php echo $chamado->nome . " " . $chamado->sobrenome ?>">
                             </fieldset>
                         </div>
 
                         <div class="form-group col-sm-12">
                             <fieldset disabled>
                                 <label for="parecer">Parecer</label>
-                                <textarea class="form-control" id="parecer" rows="4"><?php echo $chamado->parecer?></textarea>
+                                <textarea class="form-control" id="parecer"
+                                          rows="4"><?php echo $chamado->parecer ?></textarea>
                             </fieldset>
                         </div>
+
                     </div>
-                      <a href="<?php echo URL_BASE . 'usuario/meusChamados' ?>">
+                    <div class="form-group col-lg-4 col-md-5 col-sm-12">
+                        <a href="<?php echo URL_BASE . 'usuario/meusChamados' ?>">
                             <button class="btn btn-danger" type="button">Cancelar</button>
                         </a>
+                    </div>
                 </div>
             </form>
         </div>

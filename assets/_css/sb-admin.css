@@ -36,6 +36,7 @@ a .btn-primary {
   padding-top: 1rem;
   padding-bottom: 80px;
   background-color: #f2f2f2;
+  color: fff;
 }
 
 body.fixed-nav #content-wrapper {
@@ -411,6 +412,7 @@ table-bordered th, .table-bordered td {
 .form-row{
   background-color: #ffffff !important;
   border-radius: 0.5rem;
-  padding: 1rem;
+  padding: 0rem 0 0 1rem;
+
 
 }
