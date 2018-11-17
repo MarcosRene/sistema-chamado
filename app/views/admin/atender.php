@@ -57,12 +57,9 @@
                     <div class="form-group col-sm-6">
                         <fieldset disabled>
                             <label for="data-abertura">Aberto a</label>
-                            <?php
-
-                            use app\core\Data;
-                            ?>
+                            <?php   use app\core\Helper; ?>
                             <input type="text" class="form-control"
-                                   value="<?php echo Data::calcularTempoAbertura($chamado->dataAbertura) ?>">
+                                   value="<?php echo Helper::calcularTempoAbertura($chamado->dataAbertura) ?>">
                         </fieldset>
                     </div>
 

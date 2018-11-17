@@ -80,6 +80,7 @@ class ChamadoController extends Controller {
         $this->load('painel', $dados);
     }
 
+
     public function salvar() {
 
 

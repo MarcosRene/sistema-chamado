@@ -44,7 +44,10 @@ class ChamadoModel extends Model {
 
     public function listaNaoAtendidos() {
 
-        $sql = 'SELECT * FROM chamado WHERE status = :status';
+        $sql = 'SELECT c.id_chamado, c.local, u.login, c.dataAbertura, c.status, c.prioridade FROM chamado As c
+                INNER JOIN usuario AS u ON (c.abertoPor = u.id_usuario)
+                WHERE status = :status';
+        
         $qry = $this->getDb()->prepare($sql);
 
         $qry->bindValue(':status', 'Não atendido');
@@ -129,7 +132,8 @@ class ChamadoModel extends Model {
         return $qry->execute();
     }
 
-   
+    
+    
     public function atenderChamado($id_chamado, $parecer, $id_tecnico, $status) {
 
         $sql = "UPDATE chamado SET parecer = :parecer, atendidoPor = :id_tecnico, status = :status WHERE id_chamado = :id_chamado";
@@ -150,7 +154,8 @@ class ChamadoModel extends Model {
     public function getChamado($id_chamado) {
 
         $resultado = array();
-        $sql = " SELECT c.id_chamado,c.parecer, c.local, a.descricaoArea, c.status, c.prioridade, u.login, c.dataAbertura, c.tombamento, c.problema "
+        $sql = " SELECT c.id_chamado,c.parecer, c.local, a.descricaoArea, c.status, c.prioridade, u.login, "
+                . "c.dataAtendido, c.dataAbertura, c.tombamento, c.problema "
                 . "FROM chamado AS c "
                 . "INNER JOIN usuario AS u ON (c.abertoPor = u.id_usuario) "
                 . "INNER JOIN area as a on (c.area = a.id_area)"

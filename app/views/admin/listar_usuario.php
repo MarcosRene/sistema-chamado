@@ -23,7 +23,7 @@
                         <td><?php echo $usuario->nome . " " . $usuario->sobrenome ?></td>
                         <td><?php echo $usuario->email ?></td>
                         <td><?php echo $usuario->login ?></td>
-                        <td><?php echo $usuario->id_perfil ?></td>
+                        <td><?php echo $usuario->descricao ?></td>
 
 
                         <td>

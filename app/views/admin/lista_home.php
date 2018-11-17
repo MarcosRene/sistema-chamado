@@ -19,13 +19,13 @@
                 </thead>
                 <tbody>
 
-                <?php use app\core\Data; ?>
-                <?php foreach ($viewData["chamados"] as $chamado) { ?>
+                <?php use app\core\Helper; ?>
+                <?php foreach ($viewData["naoatendidos"] as $chamado) { ?>
                 <tr>
                     <td><?php echo $chamado->id_chamado ?></td>
                     <td><?php echo $chamado->local ?></td>
                     <td><?php echo $chamado->login ?></td>
-                    <td><?php echo Data::calcularTempoAbertura($chamado->dataAbertura) ?></td>
+                    <td><?php echo Helper::calcularTempoAbertura($chamado->dataAbertura) ?></td>
                     <td><?php echo $chamado->prioridade ?></td>
                     <td><?php echo $chamado->status ?></td>
 

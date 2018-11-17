@@ -48,7 +48,7 @@
                         <div class="form-group col-sm-6">
                             <fieldset disabled>
                                 <label for="data-abertura">Data Abertura</label>
-                                <input type="text" class="form-control" value="<?php echo date('d/m/Y  h:m ', strtotime($chamado->dataAbertura)) ?>">
+                                <input type="text" class="form-control" value="<?php echo date('d/m/Y  h:i ', strtotime($chamado->dataAbertura)) ?>">
                             </fieldset>
                         </div>
 
@@ -73,14 +73,21 @@
                         <div class="form-group col-sm-12">
                             <fieldset disabled>
                                 <label for="resposavel">Status</label>
-                                <input type="text" id="encerrado" class="form-control" value="<?php echo $chamado->status ?>" >
+                                <input type="text" id="<?php echo \app\core\Helper::verificarCorStatus($chamado->status)
+                                        ?>" class="form-control" value="<?php echo $chamado->status ?>" >
                             </fieldset>
                         </div>
 
                         <div class="form-group col-sm-12">
                             <fieldset disabled>
-                                <label for="data-abertura">Data Atendimento</label>
-                                <input type="text" class="form-control" value="<?php echo $chamado->dataAtendimento ?>">
+                                <label id="atendido" for="data-abertura">Data Atendimento</label>
+                                <input type="text" class="form-control" value="<?php 
+                                
+                                if($chamado->dataAtendido != null){
+                                    
+                                    echo date('d/m/Y  h:i ', strtotime($chamado->dataAtendido));
+                                    
+                                }?>">
                             </fieldset>
                         </div>
 
