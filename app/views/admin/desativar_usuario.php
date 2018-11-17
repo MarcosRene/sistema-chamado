@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container my-5">
     <div class="row justify-content-center">
 
         <div class="col-sm-12 col-md-10 col-lg-10">
@@ -7,7 +7,7 @@
 
                 <div class="form-row">
 
-                    <div class="form-group col-sm-2">
+                    <div class="form-group col-sm-3">
                         <fieldset disabled>
                             <label for="nome">Código</label>
                             <input type="text" class="form-control"
@@ -15,7 +15,7 @@
                         </fieldset>
                     </div>
 
-                    <div class="form-group col-sm-2">
+                    <div class="form-group col-sm-3">
                         <fieldset disabled>
                             <label for="nome">Nome</label>
                             <input type="text" class="form-control" value="<?php echo $usuario->nome ?>">
@@ -30,15 +30,7 @@
                         </fieldset>
 
                     </div>
-
                     <div class="form-group col-sm-3">
-                        <fieldset disabled>
-                            <label for="login">Login</label>
-                            <input type="text" class="form-control"  value="<?php echo $usuario->login ?>">
-                        </fieldset>
-                    </div>
-
-                    <div class="form-group col-sm-4">
                         <fieldset disabled>
                             <label for="tipo">Perfil</label>
                             <input type="text" class="form-control" value="<?php echo $usuario->descricao ?>">
@@ -47,7 +39,14 @@
 
                     <div class="form-group col-sm-3">
                         <fieldset disabled>
-                            <label for="email">Responsável por</label>
+                            <label for="login">Login</label>
+                            <input type="text" class="form-control" value="<?php echo $usuario->login ?>">
+                        </fieldset>
+                    </div>
+
+                    <div class="form-group col-sm-3">
+                        <fieldset disabled>
+                            <label for="email">Responsabilidade</label>
                             <input type="text" class="form-control" value="<?php echo $usuario->descricaoArea ?>">
                         </fieldset>
                     </div>
@@ -55,7 +54,7 @@
                     <div class="form-group col-sm-3">
                         <fieldset disabled>
                             <label for="nome">Data cadastro</label>
-                            <input type="text" class="form-control" 
+                            <input type="text" class="form-control"
                                    value="<?php echo date('d/m/Y', strtotime($usuario->dataCadastro)) ?>">
                         </fieldset>
                     </div>
@@ -68,7 +67,7 @@
                         </fieldset>
                     </div>
 
-                    <div class="form-group col-sm-7">
+                    <div class="form-group col-sm-6">
                         <fieldset disabled>
                             <label for="email">E-mail</label>
                             <input type="email" class="form-control" name="email" value="<?php echo $usuario->email ?>">
@@ -92,7 +91,8 @@
 </div>
 
 
-<div class="modal fade" id="modalDesativar" tabindex="-1" role="dialog" aria-labelledby="modalAlterar" aria-hidden="true">
+<div class="modal fade" id="modalDesativar" tabindex="-1" role="dialog" aria-labelledby="modalAlterar"
+     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -105,7 +105,8 @@
 
             </div>
             <div class="modal-footer">
-                <a class="btn btn-info col-lg-4 col-md-5 col-sm-5" href="<?php echo URL_BASE . "usuario/desativarUsuario/" . $usuario->id_usuario ?>">
+                <a class="btn btn-info col-lg-4 col-md-5 col-sm-5"
+                   href="<?php echo URL_BASE . "usuario/desativarUsuario/" . $usuario->id_usuario ?>">
                     Desativar
                 </a>
             </div

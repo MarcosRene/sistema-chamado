@@ -28,16 +28,13 @@
 
                         <td>
                             <div class="row justify-content-center">
-                                <a class="btn btn-primary btn-sm mr-2"
-                                   href="<?php echo URL_BASE . "usuario/edite/" . $usuario->id_usuario ?>">
-                                    Editar
+                                <a class="btn btn-primary btn-sm mr-2" href="<?php echo URL_BASE . "usuario/edite/" . $usuario->id_usuario ?>">
+                                   Editar
                                 </a>
                                 
-                                <a class="btn btn-primary btn-danger"
-                                   href="<?php echo URL_BASE . "usuario/desativar/" . $usuario->id_usuario ?>">
+                                <a class="btn btn-primary btn-danger btn-sm" href="<?php echo URL_BASE . "usuario/desativar/" . $usuario->id_usuario ?>">
                                     Desativar
                                 </a>
-                               
                                
                             </div>
                         </td>

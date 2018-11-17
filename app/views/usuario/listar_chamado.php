@@ -29,7 +29,7 @@
 
                     <td>
                         <a href="<?php echo URL_BASE . "chamado/visualizarChamado/" . $chamado->id_chamado ?>">
-                            <button class="btn">Visualizar</button>
+                            <button class="btn btn-primary btn-sm">Visualizar</button>
                         </a>
                     </td>
                     <?php } ?>

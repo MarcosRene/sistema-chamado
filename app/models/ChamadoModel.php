@@ -146,9 +146,6 @@ class ChamadoModel extends Model {
         $qry->execute();
   
     }
-
-
-    
     
 
     public function getChamado($id_chamado) {

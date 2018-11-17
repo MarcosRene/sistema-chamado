@@ -7,7 +7,7 @@
 
                 <div class="row">
 
-                    <div class="form-row col-lg-7">
+                    <div class="form-row col-lg-8">
 
                         <div class="form-group col-sm-4">
                             <fieldset disabled>
@@ -63,7 +63,7 @@
                         <div class="form-group col-sm-12">
                             <fieldset disabled>
                                 <label for="descricao-problema">Descrição problema</label>
-                                <textarea class="form-control" id="descricao-problema" rows="5"><?php echo $chamado->problema ?></textarea>
+                                <textarea class="form-control" id="descricao-problema" rows="4"><?php echo $chamado->problema ?></textarea>
                             </fieldset>
                         </div>
 
@@ -80,7 +80,7 @@
 
                         <div class="form-group col-sm-12">
                             <fieldset disabled>
-                                <label id="atendido" for="data-abertura">Data Atendimento</label>
+                                <label for="data-abertura">Data Atendimento</label>
                                 <input type="text" class="form-control" value="<?php 
                                 
                                 if($chamado->dataAtendido != null){
@@ -96,18 +96,18 @@
                             <fieldset disabled>
                                 <label for="resposavel">Responsável</label>
                                 <input type="text" class="form-control" value="<?php echo "" ?>">
-                                  
-                                
                             </fieldset>
                         </div>
 
                         <div class="form-group col-sm-12">
                             <fieldset disabled>
                                 <label for="parecer">Parecer</label>
-                                <textarea class="form-control" id="parecer" rows="5"><?php echo $chamado->parecer?></textarea>
+                                <textarea class="form-control" id="parecer" rows="4"><?php echo $chamado->parecer?></textarea>
                             </fieldset>
                         </div>
-
+                    </div>
+                    <div class="col-lg-5 col-md-10 col-sm-12">
+                        <button class="btn btn-danger">Voltar</button>
                     </div>
                 </div>
             </form>
