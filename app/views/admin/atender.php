@@ -103,21 +103,17 @@
             <form action="<?php echo URL_BASE . "chamado/atenderChamado/" . $chamado->id_chamado ?>" method="POST">
 
                 <div   class="form-group col-sm-12">
-                    <h4 class="modal-title" id="label">Escreva um parecer técnico para esse problema</h4>
+                    <h6 class="modal-body" id="label">Escreva um parecer técnico para esse problema</h6>
                     <textarea  type="text"  class="form-control" name="parecer" rows="5" required></textarea>
 
                 </div>
 
                 <div class="modal-footer">
-                    <div class="form-group">
-                        
                         <input type="hidden" name="usuario" value="<?php echo $_SESSION['dados']->id_usuario ?>">
                         <button  name="encerrar" type="submit" class="btn btn-dark">Encerrar</button>
                         <button name="atender" type="submit" class="btn btn-success">Atender</button>
                         <button name="terceiros" type="submit" class="btn btn-warning text-white">Terceiros</button>
-                    </div>
                 </div>
-
             </form>         
         </div>
     </div>
