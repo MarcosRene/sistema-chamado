@@ -24,7 +24,7 @@
         </a>
     </div>
     <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
-        <a class="a" href="#">
+        <a class="a" href="<?php echo URL_BASE . "chamado/aguardandoTerceiros" ?>">
             <div class="card text-white bg-warning o-hidden h-100">
                 <div class="card-body">
                     <div class="mr-5">Aguardando terceiros</div>
@@ -51,6 +51,6 @@
 
 <?php
 
-include 'lista_home.php';
+//include 'lista_naoAtendidos.php';
 
 ?>

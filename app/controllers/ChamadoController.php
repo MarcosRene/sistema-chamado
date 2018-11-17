@@ -71,6 +71,29 @@ class ChamadoController extends Controller {
          header("location:" . URL_BASE . 'usuario');
     }
 
+    public function aguardandoTerceiros(){
+        
+        $chamado =  new chamadoModel();
+        
+        $chamado = new ChamadoModel();
+        $dados["meuschamados"] = $chamado->listaMeusChamados($_SESSION['dados']->id_usuario);
+        $dados["chamados"]= $chamado->infoChamados();
+        $dados["naoatendidos"] = $chamado->listaNaoAtendidos();
+        $dados["aguardando"] = $chamado->listaAguardandoTerceiros();
+        $dados["ematendimento"] = $chamado->listaEmAtendimento();
+        $dados["encerrados"] = $chamado->listaEncerrados();
+        
+        $dados["aguardandoTerceiros"] = $chamado->listaAguardandoTerceiros();
+
+        $dados["view"] = "admin/lista_aguardandoTerceiros";
+        $this->load("painel", $dados);
+        
+        
+        
+    }
+
+    
+
     public function visualizarChamado($id_chamado) {
 
 
