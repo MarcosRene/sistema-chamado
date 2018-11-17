@@ -25,7 +25,8 @@
                     <td><?php echo $chamado->local ?></td>
                     <td><?php echo Helper::calcularTempoAbertura($chamado->dataAbertura) ?></td>
                     <td><?php echo $chamado->prioridade ?></td>
-                    <td><?php echo $chamado->status ?></td>
+                    <td id="<?php echo \app\core\Helper::verificarCorStatus($chamado->status)
+                                        ?>"><?php echo $chamado->status ?></td>
 
                     <td>
                         <a href="<?php echo URL_BASE . "chamado/visualizarChamado/" . $chamado->id_chamado ?>">
