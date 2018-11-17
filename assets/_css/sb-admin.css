@@ -35,6 +35,7 @@ a .btn-primary {
   width: 100%;
   padding-top: 1rem;
   padding-bottom: 80px;
+  background-color: #f2f2f2;
 }
 
 body.fixed-nav #content-wrapper {
@@ -350,7 +351,8 @@ footer.sticky-footer {
   bottom: 0;
   width: calc(100% - 90px);
   height: 60px !important;
-  background-color: #e9ecef;
+  background-color: #343a40 !important;
+  color: #fff;
 }
 
 footer.sticky-footer .copyright {
@@ -400,4 +402,15 @@ body.sidebar-toggled footer.sticky-footer {
   background-position: right !important;
   background-repeat: no-repeat;
   background-image: url(../img/pretoPX.png);
+}
+
+table-bordered th, .table-bordered td {
+  border: 0px solid #dee2e6 !important;
+}
+
+.form-row{
+  background-color: #ffffff !important;
+  border-radius: 0.5rem;
+  padding: 1rem;
+
 }

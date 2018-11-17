@@ -1,5 +1,5 @@
 
-<div class="container my-5">
+<div class="container my-3">
     <div class="row justify-content-center">
         <div class="col-sm-12 col-md-10 col-lg-8">
             <form action="<?php echo URL_BASE . "Chamado/Salvar" ?>" method="POST">

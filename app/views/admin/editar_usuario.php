@@ -25,9 +25,9 @@
 
                     <div class="form-group col-sm-4">
                         <fieldset disabled>
-                            <label for="nome">SEILA</label>
+                            <label for="nome">Situação</label>
                             <input type="text" class="form-control" name="nome"
-                                   value="<?php echo date('d/m/Y', strtotime($usuario->dataCadastro)) ?>">
+                                   value="<?php echo $usuario->ativo ?>">
                         </fieldset>
                     </div>
 
@@ -45,17 +45,6 @@
                     <div class="form-group col-sm-6">
                         <label for="email">E-mail</label>
                         <input type="email" class="form-control" name="email" value="<?php echo $usuario->email ?>">
-                    </div>
-
-                    <div class="form-group col-sm-6">
-                        <fieldset disabled>
-                            <label for="tipo">Perfil</label>
-                            <select id="perfil" name="perfil" class="form-control form-control-md">
-                                <?php foreach ($viewData["perfil"] as $perfil) { ?>
-                                    <option><?php echo $perfil->descricao ?></option>
-                                <?php } ?>
-                            </select>
-                        </fieldset>
                     </div>
 
                     <div class="form-group col-sm-6">
