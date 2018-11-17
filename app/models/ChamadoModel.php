@@ -151,12 +151,14 @@ class ChamadoModel extends Model {
     public function getChamado($id_chamado) {
 
         $resultado = array();
-        $sql = " SELECT c.id_chamado,c.parecer, c.local, a.descricaoArea, c.status, c.prioridade, u.login, "
-                . "c.dataAtendido, c.dataAbertura, c.tombamento, c.problema "
-                . "FROM chamado AS c "
-                . "INNER JOIN usuario AS u ON (c.abertoPor = u.id_usuario) "
-                . "INNER JOIN area as a on (c.area = a.id_area)"
-                . "WHERE id_chamado = :id_chamado";
+        $sql = ' SELECT c.id_chamado,c.parecer, c.local, a.descricaoArea, c.status, c.prioridade, u.login,
+                c.dataAtendido, c.dataAbertura, c.dataEncerrado, c.tombamento, c.problema, f.nome, f.sobrenome 
+                FROM chamado AS c 
+                INNER JOIN usuario AS u ON (c.abertoPor = u.id_usuario) 
+                left JOIN usuario AS f ON (c.atendidoPor = f.id_usuario) 
+                
+                INNER JOIN area as a on (c.area = a.id_area)
+                WHERE id_chamado = :id_chamado';
 
         $qry = $this->getDb()->prepare($sql);
         $qry->bindValue(":id_chamado", $id_chamado);

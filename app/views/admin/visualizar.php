@@ -56,7 +56,13 @@
                         <div class="form-group col-sm-6">
                             <fieldset disabled>
                                 <label for="data-abertura">Data Encerramento</label>
-                                <input type="text" class="form-control"value=" <?php echo $chamado->id_chamado ?>">
+                                <input type="text" class="form-control" value="<?php 
+                                
+                                if($chamado->dataEncerrado != null){
+                                    
+                                    echo date('d/m/Y  h:i ', strtotime($chamado->dataEncerrado));
+                                    
+                                }?>">
                             </fieldset>
                         </div>
 
@@ -95,7 +101,7 @@
                         <div class="form-group col-sm-12">
                             <fieldset disabled>
                                 <label for="resposavel">Responsável</label>
-                                <input type="text" class="form-control" value="<?php echo "" ?>">
+                                <input type="text" class="form-control" value="<?php echo $chamado->nome ." ".$chamado->sobrenome ?>">
                             </fieldset>
                         </div>
 
@@ -106,9 +112,9 @@
                             </fieldset>
                         </div>
                     </div>
-                    <div class="col-lg-5 col-md-10 col-sm-12">
-                        <button class="btn btn-danger">Voltar</button>
-                    </div>
+                      <a href="<?php echo URL_BASE . 'usuario/meusChamados' ?>">
+                            <button class="btn btn-danger" type="button">Cancelar</button>
+                        </a>
                 </div>
             </form>
         </div>
