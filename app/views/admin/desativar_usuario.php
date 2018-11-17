@@ -102,10 +102,10 @@
                 </button>
             </div>
             <div class="modal-body">
-                
+
             </div>
             <div class="modal-footer">
-                <a class="btn btn-info col-lg-4 col-md-5 col-sm-5" href="<?php echo URL_BASE . "usuario/desativarUsuario/". $usuario->id_usuario ?>">
+                <a class="btn btn-info col-lg-4 col-md-5 col-sm-5" href="<?php echo URL_BASE . "usuario/desativarUsuario/" . $usuario->id_usuario ?>">
                     Desativar
                 </a>
             </div

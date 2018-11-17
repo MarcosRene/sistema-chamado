@@ -16,7 +16,7 @@
                         <label for="problema">Área</label>
                           <select id="area" name="area" class="form-control form-control-md">
                          <?php foreach ($viewData["areas"] as $area) { ?>
-                             <option><?php echo $area->descricao ?></option>
+                             <option><?php echo $area->descricaoArea ?></option>
                          <?php } ?>
                      </select>
                     </div>

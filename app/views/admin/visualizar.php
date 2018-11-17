@@ -73,7 +73,7 @@
                         <div class="form-group col-sm-12">
                             <fieldset disabled>
                                 <label for="resposavel">Status</label>
-                                <input type="text" id="nao-atendido" class="form-control" value="<?php echo $chamado->status ?>" >
+                                <input type="text" id="encerrado" class="form-control" value="<?php echo $chamado->status ?>" >
                             </fieldset>
                         </div>
 
@@ -97,7 +97,7 @@
                         <div class="form-group col-sm-12">
                             <fieldset disabled>
                                 <label for="parecer">Parecer</label>
-                                <textarea class="form-control" id="parecer" rows="5"></textarea>
+                                <textarea class="form-control" id="parecer" rows="5"><?php echo $chamado->parecer?></textarea>
                             </fieldset>
                         </div>
 

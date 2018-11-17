@@ -21,10 +21,10 @@ class UsuarioController extends Controller {
         $chamado = new ChamadoModel();
         $dados["meuschamados"] = $chamado->listaMeusChamados($_SESSION['dados']->id_usuario);
         $dados["chamados"]= $chamado->infoChamados();
-        $dados["naoatendidos"] = $chamado->naoAtendidos();
-        $dados["ematendimento"] = $chamado->aguardandoTerceiros();
-        $dados["aguardando"] = $chamado->emAtendimento();
-        $dados["encerrados"] = $chamado->encerrados();
+        $dados["naoatendidos"] = $chamado->listaNaoAtendidos();
+        $dados["ematendimento"] = $chamado->listaAguardandoTerceiros();
+        $dados["aguardando"] = $chamado->listaEmAtendimento();
+        $dados["encerrados"] = $chamado->listaEncerrados();
         
         $dados['view'] =  $_SESSION['home'];
         $this->load('painel', $dados);

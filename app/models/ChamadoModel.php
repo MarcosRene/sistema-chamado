@@ -42,7 +42,7 @@ class ChamadoModel extends Model {
         return $qry->fetchALL(\PDO::FETCH_OBJ);
     }
 
-    public function naoAtendidos() {
+    public function listaNaoAtendidos() {
 
         $sql = 'SELECT * FROM chamado WHERE status = :status';
         $qry = $this->getDb()->prepare($sql);
@@ -53,7 +53,7 @@ class ChamadoModel extends Model {
         return $qry->fetchALL(\PDO::FETCH_OBJ);
     }
 
-    public function emAtendimento() {
+    public function listaEmAtendimento() {
 
         $sql = 'SELECT * FROM chamado WHERE status = :status';
         $qry = $this->getDb()->prepare($sql);
@@ -64,7 +64,7 @@ class ChamadoModel extends Model {
         return $qry->fetchALL(\PDO::FETCH_OBJ);
     }
 
-    public function aguardandoTerceiros() {
+    public function listaAguardandoTerceiros() {
 
         $sql = 'SELECT * FROM chamado WHERE status = :status';
         $qry = $this->getDb()->prepare($sql);
@@ -75,7 +75,7 @@ class ChamadoModel extends Model {
         return $qry->fetchALL(\PDO::FETCH_OBJ);
     }
 
-    public function encerrados() {
+    public function listaEncerrados() {
 
         $sql = 'SELECT * FROM chamado WHERE status = :status';
         $qry = $this->getDb()->prepare($sql);
@@ -129,20 +129,28 @@ class ChamadoModel extends Model {
         return $qry->execute();
     }
 
-    public function editar($id_area, $descricao) {
+   
+    public function atenderChamado($id_chamado, $parecer, $id_tecnico, $status) {
 
-        $sql = "UPDATE area SET descricao = :descricao WHERE id_area = :id_area";
+        $sql = "UPDATE chamado SET parecer = :parecer, atendidoPor = :id_tecnico, status = :status WHERE id_chamado = :id_chamado";
 
         $qry = $this->getDb()->prepare($sql);
-        $qry->bindValue(":descricao", $descricao);
-        $qry->bindValue(":id_area", $id_area);
+        $qry->bindValue(":parecer", $parecer);
+        $qry->bindValue(":id_tecnico", $id_tecnico);
+        $qry->bindValue(":status", $status);
+        $qry->bindValue(":id_chamado", $id_chamado); 
         $qry->execute();
+  
     }
+
+
+    
+    
 
     public function getChamado($id_chamado) {
 
         $resultado = array();
-        $sql = " SELECT c.id_chamado, c.local, a.descricaoArea, c.status, c.prioridade, u.login, c.dataAbertura, c.tombamento, c.problema "
+        $sql = " SELECT c.id_chamado,c.parecer, c.local, a.descricaoArea, c.status, c.prioridade, u.login, c.dataAbertura, c.tombamento, c.problema "
                 . "FROM chamado AS c "
                 . "INNER JOIN usuario AS u ON (c.abertoPor = u.id_usuario) "
                 . "INNER JOIN area as a on (c.area = a.id_area)"
