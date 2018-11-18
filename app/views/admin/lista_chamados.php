@@ -20,7 +20,7 @@
                 <tbody>
 
                 <?php use app\core\Helper; ?>
-                <?php foreach ($viewData["naoatendidos"] as $chamado) { ?>
+                <?php foreach ($viewData["chamados"] as $chamado) { ?>
                 <tr>
                     <td><?php echo $chamado->id_chamado ?></td>
                     <td><?php echo $chamado->local ?></td>

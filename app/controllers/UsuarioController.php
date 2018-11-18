@@ -22,12 +22,14 @@ class UsuarioController extends Controller {
         $dados["meuschamados"] = $chamado->listaMeusChamados($_SESSION['dados']->id_usuario);
         $dados["chamados"]= $chamado->infoChamados();
         $dados["naoatendidos"] = $chamado->listaNaoAtendidos();
-        $dados["aguardando"] = $chamado->listaAguardandoTerceiros();
         $dados["ematendimento"] = $chamado->listaEmAtendimento();
         $dados["encerrados"] = $chamado->listaEncerrados();
+        $dados["aguardandoTerceiros"] = $chamado->listaAguardandoTerceiros();
+
         
         $dados['view'] =  $_SESSION['home'];
         $this->load('painel', $dados);
+    
     }
     
     

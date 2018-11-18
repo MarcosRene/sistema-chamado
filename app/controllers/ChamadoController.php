@@ -79,10 +79,8 @@ class ChamadoController extends Controller {
         $dados["meuschamados"] = $chamado->listaMeusChamados($_SESSION['dados']->id_usuario);
         $dados["chamados"]= $chamado->infoChamados();
         $dados["naoatendidos"] = $chamado->listaNaoAtendidos();
-        $dados["aguardando"] = $chamado->listaAguardandoTerceiros();
         $dados["ematendimento"] = $chamado->listaEmAtendimento();
         $dados["encerrados"] = $chamado->listaEncerrados();
-        
         $dados["aguardandoTerceiros"] = $chamado->listaAguardandoTerceiros();
 
         $dados["view"] = "admin/lista_aguardandoTerceiros";
@@ -91,8 +89,28 @@ class ChamadoController extends Controller {
         
         
     }
-
     
+    
+    public function listarChamados($status){
+            
+        $chamado = new ChamadoModel();
+        $dados["meuschamados"] = $chamado->listaMeusChamados($_SESSION['dados']->id_usuario);
+        $dados["chamados"]= $chamado->infoChamados();
+        $dados["naoatendidos"] = $chamado->listaNaoAtendidos();
+        $dados["ematendimento"] = $chamado->listaEmAtendimento();
+        $dados["encerrados"] = $chamado->listaEncerrados();
+        $dados["aguardandoTerceiros"] = $chamado->listaAguardandoTerceiros();
+
+        $chamadoModel = new ChamadoModel();
+        $dados['chamados'] = $chamadoModel->listaChamados($status);
+        $dados["view"] = "admin/home";
+        $this->load("painel", $dados);
+   
+    }
+            
+
+
+        
 
     public function visualizarChamado($id_chamado) {
 

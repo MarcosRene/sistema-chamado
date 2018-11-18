@@ -69,7 +69,10 @@ class ChamadoModel extends Model {
 
     public function listaAguardandoTerceiros() {
 
-        $sql = 'SELECT * FROM chamado WHERE status = :status';
+        $sql ='SELECT c.id_chamado, c.local, u.login, c.dataAbertura, c.status, c.prioridade FROM chamado As c
+                INNER JOIN usuario AS u ON (c.abertoPor = u.id_usuario)
+                WHERE status = :status';
+     
         $qry = $this->getDb()->prepare($sql);
 
         $qry->bindValue(':status', 'Aguardando terceiros');
@@ -78,6 +81,21 @@ class ChamadoModel extends Model {
         return $qry->fetchALL(\PDO::FETCH_OBJ);
     }
 
+       public function listaChamados($status) {
+
+        $sql ='SELECT c.id_chamado, c.local, u.login, c.dataAbertura, c.status, c.prioridade FROM chamado As c
+                INNER JOIN usuario AS u ON (c.abertoPor = u.id_usuario)
+                WHERE status = :status';
+     
+        $qry = $this->getDb()->prepare($sql);
+
+        $qry->bindValue(':status', $status);
+        $qry->execute();
+
+        return $qry->fetchALL(\PDO::FETCH_OBJ);
+    }
+
+    
     public function listaEncerrados() {
 
         $sql = 'SELECT * FROM chamado WHERE status = :status';
