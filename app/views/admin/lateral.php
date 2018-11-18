@@ -39,7 +39,7 @@
         </div>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="<?php echo URL_BASE . "usuario/gerarRelatorio" ?>">
             <i class="fas fa-fw fa-chart-bar"></i>
             <span>Relatórios</span></a>
     </li>
