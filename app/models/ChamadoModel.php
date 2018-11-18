@@ -154,13 +154,15 @@ class ChamadoModel extends Model {
     
     public function atenderChamado($id_chamado, $parecer, $id_tecnico, $status) {
 
-        $sql = "UPDATE chamado SET parecer = :parecer, atendidoPor = :id_tecnico, status = :status WHERE id_chamado = :id_chamado";
+        date_default_timezone_set('America/Fortaleza');
+        $sql = "UPDATE chamado SET parecer = :parecer, atendidoPor = :id_tecnico, status = :status, dataEncerrado = :dataEncerrado WHERE id_chamado = :id_chamado";
 
         $qry = $this->getDb()->prepare($sql);
         $qry->bindValue(":parecer", $parecer);
         $qry->bindValue(":id_tecnico", $id_tecnico);
         $qry->bindValue(":status", $status);
         $qry->bindValue(":id_chamado", $id_chamado); 
+         $qry->bindValue(":dataEncerrado",date('Y-m-d H:i')); 
         $qry->execute();
   
     }

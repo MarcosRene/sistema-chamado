@@ -13,7 +13,20 @@ class Helper {
 
         $interval = date_diff($data1, $data2);
 
-        return $interval->format('%a dias %h horas');
+        $dia = 'dias';
+        $hora = 'horas';
+
+        if ($interval->format('%a') == 1) {
+
+            $dia = 'dia';
+        }
+        if ($interval->format('%h') == 1) {
+
+            $hora = 'hora';
+        }
+
+
+        return $interval->format('%a ' . $dia . ' %h ' . $hora);
     }
 
     static function verificarCorStatus($status) {
@@ -39,6 +52,15 @@ class Helper {
                 return 'nao-atendido';
                 break;
         }
+    }
+
+    static function verificarAcesso($permissoes) {
+
+        if (!isset($_SESSION['usuario']))
+           header("location:" . URL_BASE . "login/sair");
+
+        if (!in_array($_SESSION['perfil'], $permissoes))
+            header("location:" . URL_BASE . "login/sair");
     }
 
 }

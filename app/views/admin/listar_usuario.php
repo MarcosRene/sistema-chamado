@@ -1,3 +1,14 @@
+<?php
+
+    use app\core\Helper;
+
+    $permissoes = ['admin'];
+    Helper::verificarAcesso($permissoes);
+
+?>
+
+
+
 <div class="card">
     <div class="card-header">
         <i class="fas fa-table"></i>

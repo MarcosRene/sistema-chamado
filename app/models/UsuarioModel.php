@@ -27,6 +27,7 @@ class UsuarioModel extends Model {
                 $_SESSION['perfil'] = $this->verificarPerfil($row->id_perfil);
                 $_SESSION['usuario'] = $login;
                 $_SESSION['dados'] = $row;
+                
 
                 return true;
             }

@@ -1,3 +1,13 @@
+<?php
+
+    use app\core\Helper;
+
+    $permissoes = ['admin', 'tecnico'];
+    Helper::verificarAcesso($permissoes);
+
+?>
+
+
 <div class="row">
     <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
         <a class="a" href="<?php echo URL_BASE .'chamado/listarChamados/Não atendido'   ?>">

@@ -13,8 +13,6 @@ class AreaModel extends Model {
         $sql = "SELECT * FROM area";
         $qry = $this->getDb()->query($sql);
         return $qry->fetchALL(\PDO::FETCH_OBJ);
-        
-        
     }
     
     public function getArea($id_area) {

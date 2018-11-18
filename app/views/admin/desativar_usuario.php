@@ -1,3 +1,14 @@
+<?php
+
+    use app\core\Helper;
+
+    $permissoes = ['admin'];
+    Helper::verificarAcesso($permissoes);
+
+?>
+
+
+
 <div class="container my-5">
     <div class="row justify-content-center">
 
