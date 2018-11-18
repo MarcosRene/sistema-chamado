@@ -2,6 +2,7 @@
  if(!isset($_SESSION['usuario'])){
       header("location:" . URL_BASE);
   }
+
 ?>
 
 <!DOCTYPE html>

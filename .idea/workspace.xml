@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="deb33e6e-038b-471d-8c0a-a48b035183ca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/core/Helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/listar_usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/listar_usuario.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/cabecalho.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/cabecalho.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/home_relatorio.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/home_relatorio.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/painel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/painel.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/vendor/composer/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,38 +22,40 @@
     <session id="-879505879">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.2" value="2" />
-          <entry key="project.open.time.41" value="2" />
+          <entry key="project.open.time.20" value="1" />
+          <entry key="project.open.time.41" value="3" />
           <entry key="project.open.time.44" value="1" />
           <entry key="project.open.time.46" value="1" />
           <entry key="project.open.time.60" value="1" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="10" />
+          <entry key="css" value="11" />
           <entry key="html" value="2" />
-          <entry key="php" value="114" />
+          <entry key="php" value="132" />
           <entry key="rnc" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="10" />
+          <entry key="CSS" value="11" />
           <entry key="HTML" value="2" />
-          <entry key="PHP" value="114" />
+          <entry key="PHP" value="132" />
           <entry key="RNG Compact" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="1349" />
+          <entry key="dummy" value="9" />
           <entry key="html" value="1801" />
-          <entry key="php" value="4632" />
+          <entry key="php" value="5688" />
           <entry key="txt" value="67" />
         </counts>
       </usages-collector>
@@ -58,8 +63,13 @@
         <counts>
           <entry key="CSS" value="1349" />
           <entry key="HTML" value="1801" />
-          <entry key="PHP" value="4632" />
-          <entry key="PLAIN_TEXT" value="67" />
+          <entry key="PHP" value="5688" />
+          <entry key="PLAIN_TEXT" value="76" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.php.new.class">
+        <counts>
+          <entry key="PHP Class.type" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -69,53 +79,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/admin/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+            <state relative-caret-position="153">
+              <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/_css/sb-admin.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="414" column="15" selection-start-line="414" selection-start-column="15" selection-end-line="414" selection-end-column="15" />
+            <state relative-caret-position="187">
+              <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/core/Helper.php">
+        <entry file="file://$PROJECT_DIR$/app/views/admin/lista_chamados.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/cabecalho.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="52" selection-start-column="48" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admin/visualizar.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="922">
-              <caret line="119" column="61" selection-start-line="119" selection-start-column="61" selection-end-line="119" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admin/desativar_usuario.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="104" selection-start-line="104" selection-end-line="104" />
+            <state relative-caret-position="306">
+              <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -123,17 +106,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/admin/lista_area.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+            <state relative-caret-position="765">
+              <caret line="45" column="35" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admin/editar_usuario.php">
+        <entry file="file://$PROJECT_DIR$/app/views/cabecalho.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="39" column="64" lean-forward="true" selection-start-line="39" selection-start-column="64" selection-end-line="39" selection-end-column="64" />
+            <state relative-caret-position="153">
+              <caret line="9" column="47" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/home_relatorio.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="62" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/admin/cadastro_usuario.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/admin/cadastro_area.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -172,23 +182,26 @@
         <option value="$PROJECT_DIR$/app/views/visualizar.php" />
         <option value="$PROJECT_DIR$/app/views/admin/lista_home.php" />
         <option value="$PROJECT_DIR$/app/views/admin/cadastro_area.php" />
-        <option value="$PROJECT_DIR$/app/views/painel.php" />
         <option value="$PROJECT_DIR$/app/views/admin/editar_area.php" />
         <option value="$PROJECT_DIR$/app/views/admin/lateral.php" />
-        <option value="$PROJECT_DIR$/app/views/admin/lista_area.php" />
         <option value="$PROJECT_DIR$/app/models/ChamadoModel.php" />
-        <option value="$PROJECT_DIR$/app/views/admin/listar_usuario.php" />
         <option value="$PROJECT_DIR$/app/views/usuario/listar_chamado.php" />
         <option value="$PROJECT_DIR$/app/views/admin/cadastro_usuario.php" />
         <option value="$PROJECT_DIR$/app/views/admin/desativar_usuario.php" />
         <option value="$PROJECT_DIR$/app/views/admin/atender.php" />
         <option value="$PROJECT_DIR$/app/views/usuario/cadastro_chamado.php" />
         <option value="$PROJECT_DIR$/app/views/admin/editar_usuario.php" />
-        <option value="$PROJECT_DIR$/app/views/cabecalho.php" />
         <option value="$PROJECT_DIR$/app/views/admin/visualizar.php" />
         <option value="$PROJECT_DIR$/app/core/Helper.php" />
         <option value="$PROJECT_DIR$/app/views/admin/home.php" />
         <option value="$PROJECT_DIR$/assets/_css/sb-admin.css" />
+        <option value="$PROJECT_DIR$/paginacao.php" />
+        <option value="$PROJECT_DIR$/app/views/admin/listar_usuario.php" />
+        <option value="$PROJECT_DIR$/app/views/painel.php" />
+        <option value="$PROJECT_DIR$/Paginacao.php" />
+        <option value="$PROJECT_DIR$/app/views/admin/lista_area.php" />
+        <option value="$PROJECT_DIR$/app/views/cabecalho.php" />
+        <option value="$PROJECT_DIR$/app/views/home_relatorio.php" />
       </list>
     </option>
   </component>
@@ -245,12 +258,6 @@
               <item name="sistema-chamado" type="b2602c69:ProjectViewProjectNode" />
               <item name="sistema-chamado" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sistema-chamado" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sistema-chamado" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -259,13 +266,6 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
               <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sistema-chamado" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sistema-chamado" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="usuario" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sistema-chamado" type="b2602c69:ProjectViewProjectNode" />
@@ -289,6 +289,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -310,12 +311,24 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/views/admin/lista_home.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/controllers/UsuarioController.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/core/Helper.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/models/AreaModel.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/models/ChamadoModel.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/models/UsuarioModel.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/views/admin/atender.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/views/admin/cadastro_area.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/views/admin/cadastro_usuario.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/views/admin/desativar_usuario.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/views/admin/editar_area.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/views/admin/editar_usuario.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/views/admin/home.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/views/admin/lateral.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/views/admin/listar_usuario.php</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/app/views/admin/visualizar.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/views/cabecalho.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/views/usuario/cadastro_chamado.php</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/app/views/usuario/listar_chamado.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/img/amareloPX.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/img/pretoPX.png</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/assets/img/verdePX.png</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -323,6 +336,122 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/controllers/RelatorioController.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/FAQ.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/FPDF.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/changelog.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/__construct.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/acceptpagebreak.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/addfont.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/addlink.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/addpage.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/aliasnbpages.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/cell.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/close.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/error.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/footer.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/getpageheight.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/getpagewidth.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/getstringwidth.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/getx.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/gety.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/header.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/image.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/index.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/line.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/link.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/ln.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/multicell.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/output.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/pageno.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/rect.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/setauthor.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/setautopagebreak.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/setcompression.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/setcreator.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/setdisplaymode.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/setdrawcolor.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/setfillcolor.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/setfont.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/setfontsize.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/setkeywords.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/setleftmargin.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/setlinewidth.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/setlink.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/setmargins.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/setrightmargin.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/setsubject.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/settextcolor.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/settitle.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/settopmargin.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/setx.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/setxy.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/sety.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/text.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/doc/write.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/font/courier.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/font/courierb.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/font/courierbi.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/font/courieri.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/font/helvetica.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/font/helveticab.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/font/helveticabi.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/font/helveticai.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/font/symbol.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/font/times.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/font/timesb.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/font/timesbi.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/font/timesi.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/font/zapfdingbats.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/fpdf.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/install.txt</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/license.txt</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/makefont/cp1250.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/makefont/cp1251.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/makefont/cp1252.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/makefont/cp1253.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/makefont/cp1254.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/makefont/cp1255.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/makefont/cp1257.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/makefont/cp1258.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/makefont/cp874.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/makefont/iso-8859-1.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/makefont/iso-8859-11.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/makefont/iso-8859-15.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/makefont/iso-8859-16.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/makefont/iso-8859-2.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/makefont/iso-8859-4.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/makefont/iso-8859-5.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/makefont/iso-8859-7.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/makefont/iso-8859-9.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/makefont/koi8-r.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/makefont/koi8-u.map</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/makefont/makefont.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/makefont/ttfparser.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/tutorial/20k_c1.txt</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/tutorial/20k_c2.txt</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/tutorial/calligra.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/tutorial/calligra.ttf</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/tutorial/calligra.z</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/tutorial/countries.txt</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/tutorial/index.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/tutorial/logo.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/tutorial/makefont.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/tutorial/tuto1.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/tutorial/tuto1.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/tutorial/tuto2.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/tutorial/tuto2.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/tutorial/tuto3.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/tutorial/tuto3.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/tutorial/tuto4.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/tutorial/tuto4.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/tutorial/tuto5.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/tutorial/tuto5.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/tutorial/tuto6.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/tutorial/tuto6.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/tutorial/tuto7.htm</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/fpdf181/tutorial/tuto7.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app/views/home_relatorio.php</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -442,6 +571,8 @@
       <workItem from="1542464000707" duration="215000" />
       <workItem from="1542466314100" duration="3987000" />
       <workItem from="1542475249611" duration="8674000" />
+      <workItem from="1542523326166" duration="3436000" />
+      <workItem from="1542530310041" duration="533000" />
     </task>
     <task id="LOCAL-00001" summary="updete interface grafica">
       <created>1542044382459</created>
@@ -517,13 +648,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46483000" />
+    <option name="totallyTimeSpent" value="50452000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2806354" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28971255" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -597,27 +728,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/ChamadoModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2397">
-          <caret line="144" column="53" selection-start-line="144" selection-start-column="53" selection-end-line="144" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/lista_home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="51" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/cadastro_area.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="20" column="43" lean-forward="true" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/lista_home.php" />
     <entry file="file://$PROJECT_DIR$/app/views/admin/atender.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1785">
@@ -632,24 +743,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/listar_usuario.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin/editar_area.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/cadastro_usuario.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -660,66 +757,130 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/editar_usuario.php">
+    <entry file="file://$PROJECT_DIR$/app/views/admin/visualizar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="39" column="64" lean-forward="true" selection-start-line="39" selection-start-column="64" selection-end-line="39" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/lista_area.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/painel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/cabecalho.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="52" selection-start-column="48" selection-end-column="52" />
+        <state relative-caret-position="2023">
+          <caret line="119" column="61" selection-start-line="119" selection-start-column="61" selection-end-line="119" selection-end-column="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin/desativar_usuario.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
+        <state relative-caret-position="1768">
           <caret line="104" selection-start-line="104" selection-end-line="104" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/visualizar.php">
+    <entry file="file://$PROJECT_DIR$/app/views/admin/editar_usuario.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="922">
-          <caret line="119" column="61" selection-start-line="119" selection-start-column="61" selection-end-line="119" selection-end-column="61" />
+        <state relative-caret-position="663">
+          <caret line="39" column="64" selection-start-line="39" selection-start-column="64" selection-end-line="39" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/listar_usuario.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/painel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/core/Helper.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+        <state relative-caret-position="392">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/core/Core.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-662" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/core/Controller.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/core/Model.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/PerfilModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/UsuarioModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/ChamadoModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="188" column="5" lean-forward="true" selection-start-line="168" selection-start-column="2" selection-end-line="188" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Paginacao.php" />
     <entry file="file://$PROJECT_DIR$/app/views/admin/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="38" column="28" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="28" />
+        <state relative-caret-position="153">
+          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/_css/sb-admin.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="414" column="15" selection-start-line="414" selection-start-column="15" selection-end-line="414" selection-end-column="15" />
+        <state relative-caret-position="187">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/lista_chamados.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/cadastro_usuario.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/cadastro_area.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/lista_area.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="45" column="35" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/cabecalho.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="47" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/home_relatorio.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="62" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
         </state>
       </provider>
     </entry>

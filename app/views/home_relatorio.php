@@ -10,7 +10,7 @@
                     <div class="form-group col-lg-5 col-md-10 col-sm-12">
                     
                         <a href="<?php echo URL_BASE . 'relatorio' ?>">
-                            <button class="btn btn-danger" type="button">Relatorio teste</button>
+                            <button class="btn btn-danger mt-3" type="button">Gerar</button>
                         </a>
                     </div>
                 </div>

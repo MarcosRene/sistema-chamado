@@ -9,8 +9,8 @@
     <ul class="navbar-nav ml-auto ml-md-12">
         <li class="nav-item dropdown no-arrow">
             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-               <i  class="fas fa-user-circle" ><?php echo ' ' . $_SESSION['usuario'] ?> </i>
-                
+                <span><?php echo ' ' . $_SESSION['usuario'] ?></span>
+                <span  class="fas fa-user-circle ml-3" ></span>
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="<?php echo   URL_BASE . 'login/sair'?>">Sair</a>
