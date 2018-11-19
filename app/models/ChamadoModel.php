@@ -32,13 +32,11 @@ class ChamadoModel extends Model {
     }
 
     public function listaMeusChamados($id_usuario, $status) {
-
-       
         
-        $sql = 'SELECT c.id_chamado, c.local, u.login, c.dataAbertura, c.status,c.dataEncerrado, c.prioridade FROM chamado As c
+        $sql = 'SELECT c.id_chamado, c.local, u.login, c.dataAbertura, c.status,c.dataEncerrado, c.prioridade FROM chamado As c             
                 Left JOIN usuario AS u ON (c.atendidoPor = u.id_usuario)
                 WHERE status = :status
-                AND id_usuario = :id_usuario';
+                AND abertoPor = :id_usuario';
      
         $qry = $this->getDb()->prepare($sql);
 
@@ -46,8 +44,7 @@ class ChamadoModel extends Model {
         $qry->bindValue(':status', $status);
         $qry->execute();
 
-        
-       // var_dump($qry->fetchALL(\PDO::FETCH_OBJ));
+      
         return $qry->fetchALL(\PDO::FETCH_OBJ);
     }
 
