@@ -8,18 +8,17 @@
         <link href=" <?php echo URL_BASE . "assets/img/logo.png" ?>" rel="stylesheet">
    
         <link href=" <?php echo URL_BASE . "assets/_css/sb-admin.css" ?>" rel="stylesheet">
+        <link href=" <?php echo URL_BASE . "assets/img/logoJanela.png"?>" rel="shortcut icon">
+        
     </head>
 
     <body class="text-center">
-
-
-
      
         <div id="logo" class="container">
           
          </div>
       
-        
+ 
         
         <div class="container">
             <div class="form-signin">
@@ -41,11 +40,11 @@
                         <input class="form-control" type="password" name="senha" placeholder="Senha" required/>
                     </div>
 
-                    <div class="grid-item">
+                    <div class="grid-item text-right">
                         <input type="hidden" name="acao" value="login"/>
-                        <button class="btn btn-primary btn-lg mb-3"type="submit" class="button">Entrar</button>
+                        <button class="btn btn-primary btn-md mb-3"type="submit" class="button">Entrar</button>
                     </div>
-
+ 
                 </form>
             </div>
         </div>

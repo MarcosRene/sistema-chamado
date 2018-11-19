@@ -29,13 +29,18 @@
                      </select>
                     </div>
 
-                    <div class="form-group col-sm-4">
+                    <div class="form-group col-sm-3">
                         <label for="problema">Prioridade</label>
                         <select class="form-control form-control-md" name="prioridade" required>
+                            <option>Urgente</option>
                             <option>Alta</option>
                             <option>Normal</option>
                             <option>Baixa</option>
                         </select>
+                     
+                        
+                        <a  type="button" data-toggle="modal" data-target="#modalInfo" class="fas fa-info-circle ml-4" ></a>
+                  
                     </div>
 
                     <div class="form-group col-sm-12">
@@ -80,6 +85,32 @@
 
                 </div>
             </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="modalInfo" tabindex="-1" role="dialog" aria-labelledby="modalAlterar"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="label">Classificação  de prioridade</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <h6 id="Urgente"><b>Urgente:</b> Incidente que interrompa as atividade</h6><br>
+                <h6 id="Alta"> <b>Alta:</b> Incidente que não interrompa as atividades </h6><br>
+                <h6 id="Normal"> <b>Normal:</b> Solicitações e avisos </h6><br>
+                <h6 id="Baixa"> <b>Baixa:</b> Solicitações e avisos </h6><br>
+                
+            </div>
+            <div class="modal-footer">
+            
+            </div
         </div>
     </div>
 </div>

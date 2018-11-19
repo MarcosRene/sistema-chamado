@@ -404,19 +404,43 @@ body.sidebar-toggled footer.sticky-footer {
   background-repeat: no-repeat;
   background-image: url(../img/pretoPX.png);
 }
+
+#Urgente{
+  display: block;
+  background-position: right !important;
+  background-repeat: no-repeat;
+  background-image: url(../img/vermelhoPX.png);
+}
+
+#Alta {
+  display: block;
+  background-position: right !important;
+  background-repeat: no-repeat;
+  background-image: url(../img/amareloPX.png);
+}
+
+#Normal {
+  display: block;
+  background-position: right !important;
+  background-repeat: no-repeat;
+  background-image: url(../img/verdePX.png);
+}
+
+#Baixa {
+  display: block;
+  background-position: right !important;
+  background-repeat: no-repeat;
+  background-image: url(../img/pretoPX.png);
+}
 #logo {
   display: block;
-    
   background-position: center center !important;
   background-repeat: no-repeat;
   background-image: url(../img/logo.png);
   background-color: #E9ECEF;
 }
 
-
-
-
-table-bordered th, .table-bordered td {
+.table-bordered th, .table-bordered td {
   border: 0px solid #dee2e6 !important;
 }
 
