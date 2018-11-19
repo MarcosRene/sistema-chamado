@@ -1,3 +1,15 @@
+<?php
+
+use app\core\Helper;
+
+$permissoes = ['admin', 'tecnico', 'usuario'];
+Helper::verificarAcesso($permissoes);
+
+
+include 'home.php';
+?>
+
+
 <div class="card">
     <div class="card-header">
         <i class="fas fa-table"></i>
@@ -19,7 +31,7 @@
                 </thead>
                 <tbody>
 
-                <?php use app\core\Helper; ?>
+          
                 <?php foreach ($viewData["chamados"] as $chamado) { ?>
                 <tr>
                     <td><?php echo $chamado->id_chamado ?></td>

@@ -90,7 +90,8 @@ class ChamadoModel extends Model {
 
        public function listaChamados($status) {
 
-        $sql ='SELECT c.id_chamado, c.local, u.login, c.dataAbertura, c.status, c.prioridade FROM chamado As c
+        $sql ='SELECT c.id_chamado, c.dataEncerrado, c.local, u.login, c.dataAbertura, c.status, c.prioridade ,f.nome, f.sobrenome FROM chamado As c
+                LEFT JOIN usuario AS f ON (c.atendidoPor = f.id_usuario)
                 INNER JOIN usuario AS u ON (c.abertoPor = u.id_usuario)
                 WHERE status = :status';
      

@@ -19,16 +19,11 @@ class UsuarioController extends Controller {
     public function index() {
               
         if($_SESSION['perfil'] === 'usuario'){
-          
             header("location:" . URL_BASE . "usuario/meusChamados");
-      
-        }else{
-            
+        }else{ 
              header("location:" . URL_BASE . "chamado/listarChamados/Não atendido");
         }
  
-  
-    
     }
     
 

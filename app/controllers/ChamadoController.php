@@ -90,17 +90,20 @@ class ChamadoController extends Controller {
     public function listarChamados($status) {
 
         $chamado = new ChamadoModel();
-
-        $dados["chamados"] = $chamado->infoChamados();
+        
         $dados["naoAtendidos"] = $chamado->listaNaoAtendidos();
         $dados["emAtendimento"] = $chamado->listaEmAtendimento();
         $dados["encerrados"] = $chamado->listaEncerrados();
         $dados["aguardandoTerceiros"] = $chamado->listaAguardandoTerceiros();
 
+        $dados["view"] = "admin/lista_chamados";
+        $dados['chamados'] = $chamado->listaChamados($status);
+     
+        if($status === 'Encerrado'){
+ 
+             $dados["view"] = "admin/listar_encerrados";
 
-        $chamadoModel = new ChamadoModel();
-        $dados['chamados'] = $chamadoModel->listaChamados($status);
-        $dados["view"] = "admin/home";
+        }
         $this->load("painel", $dados);
     }
 

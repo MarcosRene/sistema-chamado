@@ -59,8 +59,3 @@
     </div>
 </div>
 
-<?php
-
-include 'lista_chamados.php';
-
-?>
