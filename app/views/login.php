@@ -5,11 +5,22 @@
 
         <link href=" <?php echo URL_BASE . "assets/Sass/node_modules/bootstrap/compiler/bootstrap.css" ?>" rel="stylesheet">
         <link href=" <?php echo URL_BASE . "assets/_css/estilo-form.css" ?>" rel="stylesheet">
-
+        <link href=" <?php echo URL_BASE . "assets/img/logo.png" ?>" rel="stylesheet">
+   
+        <link href=" <?php echo URL_BASE . "assets/_css/sb-admin.css" ?>" rel="stylesheet">
     </head>
 
     <body class="text-center">
 
+
+
+     
+        <div id="logo" class="container">
+          
+         </div>
+      
+        
+        
         <div class="container">
             <div class="form-signin">
                 <h1 class="h4 mb-3 font-weight-normal">Login</h1>
