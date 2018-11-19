@@ -13,13 +13,6 @@ class ChamadoModel extends Model {
         parent::__construct();
     }
 
-    public function lista() {
-
-        $sql = "SELECT * FROM chamado";
-        $qry = $this->getDb()->query($sql);
-        return $qry->fetchALL(\PDO::FETCH_OBJ);
-    }
-
     public function infoChamados() {
 
         $sql = " SELECT c.id_chamado, c.local, a.descricaoArea, c.status, c.prioridade, u.login, c.dataAbertura, c.tombamento, c.problema "
@@ -32,69 +25,29 @@ class ChamadoModel extends Model {
     }
 
     public function listaMeusChamados($id_usuario, $status) {
-        
+
         $sql = 'SELECT c.id_chamado, c.local, u.login, c.dataAbertura, c.status,c.dataEncerrado, c.prioridade FROM chamado As c             
                 Left JOIN usuario AS u ON (c.atendidoPor = u.id_usuario)
                 WHERE status = :status
                 AND abertoPor = :id_usuario';
-     
+
         $qry = $this->getDb()->prepare($sql);
 
         $qry->bindValue(':id_usuario', $id_usuario);
         $qry->bindValue(':status', $status);
         $qry->execute();
 
-      
-        return $qry->fetchALL(\PDO::FETCH_OBJ);
-    }
-
-
-    public function listaNaoAtendidos() {
-
-        $sql = 'SELECT c.id_chamado, c.local, u.login, c.dataAbertura, c.status, c.prioridade FROM chamado As c
-                INNER JOIN usuario AS u ON (c.abertoPor = u.id_usuario)
-                WHERE status = :status';
-        
-        $qry = $this->getDb()->prepare($sql);
-
-        $qry->bindValue(':status', 'Não atendido');
-        $qry->execute();
 
         return $qry->fetchALL(\PDO::FETCH_OBJ);
     }
 
-    public function listaEmAtendimento() {
+    public function listaChamados($status) {
 
-        $sql = 'SELECT * FROM chamado WHERE status = :status';
-        $qry = $this->getDb()->prepare($sql);
-
-        $qry->bindValue(':status', 'Em atendimento');
-        $qry->execute();
-
-        return $qry->fetchALL(\PDO::FETCH_OBJ);
-    }
-
-    public function listaAguardandoTerceiros() {
-
-        $sql ='SELECT c.id_chamado, c.local, u.login, c.dataAbertura, c.status, c.prioridade FROM chamado As c
-                INNER JOIN usuario AS u ON (c.abertoPor = u.id_usuario)
-                WHERE status = :status';
-     
-        $qry = $this->getDb()->prepare($sql);
-
-        $qry->bindValue(':status', 'Aguardando terceiros');
-        $qry->execute();
-
-        return $qry->fetchALL(\PDO::FETCH_OBJ);
-    }
-
-       public function listaChamados($status) {
-
-        $sql ='SELECT c.id_chamado, c.dataEncerrado, c.local, u.login, c.dataAbertura, c.status, c.prioridade ,f.nome, f.sobrenome FROM chamado As c
+        $sql = 'SELECT c.id_chamado, c.dataEncerrado, c.local, u.login, c.dataAbertura, c.status, c.prioridade ,f.nome, f.sobrenome FROM chamado As c
                 LEFT JOIN usuario AS f ON (c.atendidoPor = f.id_usuario)
                 INNER JOIN usuario AS u ON (c.abertoPor = u.id_usuario)
                 WHERE status = :status';
-     
+
         $qry = $this->getDb()->prepare($sql);
 
         $qry->bindValue(':status', $status);
@@ -103,23 +56,6 @@ class ChamadoModel extends Model {
         return $qry->fetchALL(\PDO::FETCH_OBJ);
     }
 
-    
-    public function listaEncerrados() {
-
-        $sql = 'SELECT * FROM chamado WHERE status = :status';
-        $qry = $this->getDb()->prepare($sql);
-
-        $qry->bindValue(':status', 'Encerrado');
-        $qry->execute();
-
-        return $qry->fetchALL(\PDO::FETCH_OBJ);
-    }
-
-    public function getLista() {
-
-        $model = new ChamadoModel();
-        $listaBanco = $model->lista();
-    }
 
     public function inserirChamado($chamado) {
 
@@ -158,8 +94,6 @@ class ChamadoModel extends Model {
         return $qry->execute();
     }
 
-    
-    
     public function atenderChamado($id_chamado, $parecer, $id_tecnico, $status) {
 
         date_default_timezone_set('America/Fortaleza');
@@ -169,12 +103,10 @@ class ChamadoModel extends Model {
         $qry->bindValue(":parecer", $parecer);
         $qry->bindValue(":id_tecnico", $id_tecnico);
         $qry->bindValue(":status", $status);
-        $qry->bindValue(":id_chamado", $id_chamado); 
-         $qry->bindValue(":dataEncerrado",date('Y-m-d H:i')); 
+        $qry->bindValue(":id_chamado", $id_chamado);
+        $qry->bindValue(":dataEncerrado", date('Y-m-d H:i'));
         $qry->execute();
-  
     }
-    
 
     public function getChamado($id_chamado) {
 

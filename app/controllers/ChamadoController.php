@@ -91,10 +91,10 @@ class ChamadoController extends Controller {
 
         $chamado = new ChamadoModel();
         
-        $dados["naoAtendidos"] = $chamado->listaNaoAtendidos();
-        $dados["emAtendimento"] = $chamado->listaEmAtendimento();
-        $dados["encerrados"] = $chamado->listaEncerrados();
-        $dados["aguardandoTerceiros"] = $chamado->listaAguardandoTerceiros();
+        $dados["naoAtendidos"] = $chamado->listaChamados('Não atendido');
+        $dados["emAtendimento"] = $chamado->listaChamados('Em atendimento');
+        $dados["encerrados"] = $chamado->listaChamados('Encerrado');
+        $dados["aguardandoTerceiros"] = $chamado->listaChamados('Aguardando terceiros');
 
         $dados["view"] = "admin/lista_chamados";
         $dados['chamados'] = $chamado->listaChamados($status);
