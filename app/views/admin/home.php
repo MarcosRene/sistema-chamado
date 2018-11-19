@@ -16,7 +16,7 @@
                     <div class="mr-5">Não atendidos</div>
                 </div>
                 <a class="card-footer text-white text-right p-auto">
-                    <h3><?php echo count($viewData['naoatendidos']) ?></h3>
+                    <h3><?php echo count($viewData['naoAtendidos']) ?></h3>
                 </a>
             </div>
         </a>
@@ -28,7 +28,7 @@
                     <div class="mr-5">Em atendimento</div>
                 </div>
                 <a class="card-footer text-white text-right p-auto">
-                    <h3><?php echo count($viewData['ematendimento']) ?></h3>
+                    <h3><?php echo count($viewData['emAtendimento']) ?></h3>
                 </a>
             </div>
         </a>

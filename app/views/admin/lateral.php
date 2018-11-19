@@ -13,7 +13,8 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
             <a class="dropdown-item" href="<?php echo URL_BASE . "usuario/abrirChamado" ?>">Abrir</a>
-            <a class="dropdown-item" href="<?php echo URL_BASE . "usuario/meusChamados" ?>">Meus chamados</a>
+            <a class="dropdown-item" href="<?php echo URL_BASE . "usuario/meusChamados" ?>">Abertos</a>
+            <a class="dropdown-item" href="<?php echo URL_BASE . "usuario/meusChamadosEncerrados" ?>">Encerrados</a>
         </div>
     </li>
     <li class="nav-item dropdown">

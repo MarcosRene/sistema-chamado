@@ -17,25 +17,28 @@ if(empty($_SESSION['home'])){
 class UsuarioController extends Controller {
 
     public function index() {
-                  
+              
+        if($_SESSION['perfil'] === 'usuario'){
+          
+            header("location:" . URL_BASE . "usuario/meusChamados");
+      
+        }
+ 
         $chamado = new ChamadoModel();
-        $dados["meuschamados"] = $chamado->listaMeusChamados($_SESSION['dados']->id_usuario);
+        $dados["meuschamados"] = $chamado->listaMeusChamados($_SESSION['dados']->id_usuario, 'Não atendidos');
         $dados["chamados"]= $chamado->infoChamados();
-        $dados["naoatendidos"] = $chamado->listaNaoAtendidos();
-        $dados["ematendimento"] = $chamado->listaEmAtendimento();
+        $dados["naoAtendidos"] = $chamado->listaNaoAtendidos();
+        $dados["emAtendimento"] = $chamado->listaEmAtendimento();
         $dados["encerrados"] = $chamado->listaEncerrados();
         $dados["aguardandoTerceiros"] = $chamado->listaAguardandoTerceiros();
-
         
+  
         $dados['view'] =  $_SESSION['home'];
         $this->load('painel', $dados);
     
     }
     
-    
-    
-    
-    
+
     public function novo() {
 
         $perfil = new PerfilModel();
@@ -45,7 +48,6 @@ class UsuarioController extends Controller {
     }
 
     public function mostrarUsuarios() {
-
 
         $usuario = new UsuarioModel();
         $dados["usuarios"] = $usuario->listaUser();
@@ -58,13 +60,29 @@ class UsuarioController extends Controller {
     public function meusChamados(){
         
         $chamado = new ChamadoModel();
-        $dados['meuschamados'] = $chamado->listaMeusChamados($_SESSION['dados']->id_usuario);
        
+        $dados['naoAtendidos'] = $chamado->listaMeusChamados($_SESSION['dados']->id_usuario, 'Não atendido');
+        $dados['emAtendimento'] = $chamado->listaMeusChamados($_SESSION['dados']->id_usuario, 'Em atendimento');
+        $dados['aguardandoTerceiros'] = $chamado->listaMeusChamados($_SESSION['dados']->id_usuario, 'Aguardando terceiros');
+       
+        
+   
         $dados['view'] =  "usuario/listar_chamado";
         $this->load('painel', $dados);
         
     }
 
+    public function meusChamadosEncerrados(){
+        
+        $chamado = new ChamadoModel();
+        $dados['encerrados'] = $chamado->listaMeusChamados($_SESSION['dados']->id_usuario, 'Encerrado');
+             
+             var_dump($dados['encerrados']);
+        $dados['view'] =  "usuario/listar_encerrados";
+        $this->load('painel', $dados);
+        
+    }
+    
    
     public function confirmarEdicao() {
 
