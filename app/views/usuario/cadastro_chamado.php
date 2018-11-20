@@ -12,8 +12,6 @@ Helper::verificarAcesso($permissoes);
         <div class="col-sm-12 col-md-10 col-lg-8">
             <form action="<?php echo URL_BASE . "Chamado/Salvar" ?>" method="POST">
                 <div class="form-row">
-
-
                     <div class="form-group col-sm-4">
                         <label for="local">Local</label>
                         <input type="text" class="form-control" name="local" placeholder="Local">
@@ -41,8 +39,8 @@ Helper::verificarAcesso($permissoes);
                     </div>
 
                     <div class="form-group col-sm-1">
-                        <a type="button" data-toggle="modal" data-target="#modalInfo"
-                           class="fas fa-info-circle ml-2 mt-5" title="Informações">
+                        <a data-toggle="modal" data-target="#modalInfo"
+                           class="fas fa-info-circle ml-3 mt-5" title="Informações">
                         </a>
                     </div>
 

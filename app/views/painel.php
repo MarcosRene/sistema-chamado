@@ -11,14 +11,15 @@
     <head>
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   
-        <title>Gerenciamento</title>     
+
+        <title>Gerenciamento</title>
         <link href=" <?php echo URL_BASE . "assets/Sass/node_modules/bootstrap/compiler/bootstrap.css" ?>" rel="stylesheet">
         <link href=" <?php echo URL_BASE . "assets/vendor/fontawesome-free/css/all.min.css" ?>" rel="stylesheet" type="text/css">
         <link href=" <?php echo URL_BASE . "assets/_css/sb-admin.css" ?>" rel="stylesheet">
         <link href=" <?php echo URL_BASE . "assets/img/logoJanela.png"?>" rel="shortcut icon">
-         <link href="//cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css" rel="stylesheet">
-    
+        <link href="cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">
+        <link href="cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+
     </head>
 
     <body>
@@ -32,39 +33,35 @@
                     <?php include "rodape.php" ?>
             </div>
         </div>
-        
+
         <script src=" <?php echo URL_BASE . "assets/Sass/node_modules/jquery/dist/jquery.min.js"?>"></script>
         <script src=" <?php echo URL_BASE . "assets/Sass/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"?>"></script>
         <script src=" <?php echo URL_BASE . "assets/vendor/jquery-easing/jquery.easing.min.js"?>"></script>
-        <script src=" <?php echo URL_BASE . "assets/_js/sb-admin.min.js" ?>"</script>
-        <script src=" <?php echo URL_BASE . "assets/Sass/node_modeules/popper/dist/popper.min.js" ?>"</script>
-         
-  <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script src="//cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
-  <script>
-  $(document).ready(function(){
-      $('#minhaTabela').DataTable({
-         
-            "lengthMenu": [ 5, 10],
-            
-            "language": {
-             
-                "lengthMenu": "Mostrando _MENU_ registros por página",
-                "zeroRecords": "Nada encontrado",
-                "info": "Mostrando página _PAGE_ de _PAGES_",
-                "infoEmpty": "Nenhum registro disponível",
-                "infoFiltered": "(filtrado de _MAX_ registros no total)",
-                "search": "Buscar:",
-              
-              
-                "paginate": {
-                "previous": "<",
-                "next": ">"
-                }
-            },
-          
-        });
-  });
-  </script>
+        <script src=" <?php echo URL_BASE . "assets/_js/sb-admin.min.js" ?>"></script>
+        <script src=" <?php echo URL_BASE . "assets/Sass/node_modeules/popper/dist/popper.min.js" ?>"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+
+        <script>
+          $(document).ready(function() {
+              $('#minhaTabela').DataTable({
+
+                  "lengthMenu": [ 5, 10],
+
+                  "language": {
+
+                      "lengthMenu": "_MENU_",
+                      "zeroRecords": "Nada encontrado",
+                      "info": " ",
+                      "infoEmpty": " ",
+                      "infoFiltered": " ",
+                      "search": "Buscar:",
+
+                  },
+              });
+
+          } );
+        </script>
     </body>
 </html
