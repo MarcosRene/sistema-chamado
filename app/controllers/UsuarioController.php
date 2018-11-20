@@ -45,7 +45,7 @@ class UsuarioController extends Controller {
     }
 
     
-    public function listarTecnico() {
+    public function listarResponsaveis() {
 
         $usuario = new UsuarioModel();
         $dados["tecnico"] = $usuario->listaResponsaveis(2);
@@ -70,16 +70,13 @@ class UsuarioController extends Controller {
         $id_usuario = isset($_POST["id_usuario"]) ? strip_tags(filter_input(INPUT_POST, "id_usuario")) : NULL;
         $descricao = isset($_POST["area"]) ? strip_tags(filter_input(INPUT_POST, "area")) : NULL;
         
- 
-        echo $id_usuario ." > ". $descricao;
-        
         $usuarioModel = new UsuarioModel();
         $area = new AreaModel();
         
         
         $usuarioModel->alterarResponsavel($id_usuario, $area->getCodArea($descricao));
 
-        header("location:" . URL_BASE . 'usuario/adicionarResponsabilidade/' . $id_usuario);
+        header("location:" . URL_BASE . 'usuario/listarResponsaveis');
          
     }
     

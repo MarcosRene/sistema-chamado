@@ -37,7 +37,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
             <a class="dropdown-item" href="<?php echo URL_BASE . "area/novo" ?>">Cadastrar</a>
-            <a class="dropdown-item" href="<?php echo URL_BASE . "usuario/listarTecnico" ?>">Responsaveis</a>
+            <a class="dropdown-item" href="<?php echo URL_BASE . "usuario/listarResponsaveis" ?>">Responsaveis</a>
         </div>
     </li>
     <li class="nav-item">

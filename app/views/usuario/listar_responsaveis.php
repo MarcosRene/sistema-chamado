@@ -22,7 +22,7 @@ Helper::verificarAcesso($permissoes);
                         <th>Perfil</th>
                         <th>Responsável por</th>
 
-                        <th>Alterar</th>
+                        <th>Ver</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -31,7 +31,7 @@ Helper::verificarAcesso($permissoes);
                         <tr>
                             <td><?php echo $usuario->id_usuario ?></td>
                             <td><?php echo $usuario->nome . " " . $usuario->sobrenome ?></td>
-                            <td><?php echo $usuario->login ?></td>
+                            <td ><?php echo $usuario->login ?></td>
                             <td><?php echo $usuario->descricao ?></td>
                             <td><?php echo $usuario->descricaoArea ?></td>
 
@@ -39,7 +39,7 @@ Helper::verificarAcesso($permissoes);
                             <td>
                                 <div class="row justify-content-center">
                                     <a class="btn btn-primary btn-sm mr-2" href="<?php echo URL_BASE . "usuario/adicionarResponsabilidade/" . $usuario->id_usuario ?>">
-                                        Ver
+                                        Visualizar
                                     </a>
 
 
@@ -48,10 +48,6 @@ Helper::verificarAcesso($permissoes);
 
                         </tr>
                     <?php } ?>
-
-
-
-
 
                     <?php foreach ($viewData["tecnico"] as $usuario) { ?>
                         <tr>
@@ -65,7 +61,7 @@ Helper::verificarAcesso($permissoes);
                             <td>
                                 <div class="row justify-content-center">
                                     <a class="btn btn-primary btn-sm mr-2" href="<?php echo URL_BASE . "usuario/adicionarResponsabilidade/" . $usuario->id_usuario ?>">
-                                        Ver
+                                        Visualizar
                                     </a>
 
 
