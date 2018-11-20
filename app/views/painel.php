@@ -48,6 +48,7 @@
           $(document).ready(function() {
               $('#minhaTabela').DataTable({
 
+                     "ordering": false,
                   "lengthMenu": [ 5 ],
                   "bProcessing": true,
                   "deferRender": true,
@@ -65,6 +66,8 @@
                           "previous": "Anterior",
                           "next": "Próximo"
                       },
+
+                     
 
                   },
               });

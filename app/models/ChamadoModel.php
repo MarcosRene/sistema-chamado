@@ -46,15 +46,16 @@ class ChamadoModel extends Model {
         $sql = 'SELECT c.id_chamado, c.dataEncerrado, c.local, u.login, c.dataAbertura, c.status, c.prioridade ,f.nome, f.sobrenome FROM chamado As c
                 LEFT JOIN usuario AS f ON (c.atendidoPor = f.id_usuario)
                 INNER JOIN usuario AS u ON (c.abertoPor = u.id_usuario)
-                WHERE status = :status';
+                WHERE status = :status ';
 
         $qry = $this->getDb()->prepare($sql);
-
         $qry->bindValue(':status', $status);
         $qry->execute();
 
         return $qry->fetchALL(\PDO::FETCH_OBJ);
     }
+    
+    
 
 
     public function inserirChamado($chamado) {
