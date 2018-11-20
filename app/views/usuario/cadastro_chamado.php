@@ -75,7 +75,7 @@ Helper::verificarAcesso($permissoes);
 
                     <div class="form-group col-sm-12">
                         <label for="problema">Descrição problema</label>
-                        <textarea class="form-control" name="problema" rows="5" required></textarea>
+                        <textarea class="form-control" name="problema" rows="5" required    ></textarea>
                     </div>
 
                     <div class="form-group col-lg-6 col-md-10 col-sm-12">

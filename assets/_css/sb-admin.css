@@ -419,30 +419,34 @@ body.sidebar-toggled footer.sticky-footer {
 
 #Urgente {
     display: block;
-    background-position: right !important;
+    background-position: center;
+    padding-top: 3rem;
     background-repeat: no-repeat;
-    background-image: url(../img/vermelhoPX.png);
+    background-image: url(../img/urgente.png);
 }
 
 #Alta {
     display: block;
-    background-position: right !important;
+    background-position: center;
+    padding-top: 3rem;
     background-repeat: no-repeat;
-    background-image: url(../img/amareloPX.png);
+    background-image: url(../img/alta.png);
 }
 
 #Normal {
     display: block;
-    background-position: right !important;
+    background-position: center;
+    padding-top: 3rem;
     background-repeat: no-repeat;
-    background-image: url(../img/verdePX.png);
+    background-image: url(../img/media.png);
 }
 
 #Baixa {
     display: block;
-    background-position: right !important;
+    background-position: center;
+    padding-top: 3rem;
     background-repeat: no-repeat;
-    background-image: url(../img/pretoPX.png);
+    background-image: url(../img/baixa.png);
 }
 
 #logo {

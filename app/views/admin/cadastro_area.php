@@ -37,9 +37,7 @@
         </div>
     </div>
 </div>
-<?php
-include 'lista_area.php';
-?>
+
 
 
 

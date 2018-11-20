@@ -68,7 +68,7 @@ Helper::verificarAcesso($permissoes);
                             <td><?php echo $chamado->id_chamado ?></td>
                             <td><?php echo $chamado->local ?></td>
                             <td><?php echo Helper::calcularTempoAbertura($chamado->dataAbertura) ?></td>
-                            <td ID="<?php echo $chamado->prioridade ?>"><?php echo $chamado->prioridade ?></td>
+                            <td ID="<?php echo $chamado->prioridade ?>"></td>
                             <td ><?php echo $chamado->status ?></td>
 
                             <td>
