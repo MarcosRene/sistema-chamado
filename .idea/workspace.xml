@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="deb33e6e-038b-471d-8c0a-a48b035183ca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/admin/visualizar.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/visualizar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/chamado/alterar_prioridade.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/chamado/alterar_prioridade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/admin/lista_chamados.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/admin/lista_chamados.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/painel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/painel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/usuario/listar_encerrados.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/usuario/listar_encerrados.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/usuario/listar_responsaveis.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/usuario/listar_responsaveis.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/_css/sb-admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/_css/sb-admin.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/vendor/composer/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,34 +42,34 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="css" value="13" />
+          <entry key="css" value="14" />
           <entry key="html" value="2" />
-          <entry key="php" value="171" />
+          <entry key="php" value="173" />
           <entry key="rnc" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="13" />
+          <entry key="CSS" value="14" />
           <entry key="HTML" value="2" />
-          <entry key="PHP" value="171" />
+          <entry key="PHP" value="173" />
           <entry key="RNG Compact" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="1596" />
+          <entry key="css" value="1628" />
           <entry key="dummy" value="9" />
           <entry key="html" value="1801" />
-          <entry key="php" value="8265" />
+          <entry key="php" value="8511" />
           <entry key="txt" value="67" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="1596" />
+          <entry key="CSS" value="1628" />
           <entry key="HTML" value="1801" />
-          <entry key="PHP" value="8265" />
+          <entry key="PHP" value="8511" />
           <entry key="PLAIN_TEXT" value="76" />
         </counts>
       </usages-collector>
@@ -92,29 +91,38 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/chamado/alterar_prioridade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="51" column="37" lean-forward="true" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
+            <state relative-caret-position="357">
+              <caret line="21" selection-start-line="17" selection-end-line="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admin/cadastro_usuario.php">
+        <entry file="file://$PROJECT_DIR$/app/views/painel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="884">
-              <caret line="52" column="24" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
+            <state relative-caret-position="170">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assets/_css/sb-admin.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="428" column="30" selection-start-line="428" selection-start-column="25" selection-end-line="428" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admin/editar_usuario.php">
+        <entry file="file://$PROJECT_DIR$/app/views/admin/lista_chamados.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1649">
-              <caret line="97" column="23" selection-start-line="97" selection-start-column="23" selection-end-line="97" selection-end-column="23" />
+            <state relative-caret-position="223">
+              <caret line="19" column="60" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -156,15 +164,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/admin/editar_area.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="60" selection-start-line="60" selection-end-line="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/admin/cadastro_area.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="493">
@@ -191,6 +190,7 @@
       <find>foot</find>
       <find>footer</find>
       <find>nav</find>
+      <find>table</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -214,15 +214,12 @@
         <option value="$PROJECT_DIR$/Paginacao.php" />
         <option value="$PROJECT_DIR$/app/views/cabecalho.php" />
         <option value="$PROJECT_DIR$/app/views/home_relatorio.php" />
-        <option value="$PROJECT_DIR$/app/views/admin/lista_chamados.php" />
-        <option value="$PROJECT_DIR$/app/views/painel.php" />
         <option value="$PROJECT_DIR$/app/views/admin/atender.php" />
         <option value="$PROJECT_DIR$/app/views/admin/lista_area.php" />
         <option value="$PROJECT_DIR$/app/views/admin/listar_encerrados.php" />
         <option value="$PROJECT_DIR$/app/views/usuario/adicionar_responsabilidade.php" />
         <option value="$PROJECT_DIR$/app/views/usuario/listar_chamado.php" />
         <option value="$PROJECT_DIR$/app/views/admin/editar_area.php" />
-        <option value="$PROJECT_DIR$/assets/_css/sb-admin.css" />
         <option value="$PROJECT_DIR$/app/views/admin/cadastro_usuario.php" />
         <option value="$PROJECT_DIR$/app/views/admin/cadastro_area.php" />
         <option value="$PROJECT_DIR$/app/views/usuario/cadastro_chamado.php" />
@@ -233,6 +230,9 @@
         <option value="$PROJECT_DIR$/app/views/admin/visualizar.php" />
         <option value="$PROJECT_DIR$/app/views/usuario/listar_encerrados.php" />
         <option value="$PROJECT_DIR$/app/views/chamado/alterar_prioridade.php" />
+        <option value="$PROJECT_DIR$/app/views/admin/lista_chamados.php" />
+        <option value="$PROJECT_DIR$/app/views/painel.php" />
+        <option value="$PROJECT_DIR$/assets/_css/sb-admin.css" />
       </list>
     </option>
   </component>
@@ -383,7 +383,7 @@
       <workItem from="1542687299329" duration="572000" />
       <workItem from="1542714475167" duration="13000" />
       <workItem from="1542719047762" duration="3942000" />
-      <workItem from="1542724749882" duration="1369000" />
+      <workItem from="1542724749882" duration="4219000" />
     </task>
     <task id="LOCAL-00001" summary="updete interface grafica">
       <created>1542044382459</created>
@@ -476,17 +476,24 @@
       <option name="project" value="LOCAL" />
       <updated>1542724839113</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="ajustes">
+      <created>1542726165889</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1542726165889</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68747000" />
+    <option name="totallyTimeSpent" value="71597000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3267776" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22541603" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -636,13 +643,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/painel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="35" column="15" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin/home.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -657,13 +657,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/lista_chamados.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="19" column="72" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/usuario/adicionar_responsabilidade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -675,13 +668,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
           <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/_css/sb-admin.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
@@ -771,8 +757,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/chamado/alterar_prioridade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="51" column="37" lean-forward="true" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
+        <state relative-caret-position="357">
+          <caret line="21" selection-start-line="17" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/admin/lista_chamados.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="19" column="60" selection-start-line="19" selection-start-column="60" selection-end-line="19" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/painel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/_css/sb-admin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="428" column="30" selection-start-line="428" selection-start-column="25" selection-end-line="428" selection-end-column="30" />
         </state>
       </provider>
     </entry>
