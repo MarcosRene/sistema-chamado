@@ -7,8 +7,6 @@
 
 ?>
 
-
-
 <div class="card">
     <div class="card-header">
         <i class="fas fa-table"></i>
@@ -16,7 +14,7 @@
     </div>
     <div class="card-body">
         <div class="table-responsive">
-            <table class="table table-striped table-bordered cell-border" id="minhaTabela" width="100%" cellspacing="0">
+            <table class="table table-striped table-bordered cell-border" id="minhaTabela" width="99%" cellspacing="0">
                 <thead>
                 <tr>
                     <th>Id</th>

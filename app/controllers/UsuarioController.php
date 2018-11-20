@@ -48,7 +48,8 @@ class UsuarioController extends Controller {
     public function listarTecnico() {
 
         $usuario = new UsuarioModel();
-        $dados["tecnicos"] = $usuario->listaTecnico();
+        $dados["tecnico"] = $usuario->listaResponsaveis(2);
+        $dados["admin"] = $usuario->listaResponsaveis(3);
         $dados["view"] = "usuario/listar_responsaveis";
         $this->load("painel", $dados);
     }
