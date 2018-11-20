@@ -93,7 +93,15 @@ class UsuarioModel extends Model {
         return $qry->fetchALL(\PDO::FETCH_OBJ);
     }
     
-    
+      public function alterarResponsavel($id_usuario, $id_area) {
+
+        $sql = "UPDATE usuario SET responsavelPor = :id_area WHERE id_usuario= :id_usuario";
+
+        $qry = $this->getDb()->prepare($sql);
+        $qry->bindValue(":id_area", $id_area);
+        $qry->bindValue(":id_usuario", $id_usuario);
+        $qry->execute();
+    }
     
     
     

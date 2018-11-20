@@ -13,7 +13,7 @@
 
         <div class="col-sm-12 col-md-10 col-lg-10">
 
-            <form action="<?php echo URL_BASE . "usuario/alterarResponsabilidade" ?>" method="POST">
+            <form action="<?php echo URL_BASE . "usuario/alterarResponsavel" ?>" method="POST">
 
                 <div class="form-row">
 
@@ -59,6 +59,7 @@
                         <label for="tipo">Responsável por</label>
                         <select id="perfil" name="area" class="form-control form-control-md">
                             <?php foreach ($viewData["areas"] as $area) { ?>
+                             
                                 <option><?php echo $area->descricaoArea ?></option>
                             <?php } ?>
                         </select>
@@ -69,16 +70,15 @@
                     <div class="form-group col-sm-12"></div>
 
                     <div class="form-group col-lg-5 col-md-10 col-sm-12">
+                        <input type="hidden" name="id_area" value="<?php echo $area->id_area ?>">
                         <input type="hidden" name="id_usuario" value="<?php echo $usuario->id_usuario ?>">
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalDesativar">
-                            Desativar
-                        </button>
-
+                    
+                        <button type="submit" class="btn btn-primary">Salvar</button>
                         <a class="btn btn-danger" href="<?php echo URL_BASE . "usuario/listarTecnico" ?>">Cancelar</a>
                     </div>
                 </div>
             </form>
-        </div>
+        </div>    
     </div>
 </div>
 
