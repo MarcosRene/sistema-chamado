@@ -106,7 +106,31 @@ class ChamadoController extends Controller {
         }
         $this->load("painel", $dados);
     }
+    
+    public function prioridade($id_chamado){
+        
+        $chamadoModel = new ChamadoModel();
+        $dados["chamado"] = $chamadoModel->getChamado($id_chamado);
+        $dados['view'] = 'chamado/alterar_prioridade';
+        $this->load('painel', $dados);
+        
+    }
+    
+    public function alterarPrioridade(){
+        
+        $id_chamado = isset($_POST["id_chamado"]) ? strip_tags(filter_input(INPUT_POST, "id_chamado")) : NULL;
+        $prioridade = isset($_POST["prioridade"]) ? strip_tags(filter_input(INPUT_POST, "prioridade")) : NULL;
+        
+ 
+        $chamadoModel = new ChamadoModel();
+        $chamadoModel->alterarPrioridade($id_chamado, $prioridade);
 
+        header("location:" . URL_BASE . 'chamado/atender/' . $id_chamado);
+         
+    }
+
+
+    
     public function visualizarChamado($id_chamado) {
 
 

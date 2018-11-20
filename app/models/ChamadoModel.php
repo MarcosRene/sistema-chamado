@@ -107,7 +107,21 @@ class ChamadoModel extends Model {
         $qry->bindValue(":dataEncerrado", date('Y-m-d H:i'));
         $qry->execute();
     }
+    
+    public function alterarPrioridade($id_chamado, $prioridade) {
 
+        
+        
+        
+        $sql = "UPDATE chamado SET prioridade = :prioridade WHERE id_chamado = :id_chamado";
+
+        $qry = $this->getDb()->prepare($sql);
+        $qry->bindValue(":prioridade", $prioridade);
+        $qry->bindValue(":id_chamado", $id_chamado);
+        $qry->execute();
+    }
+    
+   
     public function getChamado($id_chamado) {
 
         $resultado = array();

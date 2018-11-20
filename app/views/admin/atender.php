@@ -91,6 +91,10 @@
                     <div class="form-group col-lg-5 col-md-10 col-sm-12">
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAtender">Detalhes</button>
 
+                        <a href="<?php echo URL_BASE . 'chamado/prioridade/' .$chamado->id_chamado?>">
+                            <button class="btn btn-danger" type="button">ver prioridade</button>
+                        </a>
+                        
                         <a href="<?php echo URL_BASE . 'usuario' ?>">
                             <button class="btn btn-danger" type="button">Cancelar</button>
                         </a>
