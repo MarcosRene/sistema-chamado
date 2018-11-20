@@ -44,10 +44,9 @@ Helper::verificarAcesso($permissoes);
                             <select class="form-control form-control-md" name="prioridade" required>
                                 <option>Urgente</option>
                                 <option>Alta</option>
-                                <option>Normal</option>
+                                <option>Media</option>
                                 <option>Baixa</option>
                             </select>
-
                         </div>
 
                         <div class="form-group col-sm-4">
@@ -92,8 +91,8 @@ Helper::verificarAcesso($permissoes);
 
                         <div class="form-group col-lg-5 col-md-10 col-sm-12">
                             <input type="hidden" name="id_chamado" value="<?php echo $chamado->id_chamado ?>">
-                            <a href="<?php echo URL_BASE . 'chamado/atender/' . $chamado->id_chamado ?>">
-                                <button class="btn btn-danger" type="button">Cancelar</button>
+                            <a class="btn btn-danger" href="<?php echo URL_BASE . 'chamado/atender/' . $chamado->id_chamado ?>">
+                                  Cancelar
                             </a>
                             <button class="btn btn-primary" type="submit">Salvar</button>
                         </div>

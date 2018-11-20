@@ -129,8 +129,8 @@
 
                     </div>
                     <div class="form-group col-lg-4 col-md-5 col-sm-12">
-                        <a href="<?php echo URL_BASE . 'usuario/meusChamados' ?>">
-                            <button class="btn btn-danger" type="button">Voltar</button>
+                        <a class="btn btn-danger" href="<?php echo URL_BASE . 'usuario/meusChamados' ?>">
+                             Voltar
                         </a>
                     </div>
                 </div>

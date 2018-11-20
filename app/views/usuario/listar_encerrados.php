@@ -21,7 +21,6 @@ Helper::verificarAcesso($permissoes);
                         <th>Local</th>
                         <th>Encerrado por</th>
                         <th>Data encerrado</th>
-                        
                         <th>Prioridade</th>
                         <th>Status</th>
                         <th>Atender</th>
