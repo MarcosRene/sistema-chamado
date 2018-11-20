@@ -33,9 +33,9 @@ Helper::verificarAcesso($permissoes);
                             <td><?php echo $chamado->id_chamado ?></td>
                             <td><?php echo $chamado->local ?></td>
                             <td><?php echo Helper::calcularTempoAbertura($chamado->dataAbertura) ?></td>
-                            <td ID="<?php echo $chamado->prioridade ?>"><?php echo $chamado->prioridade ?></td>
-                         
-                            
+                            <td id="<?php echo $chamado->prioridade ?>"></td>
+
+
                             <td><?php echo $chamado->status ?></td>
 
                             <td>
@@ -45,40 +45,6 @@ Helper::verificarAcesso($permissoes);
                             </td>
                         <?php } ?>
                     </tr>
-
-                    <?php foreach ($viewData["emAtendimento"] as $chamado) { ?>
-                        <tr>
-                            <td><?php echo $chamado->id_chamado ?></td>
-                            <td><?php echo $chamado->local ?></td>
-                            <td><?php echo Helper::calcularTempoAbertura($chamado->dataAbertura) ?></td>
-                            <td ID="<?php echo $chamado->prioridade ?>"></td>
-                            <td ><?php echo $chamado->status ?></td>
-
-                            <td>
-                                <a href="<?php echo URL_BASE . "chamado/visualizarChamado/" . $chamado->id_chamado ?>">
-                                    <button class="btn btn-primary btn-sm">Visualizar</button>
-                                </a>
-                            </td>
-                        <?php } ?>
-                    </tr>
-
-                    
-                    <?php foreach ($viewData["aguardandoTerceiros"] as $chamado) { ?>
-                        <tr>
-                            <td><?php echo $chamado->id_chamado ?></td>
-                            <td><?php echo $chamado->local ?></td>
-                            <td><?php echo Helper::calcularTempoAbertura($chamado->dataAbertura) ?></td>
-                            <td ID="<?php echo $chamado->prioridade ?>"></td>
-                            <td ><?php echo $chamado->status ?></td>
-
-                            <td>
-                                <a href="<?php echo URL_BASE . "chamado/visualizarChamado/" . $chamado->id_chamado ?>">
-                                    <button class="btn btn-primary btn-sm">Visualizar</button>
-                                </a>
-                            </td>
-                        <?php } ?>
-                    </tr>
-
                 </tbody>
             </table>
         </div>

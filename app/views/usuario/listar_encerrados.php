@@ -36,9 +36,8 @@ Helper::verificarAcesso($permissoes);
                             <td><?php echo $chamado->login ?></td>
                             <td><?php echo date('d/m/Y  H:i ', strtotime($chamado->dataEncerrado)) ?></td>
                             
-                            <td><?php echo $chamado->prioridade ?></td>
-                            <td id="<?php echo \app\core\Helper::verificarCorStatus($chamado->status)
-                        ?>"><?php echo $chamado->status ?></td>
+                            <td id="<?php echo $chamado->prioridade ?>"></td>
+                            <td><?php echo $chamado->status ?></td>
 
                             <td>
                                 <a href="<?php echo URL_BASE . "chamado/visualizarChamado/" . $chamado->id_chamado ?>">
