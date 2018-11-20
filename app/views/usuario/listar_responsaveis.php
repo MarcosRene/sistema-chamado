@@ -1,10 +1,9 @@
 <?php
 
-    use app\core\Helper;
+use app\core\Helper;
 
-    $permissoes = ['admin'];
-    Helper::verificarAcesso($permissoes);
-
+$permissoes = ['admin'];
+Helper::verificarAcesso($permissoes);
 ?>
 
 <div class="card">
@@ -16,37 +15,65 @@
         <div class="table-responsive">
             <table class="table table-striped" id="minhaTabela" width="99%" cellspacing="0">
                 <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Nome</th>
-                    <th>Perfil</th>
-                    <th>Responsável por</th>
-                    
-                    <th>Alterar</th>
-                </tr>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>Login</th>
+                        <th>Perfil</th>
+                        <th>Responsável por</th>
+
+                        <th>Alterar</th>
+                    </tr>
                 </thead>
                 <tbody>
-                <?php foreach ($viewData["tecnicos"] as $usuario) { ?>
-                    <tr>
-                        <td><?php echo $usuario->id_usuario ?></td>
-                        <td><?php echo $usuario->nome . " " . $usuario->sobrenome ?></td>
-                       
-                        <td><?php echo $usuario->descricao ?></td>
-                        <td><?php echo $usuario->descricaoArea ?></td>
+
+                    <?php foreach ($viewData["admin"] as $usuario) { ?>
+                        <tr>
+                            <td><?php echo $usuario->id_usuario ?></td>
+                            <td><?php echo $usuario->nome . " " . $usuario->sobrenome ?></td>
+                            <td><?php echo $usuario->login ?></td>
+                            <td><?php echo $usuario->descricao ?></td>
+                            <td><?php echo $usuario->descricaoArea ?></td>
 
 
-                        <td>
-                            <div class="row justify-content-center">
-                                <a class="btn btn-primary btn-sm mr-2" href="<?php echo URL_BASE . "usuario/adicionarResponsabilidade/" . $usuario->id_usuario ?>">
-                                   Ver
-                                </a>
-                                
-                              
-                            </div>
-                        </td>
+                            <td>
+                                <div class="row justify-content-center">
+                                    <a class="btn btn-primary btn-sm mr-2" href="<?php echo URL_BASE . "usuario/adicionarResponsabilidade/" . $usuario->id_usuario ?>">
+                                        Ver
+                                    </a>
 
-                    </tr>
-                <?php } ?>
+
+                                </div>
+                            </td>
+
+                        </tr>
+                    <?php } ?>
+
+
+
+
+
+                    <?php foreach ($viewData["tecnico"] as $usuario) { ?>
+                        <tr>
+                            <td><?php echo $usuario->id_usuario ?></td>
+                            <td><?php echo $usuario->nome . " " . $usuario->sobrenome ?></td>
+                            <td><?php echo $usuario->login ?></td>
+                            <td><?php echo $usuario->descricao ?></td>
+                            <td><?php echo $usuario->descricaoArea ?></td>
+
+
+                            <td>
+                                <div class="row justify-content-center">
+                                    <a class="btn btn-primary btn-sm mr-2" href="<?php echo URL_BASE . "usuario/adicionarResponsabilidade/" . $usuario->id_usuario ?>">
+                                        Ver
+                                    </a>
+
+
+                                </div>
+                            </td>
+
+                        </tr>
+                    <?php } ?>
                 </tbody>
             </table>
         </div>
