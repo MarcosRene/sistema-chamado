@@ -75,6 +75,27 @@ class UsuarioModel extends Model {
         return $qry->fetchALL(\PDO::FETCH_OBJ);
     }
     
+    public function listaTecnico() {
+        
+       $sql =  'SELECT u.nome, u.id_usuario, u.sobrenome, p.descricao, a.descricaoArea 
+           FROM usuario AS u
+           INNER JOIN perfil AS p ON u.id_perfil = p.id_perfil
+           LEFT  JOIN area   AS a ON u.responsavelPor = a.id_area
+           WHERE u.ativo = :ativo
+           AND u.id_perfil = :id_perfil';
+       
+       $qry = $this->getDb()->prepare($sql);
+       $qry->bindValue(':ativo', 'Ativo');
+       $qry->bindValue(':id_perfil', 2);
+       
+       $qry->execute();
+    
+        return $qry->fetchALL(\PDO::FETCH_OBJ);
+    }
+    
+    
+    
+    
     
 
     function verificarEmail($email) {

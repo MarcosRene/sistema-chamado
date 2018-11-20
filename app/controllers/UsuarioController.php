@@ -45,6 +45,26 @@ class UsuarioController extends Controller {
     }
 
     
+    public function listarTecnico() {
+
+        $usuario = new UsuarioModel();
+        $dados["tecnicos"] = $usuario->listaTecnico();
+        $dados["view"] = "usuario/listar_responsaveis";
+        $this->load("painel", $dados);
+    }
+
+    public function adicionarResponsabilidade($id_usuario){
+        
+         $area = new AreaModel();
+         $usuario = new UsuarioModel();
+         $dados['areas'] = $area->lista();
+         $dados['usuario'] = $usuario->getUsuario($id_usuario);
+         $dados['view'] = 'usuario/adicionar_responsabilidade';
+         $this->load("painel", $dados);
+        
+    }
+    
+    
     public function meusChamados(){
         
         $chamado = new ChamadoModel();

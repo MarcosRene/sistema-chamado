@@ -1,0 +1,56 @@
+<?php
+
+    use app\core\Helper;
+
+    $permissoes = ['admin'];
+    Helper::verificarAcesso($permissoes);
+
+?>
+
+<div class="card">
+    <div class="card-header">
+        <i class="fas fa-table"></i>
+        Usuários
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-striped" id="minhaTabela" width="99%" cellspacing="0">
+                <thead>
+                <tr>
+                    <th width="5%">Id</th>
+                    <th width="15%">Nome</th>
+                
+                    <th width="15%">Perfil</th>
+                    <th width="15%">Responsável por</th>
+                    
+                    <th width="15%">Alterar</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php foreach ($viewData["tecnicos"] as $usuario) { ?>
+                    <tr>
+                        <td><?php echo $usuario->id_usuario ?></td>
+                        <td><?php echo $usuario->nome . " " . $usuario->sobrenome ?></td>
+                       
+                        <td><?php echo $usuario->descricao ?></td>
+                        <td><?php echo $usuario->descricaoArea ?></td>
+
+
+                        <td>
+                            <div class="row justify-content-center">
+                                <a class="btn btn-primary btn-sm mr-2" href="<?php echo URL_BASE . "usuario/adicionarResponsabilidade/" . $usuario->id_usuario ?>">
+                                   Ver
+                                </a>
+                                
+                              
+                            </div>
+                        </td>
+
+                    </tr>
+                <?php } ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
