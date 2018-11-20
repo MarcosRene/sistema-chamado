@@ -1,9 +1,9 @@
 <?php
 
-    use app\core\Helper;
+use app\core\Helper;
 
-    $permissoes = ['admin'];
-    Helper::verificarAcesso($permissoes);
+$permissoes = ['admin'];
+Helper::verificarAcesso($permissoes);
 
 ?>
 
@@ -66,11 +66,13 @@
 
                     <div class="form-group col-lg-5 col-md-10 col-sm-12">
                         <input type="hidden" name="id_usuario" value="<?php echo $usuario->id_usuario ?>">
+
+                        <a class="btn btn-danger" href="<?php echo URL_BASE . "usuario/mostrarUsuarios" ?>">Cancelar</a>
+
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalSalvar">
                             Salvar
                         </button>
 
-                        <a class="btn btn-danger" href="<?php echo URL_BASE . "usuario/mostrarUsuarios" ?>">Cancelar</a>
                     </div>
                 </div>
             </form>
@@ -93,7 +95,7 @@
             </div>
             <div class="modal-footer">
                 <a class="btn btn-info col-lg-4 col-md-5 col-sm-5" href="<?php echo URL_BASE . "usuario/salvar" ?>">
-                    Salvar
+                    Sim
                 </a>
             </div
         </div>

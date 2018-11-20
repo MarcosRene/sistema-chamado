@@ -48,11 +48,10 @@
                     </div>
 
                     <div class="form-group col-lg-5 col-md-10 col-sm-12">
-                        <button type="submit" class="btn btn-primary">Cadastrar</button>
-
-                        <a href="<?php echo URL_BASE . 'usuario' ?>">
-                            <button class="btn btn-danger" type="button">Cancelar</button>
+                        <a class="btn btn-danger" href="<?php echo URL_BASE . 'usuario' ?>">
+                            Cancelar
                         </a>
+                        <button type="submit" class="btn btn-primary">Cadastrar</button>
                     </div>
                 </div>
             </form>

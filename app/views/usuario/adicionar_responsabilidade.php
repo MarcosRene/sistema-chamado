@@ -72,9 +72,9 @@
                     <div class="form-group col-lg-5 col-md-10 col-sm-12">
                         <input type="hidden" name="id_area" value="<?php echo $area->id_area ?>">
                         <input type="hidden" name="id_usuario" value="<?php echo $usuario->id_usuario ?>">
-                    
-                        <button type="submit" class="btn btn-primary">Salvar</button>
+
                         <a class="btn btn-danger" href="<?php echo URL_BASE . "usuario/listarTecnico" ?>">Cancelar</a>
+                        <button type="submit" class="btn btn-primary">Salvar</button>
                     </div>
                 </div>
             </form>

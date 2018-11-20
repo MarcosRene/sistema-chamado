@@ -5,13 +5,13 @@
     </div>
     <div class="card-body">
         <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <table class="table table-striped table-bordered cell-border" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                 <tr>
-                    <th width="1%" align="left">ID</th>
-                    <th align="left">Descrição</th>
-                    <th align="left">Responsável</th>
-                    <th width="20%" align="left">Alterar</th>
+                    <th>ID</th>
+                    <th>Descrição</th>
+                    <th>Responsável</th>
+                    <th>Alterar</th>
                 </tr>
                 </thead>
                 <tbody>

@@ -16,15 +16,15 @@
     </div>
     <div class="card-body">
         <div class="table-responsive">
-            <table class="table table-bordered table-hover" id="minhaTabela" width="99%" cellspacing="0">
+            <table class="table table-striped table-bordered cell-border" id="minhaTabela" width="100%" cellspacing="0">
                 <thead>
                 <tr>
-                    <th width="5%">Id</th>
-                    <th width="15%">Nome</th>
-                    <th width="15%">Email</th>
-                    <th width="15%">Login</th>
-                    <th width="15%">Perfil</th>
-                    <th width="15%">Alterar</th>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Login</th>
+                    <th>Perfil</th>
+                    <th>Alterar</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -46,7 +46,6 @@
                                 <a class="btn btn-primary btn-danger btn-sm" href="<?php echo URL_BASE . "usuario/desativar/" . $usuario->id_usuario ?>">
                                     Desativar
                                 </a>
-                               
                             </div>
                         </td>
 
@@ -73,9 +72,9 @@
 
             </div>
             <div class="modal-footer">
+                <button type="button" class="btn btn-secondary col-lg-4 col-md-5 col-sm-5">Cancelar</button>
                 <button type="button" class="btn btn-info col-lg-4 col-md-5 col-sm-5" data-dismiss="modal">Excluir
                 </button>
-                <button type="button" class="btn btn-secondary col-lg-4 col-md-5 col-sm-5">Cancelar</button>
             </div>
         </div>
     </div>

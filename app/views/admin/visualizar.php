@@ -130,7 +130,7 @@
                     </div>
                     <div class="form-group col-lg-4 col-md-5 col-sm-12">
                         <a href="<?php echo URL_BASE . 'usuario/meusChamados' ?>">
-                            <button class="btn btn-danger" type="button">Cancelar</button>
+                            <button class="btn btn-danger" type="button">Voltar</button>
                         </a>
                     </div>
                 </div>

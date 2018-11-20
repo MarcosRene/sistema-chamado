@@ -15,10 +15,9 @@
         <title>Gerenciamento</title>
         <link href=" <?php echo URL_BASE . "assets/Sass/node_modules/bootstrap/compiler/bootstrap.css" ?>" rel="stylesheet">
         <link href=" <?php echo URL_BASE . "assets/vendor/fontawesome-free/css/all.min.css" ?>" rel="stylesheet" type="text/css">
-        <link href=" <?php echo URL_BASE . "assets/_css/sb-admin.css" ?>" rel="stylesheet">
+        <link href=" <?php echo URL_BASE . "assets/_css/sb-admin.css" ?>" rel="stylesheet" type="text/css">
         <link href=" <?php echo URL_BASE . "assets/img/logoJanela.png"?>" rel="shortcut icon">
-        <link href="cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">
-        <link href="cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.css"/>
 
     </head>
 
@@ -39,24 +38,28 @@
         <script src=" <?php echo URL_BASE . "assets/vendor/jquery-easing/jquery.easing.min.js"?>"></script>
         <script src=" <?php echo URL_BASE . "assets/_js/sb-admin.min.js" ?>"></script>
         <script src=" <?php echo URL_BASE . "assets/Sass/node_modeules/popper/dist/popper.min.js" ?>"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-        <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-        <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.18/datatables.min.js"></script>
 
         <script>
           $(document).ready(function() {
               $('#minhaTabela').DataTable({
 
-                  "lengthMenu": [ 5, 10],
-
+                  "lengthMenu": [ 5 ],
+                  "bProcessing": true,
+                  "deferRender": true,
                   "language": {
 
-                      "lengthMenu": "_MENU_",
-                      "zeroRecords": "Nada encontrado",
+                      "lengthMenu": " ",
+                      "zeroRecords": "Nada foi encontrado",
                       "info": " ",
                       "infoEmpty": " ",
                       "infoFiltered": " ",
-                      "search": "Buscar:",
+                      "search": "Buscar: ",
+
+                      "paginate": {
+                          "previous": "Anterior",
+                          "next": "Próximo"
+                      },
 
                   },
               });

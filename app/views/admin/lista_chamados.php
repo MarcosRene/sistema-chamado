@@ -17,8 +17,8 @@ include 'home.php';
     </div>
     <div class="card-body">
         <div class="table-responsive">
-            <table class="table table-striped table-bordered" id="minhaTabela" width="100%">
-                <thead>
+            <table class="table table-striped table-bordered cell-border" id="minhaTabela" width="100%" cellspacing="0">
+                <thead class="bg-blue-grey-100">
                 <tr>
                     <th>Id</th>
                     <th>Local</th>

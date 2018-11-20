@@ -35,11 +35,12 @@
 
                     <div class="form-group col-lg-5 col-md-10 col-sm-12">
                         <input type="hidden" name="id_area" value="<?php echo $area->id_area ?>">
+                        <a class="btn btn-danger" href="<?php echo URL_BASE . "usuario/mostrarUsuarios" ?>">Cancelar</a>
+
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEditar">
                             Salvar
                         </button>
 
-                        <a class="btn btn-danger" href="<?php echo URL_BASE . "usuario/mostrarUsuarios" ?>">Cancelar</a>
                     </div>
                 </div>
             </form>
@@ -57,7 +58,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                ...
+
             </div>
             <div class="modal-footer">
                 <a class="btn btn-info " href="<?php echo URL_BASE . "area/salvar" ?>">

@@ -17,13 +17,12 @@
             <table class="table table-striped" id="minhaTabela" width="99%" cellspacing="0">
                 <thead>
                 <tr>
-                    <th width="5%">Id</th>
-                    <th width="15%">Nome</th>
-                
-                    <th width="15%">Perfil</th>
-                    <th width="15%">Responsável por</th>
+                    <th>Id</th>
+                    <th>Nome</th>
+                    <th>Perfil</th>
+                    <th>Responsável por</th>
                     
-                    <th width="15%">Alterar</th>
+                    <th>Alterar</th>
                 </tr>
                 </thead>
                 <tbody>

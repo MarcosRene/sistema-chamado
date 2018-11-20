@@ -28,10 +28,9 @@
                         </select>
                     </div>
 
-
                     <div class="form-group col-lg-5 col-md-10 col-sm-12">
-                        <button type="submit" class="btn btn-primary">Cadastrar</button>
                         <button type="reset" class="btn btn-danger">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Cadastrar</button>
                     </div>
                 </div>
             </form>

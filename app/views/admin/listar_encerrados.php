@@ -18,7 +18,7 @@ include 'home.php';
     <div class="card-body">
         <body>
 
-            <table id="minhaTabela" class="table table-striped">
+            <table id="minhaTabela" class="table table-striped table-bordered cell-border">
                 <thead>
                     <tr>
                         <th>Id</th>
