@@ -16,15 +16,15 @@
     </div>
     <div class="card-body">
         <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <table class="table table-striped" id="minhaTabela" width="99%" cellspacing="0">
                 <thead>
                 <tr>
-                    <th>Id</th>
-                    <th>Nome</th>
-                    <th>Email</th>
-                    <th>Login</th>
-                    <th>Perfil</th>
-                    <th>Alterar</th>
+                    <th width="5%">Id</th>
+                    <th width="15%">Nome</th>
+                    <th width="15%">Email</th>
+                    <th width="15%">Login</th>
+                    <th width="15%">Perfil</th>
+                    <th width="15%">Alterar</th>
                 </tr>
                 </thead>
                 <tbody>

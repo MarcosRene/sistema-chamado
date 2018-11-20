@@ -14,7 +14,7 @@ Helper::verificarAcesso($permissoes);
     </div>
     <div class="card-body">
         <div class="table-responsive">
-            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <table class="table table-striped" id="minhaTabela" width="100%" cellspacing="0">
                 <thead>
                     <tr>
                         <th>Id</th>
@@ -33,9 +33,8 @@ Helper::verificarAcesso($permissoes);
                             <td><?php echo $chamado->id_chamado ?></td>
                             <td><?php echo $chamado->local ?></td>
                             <td><?php echo Helper::calcularTempoAbertura($chamado->dataAbertura) ?></td>
-                            <td><?php echo $chamado->prioridade ?></td>
-                            <td id="<?php echo \app\core\Helper::verificarCorStatus($chamado->status)
-                        ?>"><?php echo $chamado->status ?></td>
+                            <td ID="<?php echo $chamado->prioridade ?>"><?php echo $chamado->prioridade ?></td>
+                            <td><?php echo $chamado->status ?></td>
 
                             <td>
                                 <a href="<?php echo URL_BASE . "chamado/visualizarChamado/" . $chamado->id_chamado ?>">
@@ -50,9 +49,8 @@ Helper::verificarAcesso($permissoes);
                             <td><?php echo $chamado->id_chamado ?></td>
                             <td><?php echo $chamado->local ?></td>
                             <td><?php echo Helper::calcularTempoAbertura($chamado->dataAbertura) ?></td>
-                            <td><?php echo $chamado->prioridade ?></td>
-                            <td id="<?php echo \app\core\Helper::verificarCorStatus($chamado->status)
-                        ?>"><?php echo $chamado->status ?></td>
+                            <td ID="<?php echo $chamado->prioridade ?>"><?php echo $chamado->prioridade ?></td>
+                            <td ><?php echo $chamado->status ?></td>
 
                             <td>
                                 <a href="<?php echo URL_BASE . "chamado/visualizarChamado/" . $chamado->id_chamado ?>">
@@ -62,14 +60,14 @@ Helper::verificarAcesso($permissoes);
                         <?php } ?>
                     </tr>
 
-                    <?php foreach ($viewData['aguardandoTerceiros'] as $chamado) { ?>
+                    
+                    <?php foreach ($viewData["aguardandoTerceiros"] as $chamado) { ?>
                         <tr>
                             <td><?php echo $chamado->id_chamado ?></td>
                             <td><?php echo $chamado->local ?></td>
                             <td><?php echo Helper::calcularTempoAbertura($chamado->dataAbertura) ?></td>
-                            <td><?php echo $chamado->prioridade ?></td>
-                            <td id="<?php echo \app\core\Helper::verificarCorStatus($chamado->status)
-                        ?>"><?php echo $chamado->status ?></td>
+                            <td ID="<?php echo $chamado->prioridade ?>"><?php echo $chamado->prioridade ?></td>
+                            <td ><?php echo $chamado->status ?></td>
 
                             <td>
                                 <a href="<?php echo URL_BASE . "chamado/visualizarChamado/" . $chamado->id_chamado ?>">
@@ -78,6 +76,8 @@ Helper::verificarAcesso($permissoes);
                             </td>
                         <?php } ?>
                     </tr>
+
+                    
 
 
                 </tbody>
