@@ -106,11 +106,11 @@ Helper::verificarAcesso($permissoes);
                 <div class="table-responsive">
                     <table class="table" id="dataTable" width="100%" cellspacing="0">
                         <tbody>
-                        <tr>
-                            <td id="Urgente"></td>
-                            <td id="Alta"></td>
-                            <td id="Media"></td>
-                            <td id="Baixa"></td>
+                        <tr class="text-center">
+                            <td id="Urgente"><br>Incidente que causa parada</td>
+                            <td id="Alta"><br>Incidente que não causa parada</td>
+                            <td id="Media"><br>Solicitação de instalações e configurações</td>
+                            <td id="Baixa"><br>Dúvidas de usuários</td>
                         </tr>
                         </tbody>
                     </table>
