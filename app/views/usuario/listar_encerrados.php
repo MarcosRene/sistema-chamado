@@ -28,7 +28,31 @@ Helper::verificarAcesso($permissoes);
                 </thead>
                 <tbody>
 
-                    <?php foreach ($viewData["encerrados"] as $chamado) { ?>
+                    <?php foreach ($viewData["encerrados"] as $chamado) { 
+                        
+                        if($chamado->prioridade === 'Urgente'){?>
+                  
+                        <tr>
+                            <td><?php echo $chamado->id_chamado ?></td>
+                            <td><?php echo $chamado->local ?></td>
+                            <td><?php echo $chamado->login ?></td>
+                            <td><?php echo date('d/m/Y  H:i ', strtotime($chamado->dataEncerrado)) ?></td>
+                            
+                            <td id="<?php echo $chamado->prioridade ?>"></td>
+                            <td><?php echo $chamado->status ?></td>
+
+                            <td>
+                                <a href="<?php echo URL_BASE . "chamado/visualizarChamado/" . $chamado->id_chamado ?>">
+                                    <button class="btn btn-primary btn-sm">Visualizar</button>
+                                </a>
+                            </td>
+                        
+                        <?php } ?>
+                    <?php } ?>
+                  
+                    <?php foreach ($viewData["encerrados"] as $chamado) { 
+                        
+                        if($chamado->prioridade === 'Alta'){?>
                   
                         <tr>
                             <td><?php echo $chamado->id_chamado ?></td>
@@ -45,9 +69,52 @@ Helper::verificarAcesso($permissoes);
                                 </a>
                             </td>
                         <?php } ?>
-                    </tr>
+                    <?php } ?>
+                        
+                    <?php foreach ($viewData["encerrados"] as $chamado) { 
+                        
+                        if($chamado->prioridade === 'Media'){?>
+                  
+                        <tr>
+                            <td><?php echo $chamado->id_chamado ?></td>
+                            <td><?php echo $chamado->local ?></td>
+                            <td><?php echo $chamado->login ?></td>
+                            <td><?php echo date('d/m/Y  H:i ', strtotime($chamado->dataEncerrado)) ?></td>
+                            
+                            <td id="<?php echo $chamado->prioridade ?>"></td>
+                            <td><?php echo $chamado->status ?></td>
 
-              
+                            <td>
+                                <a href="<?php echo URL_BASE . "chamado/visualizarChamado/" . $chamado->id_chamado ?>">
+                                    <button class="btn btn-primary btn-sm">Visualizar</button>
+                                </a>
+                            </td>
+                        <?php } ?>
+                    <?php } ?>
+                            
+                    <?php foreach ($viewData["encerrados"] as $chamado) { 
+                        
+                        if($chamado->prioridade === 'Baixa'){?>
+                  
+                        <tr>
+                            <td><?php echo $chamado->id_chamado ?></td>
+                            <td><?php echo $chamado->local ?></td>
+                            <td><?php echo $chamado->login ?></td>
+                            <td><?php echo date('d/m/Y  H:i ', strtotime($chamado->dataEncerrado)) ?></td>
+                            
+                            <td id="<?php echo $chamado->prioridade ?>"></td>
+                            <td><?php echo $chamado->status ?></td>
+
+                            <td>
+                                <a href="<?php echo URL_BASE . "chamado/visualizarChamado/" . $chamado->id_chamado ?>">
+                                    <button class="btn btn-primary btn-sm">Visualizar</button>
+                                </a>
+                            </td>
+                        <?php } ?>
+                    <?php } ?>
+                            
+                            
+                        </tr>
                 </tbody>
             </table>
         </div>

@@ -129,7 +129,7 @@
 
                     </div>
                     <div class="form-group col-lg-4 col-md-5 col-sm-12">
-                        <a class="btn btn-danger" href="<?php echo URL_BASE . 'usuario/meusChamados' ?>">
+                        <a class="btn btn-danger" href="<?php echo URL_BASE . 'usuario/meusChamados/Não atendido' ?>">
                              Voltar
                         </a>
                     </div>

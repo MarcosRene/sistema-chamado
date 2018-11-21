@@ -4,6 +4,8 @@ use app\core\Helper;
 
 $permissoes = ['admin', 'tecnico', 'usuario'];
 Helper::verificarAcesso($permissoes);
+
+include 'home_usuarioComum.php';
 ?>
 
 
@@ -28,7 +30,7 @@ Helper::verificarAcesso($permissoes);
                 <tbody>
 
 
-                    <?php foreach ($viewData["naoAtendidos"] as $chamado) { ?>
+                    <?php foreach ($viewData["chamados"] as $chamado) { ?>
                         <tr>
                             <td><?php echo $chamado->id_chamado ?></td>
                             <td><?php echo $chamado->local ?></td>

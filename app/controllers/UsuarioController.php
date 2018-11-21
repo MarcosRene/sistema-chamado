@@ -19,7 +19,7 @@ class UsuarioController extends Controller {
     public function index() {
               
         if($_SESSION['perfil'] === 'usuario'){
-            header("location:" . URL_BASE . "usuario/meusChamados");
+            header("location:" . URL_BASE . "usuario/meusChamados/Não atendido");
         }else{ 
              header("location:" . URL_BASE . "chamado/listarChamados/Não atendido");
         }
@@ -80,14 +80,11 @@ class UsuarioController extends Controller {
          
     }
     
-    public function meusChamados(){
+    public function meusChamados($status){
         
         $chamado = new ChamadoModel();
        
-        $dados['naoAtendidos'] = $chamado->listaMeusChamados($_SESSION['dados']->id_usuario, 'Não atendido');
-        $dados['emAtendimento'] = $chamado->listaMeusChamados($_SESSION['dados']->id_usuario, 'Em atendimento');
-        $dados['aguardandoTerceiros'] = $chamado->listaMeusChamados($_SESSION['dados']->id_usuario, 'Aguardando terceiros');
-     
+        $dados['chamados'] = $chamado->listaMeusChamados($_SESSION['dados']->id_usuario, $status);
         $dados['view'] =  "usuario/listar_chamado";
         $this->load('painel', $dados);
         
@@ -195,7 +192,4 @@ class UsuarioController extends Controller {
         
     }
     
-    
-
-
 }
