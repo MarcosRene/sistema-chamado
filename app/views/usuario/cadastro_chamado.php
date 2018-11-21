@@ -104,13 +104,13 @@ Helper::verificarAcesso($permissoes);
             </div>
             <div class="modal-body">
                 <div class="table-responsive">
-                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <table class="table" id="dataTable" width="100%" cellspacing="0">
                         <tbody>
                         <tr>
-                            <td id="Urgente"><b>Urgente: </b>Incidente que interrompa as atividade</td>
-                            <td id="Alta"><b>Alta: </b> Iniciante que não interrompa as atividades </td>
-                            <td id="Normal"><b>Media: </b>Solicitações e avisos </td>
-                            <td id="Baixa"><b>Baixa: </b>Solicitações e avisos </td>
+                            <td id="Urgente"></td>
+                            <td id="Alta"></td>
+                            <td id="Media"></td>
+                            <td id="Baixa"></td>
                         </tr>
                         </tbody>
                     </table>
