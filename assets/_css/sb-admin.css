@@ -391,28 +391,28 @@ body.sidebar-toggled footer.sticky-footer {
 
 #atendido {
     display: block;
-    background-position: right !important;
+    background-position: 14.5rem center !important;
     background-repeat: no-repeat;
     background-image: url(../img/verdePX.png);
 }
 
 #nao-atendido {
     display: block;
-    background-position: right !important;
+    background-position: 14.5rem center !important;
     background-repeat: no-repeat;
     background-image: url(../img/vermelhoPX.png);
 }
 
 #aguardando {
     display: block;
-    background-position: right !important;
+    background-position: 14.5rem center !important;
     background-repeat: no-repeat;
     background-image: url(../img/amareloPX.png);
 }
 
 #encerrado {
     display: block;
-    background-position: right !important;
+    background-position: 14.5rem center !important;
     background-repeat: no-repeat;
     background-image: url(../img/pretoPX.png);
 }
