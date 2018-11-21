@@ -28,8 +28,8 @@ class RelatorioController extends Controller {
         $status = isset($_POST["status"]) ? strip_tags(filter_input(INPUT_POST, "status")) : NULL;
 
 
-        $area = isset($_POST["area"]) ? strip_tags(filter_input(INPUT_POST, "area")) : NULL;
-        $dados['area'] = $chamado->chamadosPorArea($area);
+       
+        $dados['area'] = $chamado->chamadosPorArea($area, $prioridade, $status);
 
         $pdf->SetFont("Arial", "I", 10);
         $pdf->Cell(50, 7, "Id", 1, 0, "C");

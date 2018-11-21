@@ -8,7 +8,7 @@
                 <div class="form-row col-lg-12">
 
                     <div class="form-group col-lg-5 col-md-10 col-sm-12">
-                        <form action="<?php echo URL_BASE . "relatorio" ?>" method="POST">
+                        <form action="<?php echo URL_BASE . "relatorio" ?>" method="POST" target="_blank">
 
                             <label for="tipo">Relátorio por área</label>
                             <select id="perfil" name="area" class="form-control form-control-md">
