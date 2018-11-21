@@ -433,6 +433,24 @@ body.sidebar-toggled footer.sticky-footer {
     background-image: url(../img/alta.png);
 }
 
+.bg-dark{
+    background-color: #1d2939 !important
+}
+
+.bg-primary {
+    background-color: #0766c6 !important;
+}
+
+.bg-success{
+    background-color: #00b297 !important;
+}
+
+.bg-danger {
+    background-color: #dd3544 !important;
+}
+
+
+
 #Media {
     display: block;
     background-position: center;
