@@ -11,7 +11,7 @@ Helper::verificarAcesso($permissoes);
 <div class="row">
     <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
         <a class="a" href="<?php echo URL_BASE . 'chamado/listarChamados/Não atendido' ?>">
-            <div class="card text-white bg-danger o-hidden h-100">
+            <div class="card text-white o-hidden h-100" id="danger">
                 <div class="card-body">
                     <div class="mr-5">Não atendidos</div>
                 </div>
@@ -23,7 +23,7 @@ Helper::verificarAcesso($permissoes);
     </div>
     <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
         <a class="a" href="<?php echo URL_BASE . 'chamado/listarChamados/Em atendimento' ?>">
-            <div class="card text-white bg-success o-hidden h-100">
+            <div class="card text-white o-hidden h-100" id="success">
                 <div class="card-body">
                     <div class="mr-5">Em atendimento</div>
                 </div>
@@ -35,7 +35,7 @@ Helper::verificarAcesso($permissoes);
     </div>
     <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
         <a class="a" href="<?php echo URL_BASE . 'chamado/listarChamados/Aguardando terceiros' ?>">
-            <div class="card text-white bg-primary o-hidden h-100">
+            <div class="card text-white o-hidden h-100" id="primary">
                 <div class="card-body">
                     <div class="mr-5">Aguardando terceiros</div>
                 </div>
@@ -47,7 +47,7 @@ Helper::verificarAcesso($permissoes);
     </div>
     <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
         <a class="a" href="<?php echo URL_BASE . 'chamado/listarChamados/Encerrado' ?>">
-            <div class="card text-white bg-dark o-hidden h-100">
+            <div class="card text-white o-hidden h-100" id="dark">
                 <div class="card-body">
                     <div class="mr-5">Encerrados</div>
                 </div>
