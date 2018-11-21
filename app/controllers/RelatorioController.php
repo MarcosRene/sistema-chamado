@@ -23,6 +23,10 @@ class RelatorioController extends Controller {
         $arquivo = 'relatorio.pdf';
         $tipo_pdf = 'I';
 
+        $area = isset($_POST["area"]) ? strip_tags(filter_input(INPUT_POST, "area")) : NULL;
+        $prioridade = isset($_POST["prioridade"]) ? strip_tags(filter_input(INPUT_POST, "prioridade")) : NULL;
+        $status = isset($_POST["status"]) ? strip_tags(filter_input(INPUT_POST, "status")) : NULL;
+
 
         $area = isset($_POST["area"]) ? strip_tags(filter_input(INPUT_POST, "area")) : NULL;
         $dados['area'] = $chamado->chamadosPorArea($area);
