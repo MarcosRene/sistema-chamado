@@ -32,17 +32,20 @@ class RelatorioController extends Controller {
         $dados['area'] = $chamado->chamadosPorArea($area, $prioridade, $status);
 
         $pdf->SetFont("Arial", "I", 10);
-        $pdf->Cell(50, 7, "Id", 1, 0, "C");
+        $pdf->Cell(10, 7, "Id", 1, 0, "C");
         $pdf->Cell(40, 7, "Local", 1, 0, "C");
-        $pdf->Cell(40, 7, "Prioridade", 1, 0, "C");
-        $pdf->Cell(60, 7, "status", 1, 0, "C");
+        $pdf->Cell(25, 7, "Prioridade", 1, 0, "C");
+        $pdf->Cell(40, 7, "status", 1, 0, "C");
+          $pdf->Cell(70, 7, utf8_decode("Descrição problema"), 1, 0, "C");
         $pdf->Ln();
 
         foreach ($dados['area'] as $chamado) {
-            $pdf->Cell(50, 7, utf8_decode($chamado->id_chamado), 1, 0, "C");
+            $pdf->Cell(10, 7, utf8_decode($chamado->id_chamado), 1, 0, "C");
             $pdf->Cell(40, 7, utf8_decode($chamado->local), 1, 0, "C");
-            $pdf->Cell(40, 7, utf8_decode($chamado->prioridade), 1, 0, "C");
-            $pdf->Cell(60, 7, utf8_decode($chamado->status), 1, 0, "C");
+            $pdf->Cell(25, 7, utf8_decode($chamado->prioridade), 1, 0, "C");
+            $pdf->Cell(40, 7, utf8_decode($chamado->status), 1, 0, "C");
+            $pdf->Cell(70, 7, utf8_decode($chamado->problema), 1, 0, "C");
+
             $pdf->Ln();
         }
 

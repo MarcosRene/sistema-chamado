@@ -63,7 +63,7 @@ class ChamadoModel extends Model
     public function chamadosPorArea($descricaoArea, $prioridade, $status)
     {
 
-        $sql = 'SELECT c.id_chamado, c.dataEncerrado, c.local, u.login, c.dataAbertura, c.status, c.prioridade ,f.nome, f.sobrenome FROM chamado As c
+        $sql = 'SELECT c.id_chamado, c.problema, c.dataEncerrado, c.local, u.login, c.dataAbertura, c.status, c.prioridade ,f.nome, f.sobrenome FROM chamado As c
                 LEFT JOIN usuario AS f ON (c.atendidoPor = f.id_usuario)
                 left JOIN area AS a ON (c.area = a.id_area)
                 INNER JOIN usuario AS u ON (c.abertoPor = u.id_usuario)
