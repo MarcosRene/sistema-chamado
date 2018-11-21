@@ -196,12 +196,6 @@ class UsuarioController extends Controller {
     }
     
     
-    public function gerarRelatorio(){
-       
-        $dados["view"] = "home_relatorio";
-        $this->load("painel", $dados);
 
-    }
-    
 
 }

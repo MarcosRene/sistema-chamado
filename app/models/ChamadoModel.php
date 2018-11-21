@@ -55,9 +55,22 @@ class ChamadoModel extends Model {
         return $qry->fetchALL(\PDO::FETCH_OBJ);
     }
     
+    public function chamadosPorArea($descricaoArea) {
+
+        $sql = 'SELECT c.id_chamado, c.dataEncerrado, c.local, u.login, c.dataAbertura, c.status, c.prioridade ,f.nome, f.sobrenome FROM chamado As c
+                LEFT JOIN usuario AS f ON (c.atendidoPor = f.id_usuario)
+                left JOIN area AS a ON (c.area = a.id_area)
+                INNER JOIN usuario AS u ON (c.abertoPor = u.id_usuario)
+                WHERE a.descricaoArea = :descricaoArea ';
+
+        $qry = $this->getDb()->prepare($sql);
+        $qry->bindValue(':descricaoArea', $descricaoArea);
+        $qry->execute();
+
+        return $qry->fetchALL(\PDO::FETCH_OBJ);
+    }
     
-
-
+   
     public function inserirChamado($chamado) {
 
         $sql = "INSERT INTO chamado (area, abertoPor, local, prioridade, status, problema )
