@@ -48,8 +48,8 @@
           $(document).ready(function() {
               $('#minhaTabela').DataTable({
 
-                     "ordering": false,
-                  "lengthMenu": [ 5 ],
+                 
+                    "lengthMenu": [ 5 ],
                   "bProcessing": true,
                   "deferRender": true,
                   "language": {
@@ -67,12 +67,41 @@
                           "next": "Próximo"
                       },
 
-                     
-
+                      
+       
                   },
               });
 
           } );
         </script>
+        
+              <script>
+          $(document).ready(function() {
+              $('#tabelaPrioridade').DataTable({
+
+                "order": [[ 5, "asc" ]],
+              
+                "columnDefs":[{
+                "targets": [ 5 ],
+                "visible": false
+                }],
+        
+                "lengthMenu": [ 5 ],
+                "bProcessing": true,
+                "deferRender": true,
+                "language": {
+
+                "lengthMenu": " ",
+                "zeroRecords": "Nada foi encontrado",
+                "info": " ",
+                "infoEmpty": " ",
+                "infoFiltered": " ",
+                "search": "Buscar: ",
+                
+                "paginate": {
+                    "previous": "Anterior",
+                    "next": "Próximo"
+                },
+        },});});</script>
     </body>
 </html

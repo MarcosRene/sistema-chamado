@@ -17,7 +17,7 @@ include 'home.php';
     </div>
     <div class="card-body">
         <div class="table-responsive">
-            <table class="table table-striped table-bordered" id="minhaTabela" width="100%" cellspacing="0">
+            <table class="table table-striped table-bordered" id="tabelaPrioridade" width="100%" cellspacing="0">
                 <thead class="bg-blue-grey-100">
                     <tr>
                         <th>Id</th>
@@ -25,6 +25,7 @@ include 'home.php';
                         <th>Aberto por</th>
                         <th>Aberto a</th>
                         <th>Prioridade</th>
+                        <th>Oculta</th>
                         <th>Status</th>
                         <th>Atender</th>
                     </tr>
@@ -44,6 +45,7 @@ include 'home.php';
                                 <td><?php echo $chamado->login ?></td>
                                 <td><?php echo Helper::calcularTempoAbertura($chamado->dataAbertura) ?></td>
                                 <td id="<?php echo $chamado->prioridade ?>"></td>
+                                <td>1</td>
                                 <td><?php echo $chamado->status ?></td>
 
                                 <td>
@@ -68,6 +70,7 @@ include 'home.php';
                                 <td><?php echo $chamado->login ?></td>
                                 <td><?php echo Helper::calcularTempoAbertura($chamado->dataAbertura) ?></td>
                                 <td id="<?php echo $chamado->prioridade ?>"></td>
+                                 <td>2</td>
                                 <td><?php echo $chamado->status ?></td>
 
                                 <td>
@@ -91,6 +94,7 @@ include 'home.php';
                                 <td><?php echo $chamado->login ?></td>
                                 <td><?php echo Helper::calcularTempoAbertura($chamado->dataAbertura) ?></td>
                                 <td id="<?php echo $chamado->prioridade ?>"></td>
+                                <td>3</td>
                                 <td><?php echo $chamado->status ?></td>
 
                                 <td>
@@ -113,6 +117,7 @@ include 'home.php';
                                 <td><?php echo $chamado->login ?></td>
                                 <td><?php echo Helper::calcularTempoAbertura($chamado->dataAbertura) ?></td>
                                 <td id="<?php echo $chamado->prioridade ?>"></td>
+                                  <td>4</td>
                                 <td><?php echo $chamado->status ?></td>
 
                                 <td>
