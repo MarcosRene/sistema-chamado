@@ -131,7 +131,12 @@ class ChamadoModel extends Model
         $qry->bindValue(":id_tecnico", $id_tecnico);
         $qry->bindValue(":status", $status);
         $qry->bindValue(":id_chamado", $id_chamado);
+        
+        if($status === 'Encerrado'){
         $qry->bindValue(":dataEncerrado", date('Y-m-d H:i'));
+        }else{
+          $qry->bindValue(":dataEncerrado", null);            
+        }
         $qry->execute();
     }
 
