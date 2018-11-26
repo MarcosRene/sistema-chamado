@@ -18,7 +18,7 @@ class RelatorioController extends Controller {
         $pdf->AddPage();
 
         $pdf->SetFont('Arial', 'B', 16);
-        $pdf->Cell(190, 10, utf8_decode('Relatório de cadastros'), 0, 0, "C");
+        $pdf->Cell(190, 10, utf8_decode('Relatório de chamados'), 0, 0, "C");
         $pdf->Ln(15);
         $arquivo = 'relatorio.pdf';
         $tipo_pdf = 'I';

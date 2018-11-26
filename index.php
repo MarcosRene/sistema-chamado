@@ -1,9 +1,9 @@
 <?php
 require 'config/config.php';
-require 'app/core/Core.php';
+require 'app/core/FrontController.php';
 require 'vendor/autoload.php';
 
 
-$core = new Core;
-$core->run();
+$frontController = new FrontCOntroller;
+$frontController->run();
 //$conn = Conexao::getInstance();

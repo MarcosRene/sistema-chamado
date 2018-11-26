@@ -1,7 +1,9 @@
 <?php
 
 
-class Core{
+class FrontController{
+   
+    
     private $controller;
     private $metodo;
     private $parametros = array();
