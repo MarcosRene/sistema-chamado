@@ -73,7 +73,7 @@ class UsuarioController extends Controller {
         $usuarioModel = new UsuarioModel();
         $area = new AreaModel();
         
-        
+        $_SESSION['dados']->descricaoArea = $descricao;
         $usuarioModel->alterarResponsavel($id_usuario, $area->getCodArea($descricao));
 
         header("location:" . URL_BASE . 'usuario/listarResponsaveis');

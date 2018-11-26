@@ -13,11 +13,15 @@ class UsuarioModel extends Model {
 
     function verificarlogin($login, $senha) {
 
+         $sql =  'SELECT * FROM usuario AS u 
+           LEFT JOIN area AS a ON u.responsavelPor = a.id_area
+           WHERE u.ativo = :ativo
+           AND u.login = :login';
 
-        $sql = "SELECT * FROM usuario WHERE login = :login";
         $qry = $this->getDb()->prepare($sql);
-        $qry->bindValue(":login", $login);
-
+        $qry->bindValue(':login', $login);
+        $qry->bindValue(':ativo', 'Ativo');
+      
         if ($qry->execute() && $qry->rowCount() > 0) {
 
             $row = $qry->fetch(\PDO::FETCH_OBJ);
@@ -28,7 +32,6 @@ class UsuarioModel extends Model {
                 $_SESSION['usuario'] = $login;
                 $_SESSION['dados'] = $row;
                 
-
                 return true;
             }
         }
