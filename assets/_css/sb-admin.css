@@ -420,7 +420,7 @@ body.sidebar-toggled footer.sticky-footer {
 #Urgente {
     display: block;
     background-position: center;
-    padding-top: 3rem;
+    padding-top: 2.5rem;
     background-repeat: no-repeat;
     background-image: url(../img/urgente.png);
 }
@@ -428,7 +428,7 @@ body.sidebar-toggled footer.sticky-footer {
 #Alta {
     display: block;
     background-position: center;
-    padding-top: 3rem;
+    padding-top: 2.5rem;
     background-repeat: no-repeat;
     background-image: url(../img/alta.png);
 }
@@ -454,7 +454,7 @@ body.sidebar-toggled footer.sticky-footer {
 #Media {
     display: block;
     background-position: center;
-    padding-top: 3rem;
+    padding-top: 2.5rem;
     background-repeat: no-repeat;
     background-image: url(../img/media.png);
 }
@@ -462,7 +462,7 @@ body.sidebar-toggled footer.sticky-footer {
 #Baixa {
     display: block;
     background-position: center;
-    padding-top: 3rem;
+    padding-top: 2.5rem;
     background-repeat: no-repeat;
     background-image: url(../img/baixa.png);
 }
