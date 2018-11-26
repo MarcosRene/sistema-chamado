@@ -99,12 +99,6 @@ class ChamadoController extends Controller {
         $dados["view"] = "admin/lista_chamados";
         $dados['chamados'] = $chamado->listaChamados($status);
      
-        
-        if($status === 'Encerrado'){
- 
-             $dados["view"] = "admin/listar_encerrados";
-
-        }
         $this->load("painel", $dados);
     }
     

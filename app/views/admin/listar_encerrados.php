@@ -18,7 +18,7 @@ include 'home.php';
     <div class="card-body">
         <body>
 
-            <table id="minhaTabela" class="table table-striped table-bordered cell-border">
+            <table id="tabelaPrioridade" class="table table-striped table-bordered cell-border">
                 <thead>
                     <tr>
                         <th>Id</th>
@@ -43,8 +43,8 @@ include 'home.php';
                             <td><?php echo $chamado->status ?></td>
 
                             <td>
-                                <a href="<?php echo URL_BASE . "chamado/Atender/" . $chamado->id_chamado ?>">
-                                    <button class="btn btn-primary btn-sm">Atender</button>
+                                <a href="<?php echo URL_BASE . "chamado/visualizarChamado/" . $chamado->id_chamado ?>">
+                                    <button class="btn btn-primary btn-sm">Visualizar</button>
                                 </a>
                             </td>
                         <?php } ?>
