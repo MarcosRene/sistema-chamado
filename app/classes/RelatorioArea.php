@@ -7,7 +7,7 @@ class RelatorioArea extends TemplateRelatorio {
     protected function corpoRelatorio($dados) {
 
         
-        $this->Cell(190, 10, utf8_decode('Relatório de chamados por area'), 0, 0, "C");
+        $this->Cell(190, 10, utf8_decode('Relatório de chamados por area: '. $_SESSION['dados']->descricaoArea), 0, 0, "C");
         $this->Ln(15);
         $arquivo = 'relatorio.pdf';
         $tipo_pdf = 'I';

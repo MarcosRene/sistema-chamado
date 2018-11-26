@@ -92,8 +92,7 @@
                         <div class="form-group col-sm-12">
                             <fieldset disabled>
                                 <label for="resposavel">Status</label>
-                                <input type="text" id="<?php echo \app\core\Helper::verificarCorStatus($chamado->status)
-                                ?>" class="form-control" value="<?php echo $chamado->status ?>">
+                                <input type="text" class="form-control" value="<?php echo $chamado->status ?>">
                             </fieldset>
                         </div>
 

@@ -14,18 +14,18 @@
                 <div class="form-row">
                     <div class="form-group col-sm-6">
                         <label for="nome">Nome</label>
-                        <input type="text" class="form-control" name="nome" placeholder="Nome">
+                        <input type="text" class="form-control" name="nome" placeholder="Nome" required="">
                     </div>
 
                     <div class="form-group col-sm-6">
                         <label for="sobrenome">Sobrenome</label>
-                        <input type="text" class="form-control" name="sobrenome" placeholder="Sobrenome">
+                        <input type="text" class="form-control" name="sobrenome" placeholder="Sobrenome" required="">
                     </div>
 
 
                     <div class="form-group col-sm-6">
                         <label for="email">E-mail</label>
-                        <input type="email" class="form-control" name="email" placeholder="E-mail">
+                        <input type="email" class="form-control" name="email" placeholder="E-mail" required="">
                     </div>
 
                     <div class="form-group col-sm-6">
@@ -39,12 +39,12 @@
 
                     <div class="form-group col-sm-6">
                         <label for="login">Login</label>
-                        <input type="text" class="form-control" name="login" placeholder="Login">
+                        <input type="text" class="form-control" name="login" placeholder="Login" required="">
                     </div>
 
                     <div class="form-group col-sm-6">
                         <label for="senha">Senha</label>
-                        <input type="password" class="form-control" name="senha" placeholder="Senha">
+                        <input type="password" class="form-control" name="senha" placeholder="Senha" required="">
                     </div>
 
                     <div class="form-group col-lg-5 col-md-10 col-sm-12">
