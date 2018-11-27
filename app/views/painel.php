@@ -60,13 +60,10 @@
                       "infoFiltered": " ",
                       "search": "Buscar: ",
 
-
                       "paginate": {
                           "previous": "Anterior",
                           "next": "Próximo"
                       },
-
-                     
 
                   },
               });
