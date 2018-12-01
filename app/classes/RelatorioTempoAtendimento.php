@@ -15,15 +15,15 @@ class RelatorioTempoAtendimento extends TemplateRelatorio {
         $arquivo = 'relatorio.pdf';
         $tipo_pdf = 'I';
 
-        $this->SetFont("Arial", "I", 8);
+        $this->SetFont("Arial", "I", 7);
         $this->Cell(8, 7, "Id", 1, 0, "C");
-        $this->Cell(20, 7, "Aberto por", 1, 0, "C");
-        $this->Cell(20, 7, "Aberto em", 1, 0, "C");
-        $this->Cell(20, 7, "Atendido em", 1, 0, "C");
-        $this->Cell(20, 7, "Encerrado em", 1, 0, "C");
-        $this->Cell(25, 7, "Solucionado em", 1, 0, "C");
-        $this->Cell(20, 7, "status", 1, 0, "C");
-        $this->Cell(60, 7, "Parecer", 1, 0, "C");
+        $this->Cell(15, 7, "Aberto por", 1, 0, "C");
+        $this->Cell(15, 7, "Aberto", 1, 0, "C");
+        $this->Cell(15, 7, "Encerrado", 1, 0, "C");
+        $this->Cell(25, 7, "Solucionado", 1, 0, "C");
+        $this->Cell(15, 7, "Prioridade", 1, 0, "C");
+        $this->Cell(50, 7, "Problema", 1, 0, "C");
+        $this->Cell(45, 7, "Parecer", 1, 0, "C");
    
     
         $this->Ln();
@@ -31,13 +31,13 @@ class RelatorioTempoAtendimento extends TemplateRelatorio {
         foreach ($dados['area'] as $chamado) {
            
             $this->Cell(8, 7, utf8_decode($chamado->id_chamado), 1, 0, "C");
-            $this->Cell(20, 7,utf8_decode($chamado->login), 1, 0, "C");
-            $this->Cell(20, 7, utf8_decode(date('d/m/Y', strtotime($chamado->dataAbertura))), 1, 0, "C");
-            $this->Cell(20, 7, Helper::diferençaDatas($chamado->dataAbertura,$chamado->dataAtendido), 1, 0, "C");
-            $this->Cell(20, 7, utf8_decode(date('d/m/Y', strtotime($chamado->dataEncerrado))), 1, 0, "C");  
+            $this->Cell(15, 7,utf8_decode($chamado->login), 1, 0, "C");
+            $this->Cell(15, 7, utf8_decode(date('d/m/Y', strtotime($chamado->dataAbertura))), 1, 0, "C");
+            $this->Cell(15, 7, utf8_decode(date('d/m/Y', strtotime($chamado->dataEncerrado))), 1, 0, "C");  
             $this->Cell(25, 7, Helper::diferençaDatas($chamado->dataAbertura,$chamado->dataEncerrado), 1, 0, "C");
-            $this->Cell(20, 7, utf8_decode($chamado->prioridade), 1, 0, "C");
-             $this->Cell(60, 7, utf8_decode($chamado->parecer), 1, 0, "C");
+            $this->Cell(15, 7, utf8_decode($chamado->prioridade), 1, 0, "C");
+            $this->Cell(50, 7, utf8_decode($chamado->problema), 1, 0, "C");
+            $this->Cell(45, 7, utf8_decode($chamado->parecer), 1, 0, "C");
 
             $this->Ln();
         }

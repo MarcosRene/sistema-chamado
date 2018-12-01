@@ -92,8 +92,13 @@ class FacadeModels {
    }
    
    public function chamadosArea($area){
- 
+       
        return $this->chamadosArea($area);
+   }
+   
+   public function chamadosPorArea($prioridade, $status){
+       
+       return $this->chamadosPorArea($prioridade, $status);
    }
    
    public function verificarEmail($email){

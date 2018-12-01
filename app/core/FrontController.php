@@ -7,7 +7,7 @@ class FrontController{
     private $parametros = array();
     
     public function __construct() {
-        $this->verificaUri();
+        $this->verificaUrl();
     }
     
     public function run(){
@@ -17,7 +17,7 @@ class FrontController{
        call_user_func_array(array($c, $this->getMetodo()), $this->getParametros());      
         
     }
-    public function verificaUri(){
+    public function verificaUrl(){
         $url =explode("index.php", $_SERVER["PHP_SELF"]);
         $url = end($url);
         

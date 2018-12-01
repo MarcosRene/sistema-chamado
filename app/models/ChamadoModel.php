@@ -47,7 +47,7 @@ class ChamadoModel extends Model
 
    public function listaChamados($status)
     {
-        $sql = 'SELECT c.id_chamado,c.dataAtendido, c.parecer, c.dataEncerrado, c.local, u.login, c.dataAbertura, c.status, c.prioridade ,f.nome, f.sobrenome 
+        $sql = 'SELECT c.id_chamado,c.dataAtendido,c.problema, c.parecer, c.dataEncerrado, c.local, u.login, c.dataAbertura, c.status, c.prioridade ,f.nome, f.sobrenome 
                 FROM chamado As c
                 LEFT JOIN usuario AS f ON (c.atendidoPor = f.id_usuario)
                 LEFT JOIN area AS a ON (c.area = a.id_area)     

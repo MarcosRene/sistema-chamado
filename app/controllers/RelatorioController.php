@@ -46,8 +46,7 @@ class RelatorioController extends Controller {
     public function tempoDeAtendimento() {
 
         $relatorio = new RelatorioTempoAtendimento();
-        $chamado = new ChamadoModel();
-        $dados['area'] = $chamado->listaChamados('Encerrado');
+        $dados['area'] = $this->getFacade()->listaChamados('Encerrado');
         $relatorio->gerarRelatorio($dados);
 
     }
