@@ -14,7 +14,7 @@ Helper::verificarAcesso($permissoes);
                 <div class="form-row">
                     <div class="form-group col-sm-4">
                         <label for="local">Local</label>
-                        <input type="text" class="form-control" name="local" placeholder="Local">
+                        <input type="text" class="form-control" name="local" placeholder="Local" required>
                     </div>
 
 

@@ -74,8 +74,7 @@ class UsuarioModel extends Model {
        $qry = $this->getDb()->prepare($sql);
        $qry->bindValue(':ativo', 'Ativo');
        $qry->execute();
-       
-        return $qry->fetchALL(\PDO::FETCH_OBJ);
+       return $qry->fetchALL(\PDO::FETCH_OBJ);
     }
     
     public function listaResponsaveis($id_perfil) {
@@ -217,14 +216,4 @@ class UsuarioModel extends Model {
         
     }
     
-
-    public function excluir($id_cliente) {
-
-        $sql = "DELETE FROM cliente WHERE id_cliente = :id_cliente";
-
-        $qry = $this->getDb()->prepare($sql);
-        $qry->bindValue(":id_cliente", $id_cliente);
-        $qry->execute();
-    }
-
 }

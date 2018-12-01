@@ -28,8 +28,5 @@ class PerfilModel extends Model {
        $result =  $qry->fetch(\PDO::FETCH_OBJ);
         return $result->id_perfil;
     }
-    
-    
-  
-    
+   
 }

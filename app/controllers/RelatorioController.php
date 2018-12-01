@@ -8,17 +8,15 @@ use app\models\AreaModel;
 use app\models\ChamadoModel;
 use app\classes\RelatorioArea;
 use app\classes\RelatorioTempoAtendimento;
+use app\models\FacadeModels;
 
 session_start();
 
 class RelatorioController extends Controller {
 
-    
     public function index() {
-
-        $area = new AreaModel();
-        $dados['areas'] = $area->lista();
-
+        
+        $dados['areas'] = $this->getFacade()->listarAreas();
         $dados['view'] = 'home_relatorio';
         $this->load('painel', $dados);
     }

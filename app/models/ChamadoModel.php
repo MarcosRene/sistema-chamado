@@ -45,9 +45,8 @@ class ChamadoModel extends Model
         return $qry->fetchALL(\PDO::FETCH_OBJ);
     }
 
-    public function listaChamados($status)
+   public function listaChamados($status)
     {
-
         $sql = 'SELECT c.id_chamado,c.dataAtendido, c.parecer, c.dataEncerrado, c.local, u.login, c.dataAbertura, c.status, c.prioridade ,f.nome, f.sobrenome 
                 FROM chamado As c
                 LEFT JOIN usuario AS f ON (c.atendidoPor = f.id_usuario)
@@ -55,15 +54,15 @@ class ChamadoModel extends Model
                 INNER JOIN usuario AS u ON (c.abertoPor = u.id_usuario)
                 WHERE status = :status
                 AND a.descricaoArea = :descricaoArea';
-
+        
         $qry = $this->getDb()->prepare($sql);
         $qry->bindValue(':status', $status);
         $qry->bindValue(':descricaoArea', $_SESSION['dados']->descricaoArea);
         $qry->execute();
-        
+       
         return $qry->fetchALL(\PDO::FETCH_OBJ);
     }
-
+    
     public function chamadosPorArea( $prioridade, $status){
       
         $sql = 'SELECT c.id_chamado, c.problema, c.parecer, c.dataEncerrado, c.local, u.login, c.dataAbertura, c.status, c.prioridade ,f.nome, f.sobrenome FROM chamado As c
