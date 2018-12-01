@@ -38,7 +38,7 @@ abstract class TemplateRelatorio extends FPDF {
           // Position at 1.5 cm from bottom
           $this->SetY(-31);
           $this->SetFont('Arial', 'I', 9);
-          $this->Cell(0, 10, utf8_decode('gerador por: '.$_SESSION['dados']->login . '           em: ' . date('d-m-Y H:i') ) , 0, 0, 'R');
+          $this->Cell(0, 10, utf8_decode('gerado por: '.$_SESSION['dados']->login . '           em: ' . date('d-m-Y H:i') ) , 0, 0, 'R');
         
 
         

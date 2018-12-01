@@ -10,17 +10,9 @@
                     <div class="form-group col-lg-5 col-md-10 col-sm-12">
                         <form action="<?php echo URL_BASE . "relatorio/relatorioArea" ?>" method="POST" target="_blank">
 
-                            <label for="tipo">Relátorio por área</label>
-                            <select id="perfil" name="area" class="form-control form-control-md">
-                                <?php foreach ($viewData["areas"] as $area) { ?>
-
-                                    <option><?php echo $area->descricaoArea ?></option>
-                                <?php } ?>
-                            </select>
-
 
                             <label for="problema">Prioridade</label>
-                            <select class="form-control form-control-md" name="prioridade" required>
+                            <select class="form-control form-control-md" name="prioridade">
                                 <option></option>
                                 <option>Urgente</option>
                                 <option>Alta</option>
@@ -30,7 +22,7 @@
 
 
                             <label for="problema">Status</label>
-                            <select class="form-control form-control-md" name="status" required>
+                            <select class="form-control form-control-md" name="status" >
                                 <option></option>
                                 <option>Não atendido</option>
                                 <option>Em atendimento</option>
@@ -40,9 +32,21 @@
 
                             <a>
                                 <button class="btn btn-danger mt-3" type="submit">Gerar</button>
+
+
+
                             </a>
                         </form>
+                        <div><br>
+                        
+                        <a class="btn btn-info" target="_blank" href="<?php echo URL_BASE . "relatorio/tempoDeAtendimento" ?>">
+                            Tempo de atendimento
+                        </a>
+
                     </div>
+
+                    </div>
+
                 </div>
             </div>
         </div>

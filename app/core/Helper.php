@@ -29,6 +29,31 @@ class Helper {
         return $interval->format('%a ' . $dia . ' %h ' . $hora);
     }
 
+    static function diferençaDatas($primeira, $segunda) {
+        
+        $data1 = date_create($primeira);
+        $data2 = date_create($segunda);
+
+        $interval = date_diff($data1, $data2);
+
+        $dia = 'dias';
+        $hora = 'horas';
+
+        if ($interval->format('%a') == 1) {
+
+            $dia = 'dia';
+        }
+        if ($interval->format('%h') == 1) {
+
+            $hora = 'hora';
+        }
+        
+        $totalHoras = $interval->format('%a') * 24 + $interval->format('%h');
+        
+      //  return $interval->format('%a ' . $dia . ' %h ' . $hora);
+        return $totalHoras . ' h ' . $interval->format('%i') . ' m' ;
+    }
+
     static function verificarCorStatus($status) {
 
         switch ($status) {
@@ -57,7 +82,7 @@ class Helper {
     static function verificarAcesso($permissoes) {
 
         if (!isset($_SESSION['usuario']))
-           header("location:" . URL_BASE . "login/sair");
+            header("location:" . URL_BASE . "login/sair");
 
         if (!in_array($_SESSION['perfil'], $permissoes))
             header("location:" . URL_BASE . "login/sair");

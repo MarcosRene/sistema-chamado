@@ -48,7 +48,7 @@ class ChamadoModel extends Model
     public function listaChamados($status)
     {
 
-        $sql = 'SELECT c.id_chamado, c.dataEncerrado, c.local, u.login, c.dataAbertura, c.status, c.prioridade ,f.nome, f.sobrenome 
+        $sql = 'SELECT c.id_chamado,c.dataAtendido, c.parecer, c.dataEncerrado, c.local, u.login, c.dataAbertura, c.status, c.prioridade ,f.nome, f.sobrenome 
                 FROM chamado As c
                 LEFT JOIN usuario AS f ON (c.atendidoPor = f.id_usuario)
                 LEFT JOIN area AS a ON (c.area = a.id_area)     
@@ -64,10 +64,9 @@ class ChamadoModel extends Model
         return $qry->fetchALL(\PDO::FETCH_OBJ);
     }
 
-    public function chamadosPorArea($descricaoArea, $prioridade, $status)
-    {
-
-        $sql = 'SELECT c.id_chamado, c.problema, c.dataEncerrado, c.local, u.login, c.dataAbertura, c.status, c.prioridade ,f.nome, f.sobrenome FROM chamado As c
+    public function chamadosPorArea( $prioridade, $status){
+      
+        $sql = 'SELECT c.id_chamado, c.problema, c.parecer, c.dataEncerrado, c.local, u.login, c.dataAbertura, c.status, c.prioridade ,f.nome, f.sobrenome FROM chamado As c
                 LEFT JOIN usuario AS f ON (c.atendidoPor = f.id_usuario)
                 left JOIN area AS a ON (c.area = a.id_area)
                 INNER JOIN usuario AS u ON (c.abertoPor = u.id_usuario)
@@ -76,7 +75,7 @@ class ChamadoModel extends Model
                 and c.status = :status';
 
         $qry = $this->getDb()->prepare($sql);
-        $qry->bindValue(':descricaoArea', $descricaoArea);
+        $qry->bindValue(':descricaoArea', $_SESSION['dados']->descricaoArea);
         $qry->bindValue(':prioridade', $prioridade);
         $qry->bindValue(':status', $status);
         $qry->execute();
@@ -84,6 +83,22 @@ class ChamadoModel extends Model
         return $qry->fetchALL(\PDO::FETCH_OBJ);
     }
 
+    public function chamadosArea($descricaoArea){
+
+        $sql = 'SELECT c.id_chamado, c.problema, c.dataEncerrado, c.local, u.login, c.dataAbertura, c.status, c.prioridade ,f.nome, f.sobrenome FROM chamado As c
+                LEFT JOIN usuario AS f ON (c.atendidoPor = f.id_usuario)
+                left JOIN area AS a ON (c.area = a.id_area)
+                INNER JOIN usuario AS u ON (c.abertoPor = u.id_usuario)
+                WHERE a.descricaoArea = :descricaoArea ';
+       
+        $qry = $this->getDb()->prepare($sql);
+        $qry->bindValue(':descricaoArea', $descricaoArea);
+        $qry->execute();
+
+        return $qry->fetchALL(\PDO::FETCH_OBJ);
+    }
+
+    
 
     public function inserirChamado($chamado)
     {
@@ -137,7 +152,8 @@ class ChamadoModel extends Model
         $qry->bindValue(":id_chamado", $id_chamado);
         
         if($status === 'Encerrado'){
-        $qry->bindValue(":dataEncerrado", date('Y-m-d H:i'));
+          $qry->bindValue(":dataEncerrado", date('Y-m-d H:i:s'));
+        
         }else{
           $qry->bindValue(":dataEncerrado", null);            
         }

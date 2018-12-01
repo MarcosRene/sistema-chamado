@@ -1,9 +1,7 @@
 <?php
 
-
 class FrontController{
    
-    
     private $controller;
     private $metodo;
     private $parametros = array();
@@ -13,6 +11,7 @@ class FrontController{
     }
     
     public function run(){
+       
        $controllerCorrente = $this->getController();         
        $c = new $controllerCorrente;
        call_user_func_array(array($c, $this->getMetodo()), $this->getParametros());      
