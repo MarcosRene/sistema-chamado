@@ -8,7 +8,6 @@ class RelatorioTempoAtendimento extends TemplateRelatorio {
 
     protected function corpoRelatorio($dados) {
 
-  
         $this->Cell(190, 10, utf8_decode('Relatório de tempo de atendimento'), 0, 0, "C");
        
         $this->Ln(15);
